@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir:*)",
+      "Bash(python -m http.server:*)",
+      "Bash(ipconfig:*)",
+      "Bash(findstr:*)",
+      "Bash(powershell -Command:*)",
+      "Bash(wslpath:*)",
+      "Bash(fc:*)",
+      "Bash(node -e:*)"
+    ]
+  }
+}
