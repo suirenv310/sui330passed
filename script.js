@@ -4041,7 +4041,7 @@ function initDatabase(userId) {
     let likesHtml = '';
     if (post.likes && post.likes.length > 0) {
       const displayLikes = post.likes.map(name => getDisplayNameByOriginalName(name)).join('、');
-      likesHtml = `<div class="post-likes-section"><svg class="like-icon" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg><span>${displayLikes} 觉得很赞</span></div>`;
+      likesHtml = `<div class="post-likes-section"><svg class="like-icon" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg><span>${displayLikes} Love it</span></div>`;
     }
 
 
@@ -6691,7 +6691,7 @@ function showNotification(chatId, messageContent, isTest = false) {
                 new Notification(titleText, notifyOptions);
             }
         } catch (e) {
-            console.warn("系统通知发送失败:", e);
+            console.warn("System notification sending failed:", e);
         }
     }
     
@@ -7229,7 +7229,7 @@ function showNotification(chatId, messageContent, isTest = false) {
     const npcs = await db.npcs.toArray();
 
     if (npcs.length === 0) {
-      listEl.innerHTML = '<p style="text-align:center; color: var(--text-secondary); padding: 50px 0;">还没有创建任何NPC，<br>点击右上角“+”添加第一个吧！</p>';
+      listEl.innerHTML = '<p style="text-align:center; color: var(--text-secondary); padding: 50px 0;">No NPCs have been created yet,<br>click the "+" in the top right corner to add your first one!</p>';
       return;
     }
 
@@ -7277,7 +7277,7 @@ function showNotification(chatId, messageContent, isTest = false) {
     const cooldownInput = document.getElementById('npc-action-cooldown-input');
 
     associationListEl.innerHTML = '';
-    groupSelectEl.innerHTML = '<option value="">-- 未分组 --</option>'; 
+    groupSelectEl.innerHTML = '<option value="">-- Unassigned --</option>'; 
 
    
     const npcGroups = await db.npcGroups.toArray();
@@ -7289,9 +7289,9 @@ function showNotification(chatId, messageContent, isTest = false) {
     });
 
   
-    associationListEl.innerHTML += `<label><input type="checkbox" value="user"> ${state.qzoneSettings.nickname || '我'} (用户)</label>`;
+    associationListEl.innerHTML += `<label><input type="checkbox" value="user"> ${state.qzoneSettings.nickname || 'Me'} (User)</label>`;
     Object.values(state.chats).filter(c => !c.isGroup).forEach(char => {
-      associationListEl.innerHTML += `<label><input type="checkbox" value="${char.id}"> ${char.name} (角色)</label>`;
+      associationListEl.innerHTML += `<label><input type="checkbox" value="${char.id}"> ${char.name} (Character)</label>`;
     });
 
     if (npcId) {
@@ -7545,7 +7545,7 @@ function showNotification(chatId, messageContent, isTest = false) {
     const allGroups = await db.qzoneGroups.toArray();
 
     if (allChats.length === 0) {
-      chatListEl.innerHTML = '<p style="text-align:center; color: #8a8a8a; margin-top: 50px;">点击右上角 "+" 或群组图标添加聊天</p>';
+      chatListEl.innerHTML = '<p style="text-align:center; color: #8a8a8a; margin-top: 50px;">Click the "+" or the group icon in the top right corner to start a chat.</p>';
       return;
     }
 
@@ -7631,7 +7631,7 @@ function showNotification(chatId, messageContent, isTest = false) {
   function appendLoadMoreChatsButton(container, sortedItems) {
     const button = document.createElement('button');
     button.id = 'load-more-chats-btn';
-    button.textContent = '加载更早的会话';
+    button.textContent = 'Load More Chats';
     button.className = 'load-more-btn';
 
 
@@ -7720,22 +7720,22 @@ function showNotification(chatId, messageContent, isTest = false) {
       let lastMsgDisplay;
 
       if (!chat.isGroup && chat.relationship?.status === 'pending_user_approval') {
-        lastMsgDisplay = `<span style="color: #ff8c00;">[好友申请] ${chat.relationship.applicationReason || '请求添加你为好友'}</span>`;
+        lastMsgDisplay = `<span style="color: #ff8c00;">[Friend Request] ${chat.relationship.applicationReason || 'wants to add you as a friend'}</span>`;
       } else if (!chat.isGroup && chat.relationship?.status === 'blocked_by_ai') {
-        lastMsgDisplay = `<span style="color: #dc3545;">[你已被对方拉黑]</span>`;
+        lastMsgDisplay = `<span style="color: #dc3545;">[You have been blocked]</span>`;
       } else if (chat.isGroup) {
         if (lastMsgObj.type === 'pat_message') {
-          lastMsgDisplay = `[系统消息] ${lastMsgObj.content}`;
+          lastMsgDisplay = `[System Message] ${lastMsgObj.content}`;
         } else if (lastMsgObj.type === 'transfer') {
-          lastMsgDisplay = '[转账]';
+          lastMsgDisplay = '[Transfer]';
         } else if (lastMsgObj.type === 'ai_image' || lastMsgObj.type === 'user_photo') {
-          lastMsgDisplay = '[照片]';
+          lastMsgDisplay = '[Photo]';
         } else if (lastMsgObj.type === 'voice_message') {
-          lastMsgDisplay = '[语音]';
+          lastMsgDisplay = '[Voice Message]';
         } else if (typeof lastMsgObj.content === 'string' && STICKER_REGEX.test(lastMsgObj.content)) {
-          lastMsgDisplay = lastMsgObj.meaning ? `[表情: ${lastMsgObj.meaning}]` : '[表情]';
+          lastMsgDisplay = lastMsgObj.meaning ? `[Sticker: ${lastMsgObj.meaning}]` : '[Sticker]';
         } else if (Array.isArray(lastMsgObj.content)) {
-          lastMsgDisplay = `[图片]`;
+          lastMsgDisplay = `[Image]`;
         } else {
           lastMsgDisplay = String(lastMsgObj.content || '...').substring(0, 20);
         }
@@ -7745,7 +7745,7 @@ function showNotification(chatId, messageContent, isTest = false) {
           lastMsgDisplay = `${senderDisplayName}: ${lastMsgDisplay}`;
         }
       } else {
-        const statusText = chat.status?.text || '在线';
+        const statusText = chat.status?.text || 'Online';
         lastMsgDisplay = `[${statusText}]`;
       }
 
@@ -7772,7 +7772,7 @@ function showNotification(chatId, messageContent, isTest = false) {
             <div class="info">
                 <div class="name-line">
                     <span class="name">${chat.name}</span>
-                    ${chat.isGroup ? '<span class="group-tag">群聊</span>' : ''}
+                    ${chat.isGroup ? '<span class="group-tag">Group</span>' : ''}
                 </div>
                 <div class="last-msg" style="color: ${chat.isGroup ? 'var(--text-secondary)' : '#b5b5b5'}; font-style: italic;">${lastMsgDisplay}</div>
             </div>
@@ -7814,7 +7814,7 @@ function showNotification(chatId, messageContent, isTest = false) {
             renderChatList();
             break;
           case 'delete':
-            const deleteConfirmed = await showCustomConfirm('删除对话', `确定要删除与 "${chat.name}" 的整个对话吗？此操作不可撤销。`, {
+            const deleteConfirmed = await showCustomConfirm('Delete Chat', `Are you sure you want to delete the entire conversation with "${chat.name}"? This action cannot be undone.`, {
               confirmButtonClass: 'btn-danger'
             });
             if (deleteConfirmed) {
@@ -7835,7 +7835,7 @@ function showNotification(chatId, messageContent, isTest = false) {
 
     } catch (error) {
 
-      console.error(`渲染聊天项 [${chat.name || '未知'}] (ID: ${chat.id}) 时出错:`, error);
+      console.error(`Error rendering chat item [${chat.name || 'Unknown'}] (ID: ${chat.id}):`, error);
       return null;
     }
   }
@@ -7869,7 +7869,7 @@ function showNotification(chatId, messageContent, isTest = false) {
     } else {
       statusContainer.style.display = 'flex';
       document.getElementById('chat-header-title-wrapper').style.justifyContent = 'flex-start';
-      statusTextEl.textContent = chat.status?.text || '在线';
+      statusTextEl.textContent = chat.status?.text || 'Online';
       statusContainer.classList.toggle('busy', chat.status?.isBusy || false);
     }
 
@@ -7895,16 +7895,16 @@ function showNotification(chatId, messageContent, isTest = false) {
       chatInputArea.style.display = 'none';
       lockOverlay.style.display = 'flex';
       lockContent.innerHTML = `
-                    <span class="lock-text">正在围观AI们的群聊...</span>
+                    <span class="lock-text">Spectating AI group chat...</span>
                     <div class="spectator-actions-container">
-                        <button id="spectator-reroll-btn" class="lock-action-btn secondary" title="重新生成上一轮对话">
+                        <button id="spectator-reroll-btn" class="lock-action-btn secondary" title="Regenerate the last round of conversation">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M20 11A8.1 8.1 0 0 0 4.5 9M4 5v4h4"></path>
                                 <path d="M4 13a8.1 8.1 0 0 0 15.5 2m.5 4v-4h-4"></path>
                             </svg>
                         </button>
-                        <button id="spectator-propel-btn" class="lock-action-btn">🎬 推进剧情</button>
-                        <button id="spectator-edit-btn" class="lock-action-btn secondary" title="导演剪辑室：编辑AI上一轮的响应">
+                        <button id="spectator-propel-btn" class="lock-action-btn">🎬 Propel Story</button>
+                        <button id="spectator-edit-btn" class="lock-action-btn secondary" title="Director's Editing Room: Edit AI's last response">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"></path>
                                 <line x1="16" y1="8" x2="2" y2="22"></line>
@@ -7937,32 +7937,32 @@ function showNotification(chatId, messageContent, isTest = false) {
                                 <span class="lock-text">你已将“${chat.name}”拉黑。</span>
                                 <button id="unblock-btn" class="lock-action-btn">解除拉黑</button>
                                 <div style="margin-top: 20px; padding: 10px; border: 1px dashed #ccc; border-radius: 8px; font-size: 11px; text-align: left; color: #666; background: rgba(0,0,0,0.02);">
-                                    <strong style="color: #333;">【开发者诊断面板】</strong><br>
-                                    - 后台活动总开关: ${state.globalSettings.enableBackgroundActivity ? '<span style="color: green;">已开启</span>' : '<span style="color: red;">已关闭</span>'}<br>
-                                    - 系统心跳计时器: ${isSimulationRunning ? '<span style="color: green;">运行中</span>' : '<span style="color: red;">未运行</span>'}<br>
-                                    - 当前角色状态: <strong>${chat.relationship.status}</strong><br>
-                                    - 需要冷静(小时): <strong>${cooldownHours}</strong><br>
-                                    - 冷静期是否结束: ${isCooldownOver ? '<span style="color: green;">是</span>' : `<span style="color: orange;">否 (还剩约 ${timeRemainingMinutes} 分钟)</span>`}<br>
-                                    - 触发条件: ${isCooldownOver && state.globalSettings.enableBackgroundActivity ? '<span style="color: green;">已满足，等待下次系统心跳</span>' : '<span style="color: red;">未满足</span>'}
+                                    <strong style="color: #333;">【Developer Diagnostic Panel】</strong><br>
+                                    - Background Activity Switch: ${state.globalSettings.enableBackgroundActivity ? '<span style="color: green;">Enabled</span>' : '<span style="color: red;">Disabled</span>'}<br>
+                                    - System Heartbeat Timer: ${isSimulationRunning ? '<span style="color: green;">Running</span>' : '<span style="color: red;">Not Running</span>'}<br>
+                                    - Current Role Status: <strong>${chat.relationship.status}</strong><br>
+                                    - Cooldown Required (hours): <strong>${cooldownHours}</strong><br>
+                                    - Is Cooldown Over: ${isCooldownOver ? '<span style="color: green;">Yes</span>' : `<span style="color: orange;">No (approximately ${timeRemainingMinutes} minutes remaining)</span>`}<br>
+                                    - Trigger Condition: ${isCooldownOver && state.globalSettings.enableBackgroundActivity ? '<span style="color: green;">Met, waiting for next system heartbeat</span>' : '<span style="color: red;">Not Met</span>'}
                                 </div>
-                                <button id="force-apply-check-btn" class="lock-action-btn secondary" style="margin-top: 10px;">强制触发一次好友申请检测</button>
+                                <button id="force-apply-check-btn" class="lock-action-btn secondary" style="margin-top: 10px;">Force Trigger Friend Request Check</button>
                             `;
             break;
           case 'blocked_by_ai':
             lockHtml = `
-                                <span class="lock-text">你被对方拉黑了。</span>
-                                <button id="apply-friend-btn" class="lock-action-btn">重新申请加为好友</button>
+                                <span class="lock-text">You have been blocked by the other party.</span>
+                                <button id="apply-friend-btn" class="lock-action-btn">Reapply for Friend</button>
                             `;
             break;
           case 'pending_user_approval':
             lockHtml = `
-                                <span class="lock-text">“${chat.name}”请求添加你为好友：<br><i>“${chat.relationship.applicationReason}”</i></span>
-                                <button id="accept-friend-btn" class="lock-action-btn">接受</button>
-                                <button id="reject-friend-btn" class="lock-action-btn secondary">拒绝</button>
+                                <span class="lock-text">“${chat.name}” requests to add you as a friend：<br><i>“${chat.relationship.applicationReason}”</i></span>
+                                <button id="accept-friend-btn" class="lock-action-btn">Accept</button>
+                                <button id="reject-friend-btn" class="lock-action-btn secondary">Reject</button>
                             `;
             break;
           case 'pending_ai_approval':
-            lockHtml = `<span class="lock-text">好友申请已发送，等待对方通过...</span>`;
+            lockHtml = `<span class="lock-text">Friend request sent, waiting for the other party to approve...</span>`;
             break;
         }
         lockContent.innerHTML = lockHtml;
@@ -8030,10 +8030,10 @@ images.forEach(img => {
 Promise.all(imageLoadPromises).then(() => {
    
     messagesContainer.scrollTop = messagesContainer.scrollHeight;
-    console.log('所有初始图片加载完成，已滚动到底部。');
+    console.log('All initial images have loaded, scrolled to the bottom.');
 }).catch(err => {
    
-    console.error("等待图片加载时出错:", err);
+    console.error("Error while waiting for images to load:", err);
     messagesContainer.scrollTop = messagesContainer.scrollHeight;
 });
     setTimeout(() => messagesContainer.scrollTop = messagesContainer.scrollHeight, 0);
@@ -8143,7 +8143,7 @@ Promise.all(imageLoadPromises).then(() => {
           ephonePreview.textContent = '';
       } else {
           ephonePreview.style.backgroundImage = 'linear-gradient(135deg, #89f7fe, #66a6ff)';
-          ephonePreview.textContent = '点击下方上传';
+          ephonePreview.textContent = 'Click below to upload';
       }
     }
 
@@ -8154,7 +8154,7 @@ Promise.all(imageLoadPromises).then(() => {
       cphonePreview.textContent = '';
     } else {
       cphonePreview.style.backgroundImage = 'linear-gradient(135deg, #f6d365, #fda085)';
-      cphonePreview.textContent = '当前为渐变色';
+      cphonePreview.textContent = 'Currently a gradient';
     }
 
     const globalBgPreview = document.getElementById('global-bg-preview');
@@ -8165,7 +8165,7 @@ Promise.all(imageLoadPromises).then(() => {
       document.getElementById('remove-global-bg-btn').style.display = 'inline-block';
     } else {
       globalBgPreview.style.backgroundImage = 'none';
-      globalBgPreview.textContent = '点击下方上传';
+      globalBgPreview.textContent = 'Click below to upload';
       document.getElementById('remove-global-bg-btn').style.display = 'none';
     }
 
@@ -8188,7 +8188,7 @@ Promise.all(imageLoadPromises).then(() => {
         lockPreview.textContent = '';
     } else {
         lockPreview.style.backgroundImage = 'linear-gradient(135deg, #1c1c1e, #3a3a3c)';
-        lockPreview.textContent = '默认壁纸';
+        lockPreview.textContent = 'Default Wallpaper';
     }
     
     renderButtonOrderEditor();
@@ -8238,14 +8238,14 @@ Promise.all(imageLoadPromises).then(() => {
     state.worldBooks = books;
 
     if (books.length === 0) {
-      contentContainer.innerHTML = '<p style="text-align:center; color: #8a8a8a; margin-top: 50px;">点击右上角 "+" 创建你的第一本世界书</p>';
+      contentContainer.innerHTML = '<p style="text-align:center; color: #8a8a8a; margin-top: 50px;">Click the "+" in the top right corner to create your first world book</p>';
       return;
     }
 
 
     const allTab = document.createElement('button');
     allTab.className = 'world-book-tab active';
-    allTab.textContent = '全部';
+    allTab.textContent = 'All';
     allTab.dataset.categoryId = 'all';
     tabsContainer.appendChild(allTab);
 
@@ -8273,7 +8273,7 @@ Promise.all(imageLoadPromises).then(() => {
     if (hasUncategorized) {
       const uncategorizedTab = document.createElement('button');
       uncategorizedTab.className = 'world-book-tab';
-      uncategorizedTab.textContent = '未分类';
+      uncategorizedTab.textContent = 'Uncategorized';
       uncategorizedTab.dataset.categoryId = 'uncategorized';
       tabsContainer.appendChild(uncategorizedTab);
 
@@ -8285,7 +8285,7 @@ Promise.all(imageLoadPromises).then(() => {
 
 
     books.forEach(book => {
-      let contentPreview = '暂无内容...';
+      let contentPreview = 'No content yet...';
       if (Array.isArray(book.content) && book.content.length > 0) {
         const firstEntry = book.content[0];
         contentPreview = firstEntry.comment || firstEntry.content || '';
@@ -8303,7 +8303,7 @@ Promise.all(imageLoadPromises).then(() => {
 
       const cardClickHandler = () => openWorldBookEditor(book.id);
       const cardLongPressHandler = async () => {
-        const confirmed = await showCustomConfirm('删除世界书', `确定要删除《${book.name}》吗？`, {
+        const confirmed = await showCustomConfirm('Delete World Book', `Are you sure you want to delete "${book.name}"?`, {
           confirmButtonClass: 'btn-danger'
         });
         if (confirmed) {
@@ -8597,7 +8597,7 @@ Promise.all(imageLoadPromises).then(() => {
   function updatePlaylistActionBar() {
     const btn = document.getElementById('upload-selected-to-catbox-btn');
     const count = selectedPlaylistItems.size;
-    if (btn) btn.textContent = `上传Catbox (${count})`;
+    if (btn) btn.textContent = `Upload to Catbox (${count})`;
   }
 
   function handleSelectAllPlaylistItems() {
@@ -8623,12 +8623,12 @@ Promise.all(imageLoadPromises).then(() => {
   async function executeBatchUploadToCatbox() {
     // 1. 检查 Catbox 配置
     if (!state.apiConfig.catboxEnable || !state.apiConfig.catboxUserHash) {
-      await showCustomAlert("功能未开启", "请先在“API设置” -> “Catbox.moe”中开启此功能并填写您的 User Hash。");
+      await showCustomAlert("Feature not enabled", "Please enable this feature and fill in your User Hash in 'API Settings' -> 'Catbox.moe'.");
       return;
     }
 
     if (selectedPlaylistItems.size === 0) {
-      await showCustomAlert("未选择", "请先选择要上传的歌曲。");
+      await showCustomAlert("No selection", "Please select the songs you want to upload.");
       return;
     }
 
@@ -8639,20 +8639,20 @@ Promise.all(imageLoadPromises).then(() => {
     });
 
     if (indicesToUpload.length === 0) {
-      await showCustomAlert("无需上传", "您选择的所有歌曲均已在 Catbox 上。");
+      await showCustomAlert("No upload needed", "All the selected songs are already on Catbox.");
       togglePlaylistManagementMode();
       return;
     }
 
     const confirmed = await showCustomConfirm(
-      '确认上传？',
-      `即将上传 ${indicesToUpload.length} 首歌曲到 Catbox.moe。\n\n这会转换本地音乐和外部链接，可能需要一些时间并消耗流量。\n（已在 Catbox 上的歌曲将被自动跳过）`,
-      { confirmText: '开始上传' }
+      'Confirm Upload?',
+      `You are about to upload ${indicesToUpload.length} songs to Catbox.moe.\n\nThis will convert local music and external links, which may take some time and consume data.\n(Songs already on Catbox will be automatically skipped)`,
+      { confirmText: 'Start Upload' }
     );
 
     if (!confirmed) return;
 
-    await showCustomAlert("请稍候...", `正在开始上传 ${indicesToUpload.length} 首歌曲，请勿关闭页面...`);
+    await showCustomAlert("Please wait...", `Starting upload of ${indicesToUpload.length} songs, please do not close the page...`);
 
     let successCount = 0;
     let failCount = 0;
@@ -8673,11 +8673,11 @@ Promise.all(imageLoadPromises).then(() => {
 
         if (song.isLocal) {
           // 4a. 处理本地歌曲 (ArrayBuffer 或 Blob) - 这部分逻辑是正确的
-          console.log(`[Catbox 批量上传] 处理本地歌曲: ${song.name}`);
+          console.log(`[Catbox Batch Upload] Processing local song: ${song.name}`);
           fileToUpload = new Blob([song.src], { type: song.fileType || 'audio/mpeg' });
         } else {
           // 4b. 处理网络歌曲 (需要CORS代理)
-          console.log(`[Catbox 批量上传] 处理网络歌曲: ${song.name} from ${song.src}`);
+          console.log(`[Catbox Batch Upload] Processing network song: ${song.name} from ${song.src}`);
           
           
           let fetchUrl = song.src;
@@ -8685,17 +8685,18 @@ Promise.all(imageLoadPromises).then(() => {
           if (corsProxy && corsProxy !== '' && !fetchUrl.startsWith('data:')) {
             // 【重要】必须对源URL进行编码，以防URL中有特殊字符
             fetchUrl = corsProxy + encodeURIComponent(song.src); 
-            console.log(`[Catbox 批量上传] 使用代理下载: ${fetchUrl}`);
+            console.log(`[Catbox Batch Upload] Using proxy to download: ${fetchUrl}`);
           } else {
-            console.log(`[Catbox 批量上传] 不使用代理，尝试直连下载... (这在Safari上会失败)`);
+            console.log(`[Catbox Batch Upload] Not using proxy, attempting direct download... (This may fail on Safari)`);
+
           }
           
           const response = await fetch(fetchUrl); // <--- 现在这个 fetch 是带代理的
-          if (!response.ok) throw new Error(`下载歌曲失败，状态: ${response.status}`);
+          if (!response.ok) throw new Error(`Failed to download song, status: ${response.status}`);
           fileToUpload = await response.blob();
         }
 
-        // 确保文件名有后缀
+        // Ensure the file name has an extension
         if (!songName.match(/\.(mp3|wav|flac|m4a|ogg)$/i)) {
           songName += '.mp3';
         }
@@ -8711,7 +8712,7 @@ Promise.all(imageLoadPromises).then(() => {
         successCount++;
 
       } catch (error) {
-        console.error(`[Catbox 批量上传] 上传失败: ${song.name}`, error);
+        console.error(`[Catbox Batch Upload] Upload failed: ${song.name}`, error);
         failCount++;
         failedNames.push(song.name);
       }
@@ -8721,11 +8722,11 @@ Promise.all(imageLoadPromises).then(() => {
     await saveGlobalPlaylist();
 
     // 8. 显示总结报告
-    let summary = `上传完成！\n\n成功: ${successCount} 首`;
+    let summary = `Upload complete!\n\nSuccess: ${successCount} songs`;
     if (failCount > 0) {
-      summary += `\n失败: ${failCount} 首\n(${failedNames.join(', ')})`;
+      summary += `\nFailed: ${failCount} songs\n(${failedNames.join(', ')})`;
     }
-    await showCustomAlert("操作完成", summary);
+    await showCustomAlert("Operation Complete", summary);
 
     // 9. 退出管理模式并刷新UI
     togglePlaylistManagementMode();
@@ -8742,13 +8743,13 @@ Promise.all(imageLoadPromises).then(() => {
     grid.classList.toggle('management-mode', isStickerManagementMode);
 
     if (isStickerManagementMode) {
-      manageBtn.textContent = '完成';
+      manageBtn.textContent = 'Done';
       actionBar.style.display = 'flex';
       selectedStickers.clear();
       selectAllCheckbox.checked = false;
       updateDeleteStickerButton();
     } else {
-      manageBtn.textContent = '管理';
+      manageBtn.textContent = 'Manage';
       actionBar.style.display = 'none';
       grid.querySelectorAll('.sticker-item.selected').forEach(item => item.classList.remove('selected'));
     }
@@ -8797,33 +8798,33 @@ Promise.all(imageLoadPromises).then(() => {
     const exportBtn = document.getElementById('export-selected-stickers-btn');
     const moveBtn = document.getElementById('move-selected-stickers-btn'); // 新增
 
-    if (delBtn) delBtn.textContent = `删除 (${count})`;
-    if (exportBtn) exportBtn.textContent = `导出 (${count})`;
-    if (moveBtn) moveBtn.textContent = `移动 (${count})`; // 新增
+    if (delBtn) delBtn.textContent = `Delete (${count})`;
+    if (exportBtn) exportBtn.textContent = `Export (${count})`;
+    if (moveBtn) moveBtn.textContent = `Move (${count})`; // 新增
 }
 async function executeBatchMoveStickers() {
     if (selectedStickers.size === 0) {
-        alert("请先选择要移动的表情。");
+        alert("Please select stickers to move.");
         return;
     }
 
-    // 1. 获取所有分类
+    // 1. Get all categories
     const categories = await db.stickerCategories.toArray();
     const options = [
-        { text: '未分类', value: 'uncategorized' },
+        { text: 'Uncategorized', value: 'uncategorized' },
         ...categories.map(c => ({ text: c.name, value: c.id }))
     ];
 
-    // 2. 弹出选择框
-    const targetCategoryId = await showChoiceModal("移动到分类", options);
+    // 2. Show choice modal
+    const targetCategoryId = await showChoiceModal("Move to Category", options);
     if (!targetCategoryId) return;
 
-    // 3. 处理目标ID (未分类存为 null)
+    // 3. Handle target ID (uncategorized is stored as null)
     const finalCategoryId = targetCategoryId === 'uncategorized' ? null : parseInt(targetCategoryId);
 
-    await showCustomAlert("请稍候...", "正在移动表情...");
+    await showCustomAlert("Please wait...", "Moving stickers...");
 
-    // 4. 更新数据库
+    // 4. Update database
     const idsToMove = Array.from(selectedStickers);
     await db.transaction('rw', db.userStickers, async () => {
         for (const id of idsToMove) {
@@ -8838,7 +8839,7 @@ async function executeBatchMoveStickers() {
     toggleStickerManagementMode(); // 退出管理模式
     await renderStickerPanel(); // 刷新列表 (这会根据当前选中的Tab刷新，移动走的表情会消失)
     
-    await showCustomAlert("成功", `已将 ${idsToMove.length} 个表情移动到新分类。`);
+    await showCustomAlert("Success", `Moved ${idsToMove.length} stickers to the new category.`);
 }
   /**
    * 处理用户点击选择或取消选择表情
@@ -8865,8 +8866,8 @@ async function executeBatchMoveStickers() {
     if (selectedStickers.size === 0) return;
 
     const confirmed = await showCustomConfirm(
-      '确认删除',
-      `确定要删除选中的 ${selectedStickers.size} 个表情吗？此操作不可恢复。`, {
+      'Confirm deletion',
+      `Are you sure you want to delete the selected ${selectedStickers.size} stickers? This action cannot be undone.`, {
         confirmButtonClass: 'btn-danger'
       }
     );
@@ -8884,13 +8885,13 @@ async function executeBatchMoveStickers() {
       toggleStickerManagementMode();
       renderStickerPanel();
 
-      await showCustomAlert('删除成功', '选中的表情已成功删除。');
+      await showCustomAlert('Deletion Successful', 'The selected stickers have been successfully deleted.');
     }
   }
 
 async function executeBatchExportStickers() {
     if (selectedStickers.size === 0) {
-      alert("请先选择要导出的表情包。");
+      alert("Please select stickers to export.");
       return;
     }
 
@@ -8907,7 +8908,7 @@ async function executeBatchExportStickers() {
     });
 
     if (exportedCount === 0) {
-      alert("未找到所选表情的数据。");
+      alert("No data found for the selected stickers.");
       return;
     }
 
@@ -8917,7 +8918,7 @@ async function executeBatchExportStickers() {
   
     const alertHtml = `
         <p style="text-align:left; font-size: 14px; margin: 0 0 10px 0;">
-            已为您生成 ${exportedCount} 条快捷导入格式的文本：
+            Generated ${exportedCount} lines of quick import format text:
         </p>
         <textarea id="${textareaId}" 
                   rows="10" 
@@ -8926,14 +8927,14 @@ async function executeBatchExportStickers() {
     `;
 
    
-    showCustomAlert("复制表情包数据", alertHtml);
+    showCustomAlert("Copy Sticker Data", alertHtml);
   
     const modalConfirmBtn = document.getElementById('custom-modal-confirm');
     
     if (modalConfirmBtn) {
         
         
-        modalConfirmBtn.textContent = '一键复制';
+        modalConfirmBtn.textContent = 'Copy All';
         
         
         const originalOnclick = modalConfirmBtn.onclick;
@@ -8943,19 +8944,19 @@ async function executeBatchExportStickers() {
             try {
                 
                 await navigator.clipboard.writeText(finalText);
-                modalConfirmBtn.textContent = '复制成功!';
+                modalConfirmBtn.textContent = 'Copy Successful!';
                 
                
                 setTimeout(() => {
-                   modalConfirmBtn.textContent = '完成';
+                   modalConfirmBtn.textContent = 'Done';
                    modalConfirmBtn.onclick = originalOnclick; 
                 }, 1500);
                 
             } catch (err) {
                
-                alert('自动复制失败，请长按文本框手动复制。');
+                alert('Automatic copy failed, please long press the text box to copy manually.');
                 
-                modalConfirmBtn.textContent = '完成';
+                modalConfirmBtn.textContent = 'Done';
                 modalConfirmBtn.onclick = originalOnclick;
             }
         };
@@ -8965,24 +8966,24 @@ async function executeBatchExportStickers() {
 
  
   async function openBatchStickerImportModal() {
-    // 1. 让用户选择导入方式
-    const choice = await showChoiceModal('批量导入表情', [
-        { text: '📋 粘贴文本', value: 'paste' },
-        { text: '📁 上传文件 (.txt/.json/.docx)', value: 'file' }
+    // 1. Let the user choose the import method
+    const choice = await showChoiceModal('Batch Import Stickers', [
+        { text: '📋 Paste Text', value: 'paste' },
+        { text: '📁 Upload File (.txt/.json/.docx)', value: 'file' }
     ]);
 
     if (choice === 'paste') {
-        // --- 方式 A: 粘贴文本 (保持原有逻辑) ---
-        const placeholderText = `请输入表情数据，一行一个。
-【规则】：包含【名字】和【链接】。
-【示例】：
-开心: https://xx.com/1.jpg
-哭泣：https://xx.com/2.png
-生气https://xx.com/3.gif
-https://xx.com/4.jpg 疑惑`;
+        // --- Method A: Paste Text (保持原有逻辑) ---
+        const placeholderText = `Please enter sticker data, one per line
+【Rules】: Include 【Name】 and 【URL】.
+【Example】：
+Happy: https://xx.com/1.jpg
+Crying: https://xx.com/2.png
+Angry: https://xx.com/3.gif
+Confused: https://xx.com/4.jpg`;
 
         const pastedText = await showCustomPrompt(
-          '批量导入表情',
+          'Batch Import Stickers',
           placeholderText,
           '',
           'textarea'
@@ -9015,7 +9016,7 @@ https://xx.com/4.jpg 疑惑`;
       const trimmedLine = line.trim();
 
       // 跳过空行或包含提示语的行
-      if (!trimmedLine || trimmedLine.includes('填入') || trimmedLine.includes('格式')) {
+      if (!trimmedLine || trimmedLine.includes('Enter') || trimmedLine.includes('Format')) {
         continue;
       }
 
@@ -9035,12 +9036,12 @@ https://xx.com/4.jpg 疑惑`;
              });
          } else {
              errorCount++;
-             console.warn('无法识别行:', trimmedLine);
+             console.warn('Unrecognized line:', trimmedLine);
          }
          continue; 
       }
 
-      // --- 第二步：提取并清洗数据 ---
+      // --- Step 2: Extract and clean data ---
       const url = urlMatch[0];
       
       // 从整行中把链接删掉，剩下的就是名字
@@ -9048,18 +9049,18 @@ https://xx.com/4.jpg 疑惑`;
       // 例如 "开心：http://..." -> 剩下 "开心：" (中文冒号)
       let rawName = trimmedLine.replace(url, '').trim();
 
-      // --- 第三步：智能清洗名字 (核心修改) ---
+      // --- Step 3: Smart clean name (核心修改) ---
       // 正则解释：
       // ^[\s:：,，]+  -> 去掉开头的所有 空格、英文冒号、中文冒号、逗号
       // |             -> 或者
       // [\s:：,，]+$  -> 去掉结尾的所有 空格、英文冒号、中文冒号、逗号
       let cleanName = rawName.replace(/^[\s:：,，]+|[\s:：,，]+$/g, '');
 
-      // --- 第四步：严格校验 (禁止纯链接) ---
+      // --- Step 4: Strict validation (禁止纯链接) ---
       // 如果清洗后名字为空，说明这一行只有链接
       if (!cleanName) {
           skippedPureLinks++;
-          console.warn('跳过纯链接 (未提供名字):', trimmedLine);
+          console.warn('Skipped pure link (no name provided):', trimmedLine);
           continue;
       }
 
@@ -9072,28 +9073,28 @@ https://xx.com/4.jpg 疑惑`;
       });
     }
 
-    // --- 第五步：结果反馈 ---
+    // --- Step 5: Result feedback ---
     let resultMsg = '';
     
     if (newStickers.length > 0) {
       await db.userStickers.bulkAdd(newStickers);
       state.userStickers.push(...newStickers);
       renderStickerPanel();
-      resultMsg = `成功导入 ${newStickers.length} 个新表情！`;
+      resultMsg = `Successfully imported ${newStickers.length} new stickers!`;
     }
 
     if (skippedPureLinks > 0) {
-        resultMsg += `\n⚠️ 有 ${skippedPureLinks} 行因只有链接(无名字)被跳过。`;
+        resultMsg += `\n⚠️ ${skippedPureLinks} lines were skipped because they contained only links (no name provided).`;
     }
 
     if (errorCount > 0) {
-        resultMsg += `\n❌ 有 ${errorCount} 行格式无法识别。`;
+        resultMsg += `\n❌ ${errorCount} lines could not be recognized.`;
     }
 
     if (resultMsg) {
-        await showCustomAlert('导入结果', resultMsg);
+        await showCustomAlert('Import Result', resultMsg);
     } else if (lines.length > 0) {
-        await showCustomAlert('导入失败', '未能识别任何有效数据，请确保每行都包含【名字】和【链接】。');
+        await showCustomAlert('Import Failed', 'No valid data could be recognized. Please ensure each line contains a 【Name】 and 【URL】.');
     }
   }
 // 处理文件选择
@@ -9111,19 +9112,19 @@ https://xx.com/4.jpg 疑惑`;
         }
 
         try {
-            await showCustomAlert("正在解析...", "正在读取文件内容，请稍候...");
+            await showCustomAlert("Processing...", "Reading file content, please wait...");
             const textContent = await processStickerFile(file);
             
             if (textContent && textContent.trim()) {
-                // 解析成功后，直接复用之前的文本解析逻辑
-                // 这样无论是文件还是粘贴，都支持那种灵活的格式（中文冒号、无空格等）
+                // After successful parsing, directly reuse the previous text parsing logic
+                // This way, whether it's a file or paste, it supports that flexible format (Chinese colon, no space, etc.)
                 await handleBatchStickerImport(textContent);
             } else {
-                alert("文件内容为空或无法解析。");
+                alert("File content is empty or cannot be parsed.");
             }
         } catch (error) {
-            console.error("文件解析失败:", error);
-            alert(`文件解析失败: ${error.message}`);
+            console.error("File parsing failed:", error);
+            alert(`File parsing failed: ${error.message}`);
         }
         resolve();
       };
@@ -9144,11 +9145,11 @@ https://xx.com/4.jpg 疑惑`;
       // 2. 处理 .docx 文件 (依赖 mammoth.js)
       if (fileName.endsWith('.docx')) {
           if (typeof mammoth === 'undefined') {
-              throw new Error("未加载 mammoth.js 库，无法读取 Word 文档。");
+              throw new Error("mammoth.js library is not loaded, unable to read Word document.");
           }
           const arrayBuffer = await file.arrayBuffer();
           const result = await mammoth.extractRawText({ arrayBuffer: arrayBuffer });
-          return result.value; // 返回 Word 中的纯文本
+          return result.value; // Return plain text from Word
       }
 
       // 3. 处理 .json 文件
@@ -9158,7 +9159,7 @@ https://xx.com/4.jpg 疑惑`;
           try {
               json = JSON.parse(text);
           } catch (e) {
-              throw new Error("JSON 格式错误");
+              throw new Error("JSON format error");
           }
 
           // 将 JSON 转换为 "名字: 链接" 的文本格式，以便复用 handleBatchStickerImport
@@ -9181,7 +9182,7 @@ https://xx.com/4.jpg 疑惑`;
                    // 简单的兼容 Tavern 格式
                    const entries = Array.isArray(json.entries) ? json.entries : Object.values(json.entries);
                    entries.forEach(item => {
-                       const name = item.comment || item.key?.toString() || "表情";
+                       const name = item.comment || item.key?.toString() || "Sticker";
                        const url = item.content || item.url;
                        if (url && url.startsWith('http')) {
                            convertedText += `${name}: ${url}\n`;
@@ -9200,7 +9201,7 @@ https://xx.com/4.jpg 疑惑`;
           return convertedText;
       }
 
-      throw new Error("不支持的文件格式");
+      throw new Error("Unsupported file format");
   }
 
   function scrollToOriginalMessage(originalTimestamp) {
@@ -9222,7 +9223,7 @@ https://xx.com/4.jpg 疑惑`;
 
     } else {
 
-      alert("找不到原始消息。可能已被删除或位于更早的历史记录中。");
+      alert("Original message not found. It may have been deleted or is located in earlier history.");
     }
   }
   async function createMessageElement(msg, chat) {
@@ -9305,7 +9306,7 @@ https://xx.com/4.jpg 疑惑`;
 
 
     const isUser = msg.role === 'user';
-    const myNickname = chat.settings.myNickname || '我';
+    const myNickname = chat.settings.myNickname || 'Me';
     const wrapper = document.createElement('div');
     wrapper.className = `message-wrapper ${isUser ? 'user' : 'ai'}`;
     if (msg.isHidden) {
@@ -9315,7 +9316,7 @@ https://xx.com/4.jpg 疑惑`;
       const member = chat.members.find(m => m.originalName === msg.senderName);
       const senderNameDiv = document.createElement('div');
       senderNameDiv.className = 'sender-name';
-      senderNameDiv.textContent = member ? member.groupNickname : (msg.senderName || '未知成员');
+      senderNameDiv.textContent = member ? member.groupNickname : (msg.senderName || 'Unknown Member');
       wrapper.appendChild(senderNameDiv);
     }
 
@@ -49147,7 +49148,7 @@ const tempProxyUrl = document.getElementById('proxy-url').value.trim();
     document.getElementById('clear-chat-btn').addEventListener('click', async () => {
       if (!state.activeChatId) return;
       const chat = state.chats[state.activeChatId];
-      const confirmed = await showCustomConfirm('清空聊天记录', '此操作将永久删除此聊天的所有消息，无法恢复。确定要清空吗？', {
+      const confirmed = await showCustomConfirm('Clear Chat History', 'This action will permanently delete all messages from this chat and cannot be undone. Are you sure you want to proceed with clearing it?', {
         confirmButtonClass: 'btn-danger'
       });
       if (confirmed) {
