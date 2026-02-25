@@ -8,7 +8,17 @@
       "Bash(powershell -Command:*)",
       "Bash(wslpath:*)",
       "Bash(fc:*)",
-      "Bash(node -e:*)"
+      "Bash(node -e:*)",
+      "Bash(node --version)",
+      "Bash(npx webcrack --help:*)",
+      "Bash(npm install:*)",
+      "Bash(npx deobfuscator:*)",
+      "Bash(npx synchrony:*)",
+      "Bash(curl:*)",
+      "Bash(serve:*)",
+      "Bash(node:*)",
+      "Bash(dd:*)",
+      "Bash(ls:*)"
     ]
   }
 }

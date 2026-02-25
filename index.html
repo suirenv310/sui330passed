@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
@@ -16,14 +16,13 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <script src="https://unpkg.com/dexie/dist/dexie.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" defer></script>
-  <!-- <script src="https://phoebeboo.github.io/mewoooo/pp.js" defer></script> -->
+  <script src="https://phoebeboo.github.io/mewoooo/pp.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/streamsaver@2.0.6/StreamSaver.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/browser-image-compression@2.0.2/dist/browser-image-compression.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.6.0/mammoth.browser.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
-  <script src="dev-bypass.js" defer="defer"></script>
   <script src="script.js" defer="defer"></script>
 </head>
 <body>
@@ -39,7 +38,7 @@
         <div id="lock-screen-content">
             <div class="lock-icon">🔓</div>
             <div class="lock-time-container">
-                <div id="lock-date">Jan 1, Monday</div>
+                <div id="lock-date">January 1, Monday</div>
                 <div id="lock-time">12:00</div>
             </div>
             
@@ -93,7 +92,7 @@
                 <div class="profile-info">
                   <p id="profile-username" class="editable-text">@ insonneve 🪦</p>
                   <p id="profile-sub-username" class="editable-text">@ insonneve</p>
-                  <p id="profile-bio" class="editable-text">You seem to be doing well, can't wait to erase my traces of existence</p>
+                  <p id="profile-bio" class="editable-text">It seems you are doing quite well, eager to erase any trace of my existence.</p>
                   <p id="profile-location" class="editable-text"> <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
                       <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5-2.5-1.12 2.5-2.5 2.5z"></path>
                     </svg> <span>Hokkaido</span> </p>
@@ -115,7 +114,7 @@
                     <div class="icon-bg-desktop"><img id="icon-img-world-book" src="https://i.postimg.cc/HWf1JKzn/IMG-6435.jpg" alt="World Book"></div> <span class="label"data-lang-key="homeAppWorldBook">World Book</span>
                   </div>
                   <div class="desktop-app-icon" onclick="showScreen('wallpaper-screen')">
-                    <div class="icon-bg-desktop"><img id="icon-img-wallpaper" src="https://i.postimg.cc/T1j03pQr/IMG-6440.jpg" alt="Appearance"></div> <span class="label"data-lang-key="homeAppAppearance">Appearance</span>
+                    <div class="icon-bg-desktop"><img id="icon-img-wallpaper" src="https://i.postimg.cc/T1j03pQr/IMG-6440.jpg" alt="Appearance Settings"></div> <span class="label"data-lang-key="homeAppAppearance">Appearance Settings</span>
                   </div>
                   <div class="desktop-app-icon" onclick="openRenderingRulesScreen()">
                     <div class="icon-bg-desktop"><img id="icon-img-renderer" src="https://s3plus.meituan.net/opapisdk/op_ticket_885190757_1756312261242_qdqqd_g0eriz.jpeg" alt="Renderer"></div> <span class="label"data-lang-key="homeAppRenderer">Renderer</span>
@@ -145,22 +144,22 @@
             <div class="desktop-app-icon" onclick="openAlipayScreen()">
     <div class="icon-bg-desktop">
         <img id="icon-img-alipay" src="https://i.postimg.cc/SK31X0Bb/IMG_2231.png" alt="Alipay">
-    </div>
+    </div> 
     <span class="label">Alipay</span>
 </div>
 
 <div class="desktop-app-icon" onclick="openAuctionScreen()">
     <div class="icon-bg-desktop"> 
-        <img id="icon-img-auction"
-             src="https://i.postimg.cc/Hs7BLh76/alipay.png"
+        <img id="icon-img-auction" 
+             src="https://i.postimg.cc/Hs7BLh76/alipay.png" 
              alt="Black Market">
     </div>
     <span class="label">Black Market</span>
 </div>
 <div class="desktop-app-icon" onclick="openGreenRiverScreen()">
     <div class="icon-bg-desktop"> 
-        <img id="icon-img-green-river"
-             src="https://i.postimg.cc/0j55Pj1L/green-river-icon.png"
+        <img id="icon-img-green-river" 
+             src="https://i.postimg.cc/0j55Pj1L/green-river-icon.png" 
              alt="Green River">
     </div>
     <span class="label">Green River</span>
@@ -169,7 +168,7 @@
     <div class="icon-bg-desktop"> 
         <img id="icon-img-mail" src="https://i.postimg.cc/PfR7f37x/mail.png" alt="Mail">
     </div>
-    <span class="label">Email</span>
+    <span class="label">Mail</span>
 </div>
             <!-- 未来可以在这里加更多 App -->
         </div>
@@ -179,20 +178,20 @@
     <div class="app-subgrid">
         <div class="small-widget" onclick="openPresetScreen()">
             <div class="small-widget-icon-wrapper"> 
-                <img class="small-widget-img" id="icon-img-preset" src="https://s3plus.meituan.net/opapisdk/op_ticket_885190757_1758510900942_qdqqd_djw0z2.jpeg" alt="Preset">
-            </div>
+                <img class="small-widget-img" id="icon-img-preset" src="https://s3plus.meituan.net/opapisdk/op_ticket_885190757_1758510900942_qdqqd_djw0z2.jpeg" alt="Preset"> 
+            </div> 
             <span class="small-widget-label" data-lang-key="homeAppPreset">Preset</span>
         </div>
         <div class="small-widget" onclick="showScreen('tutorial-screen')">
             <div class="small-widget-icon-wrapper"> 
-                <img class="small-widget-img" id="icon-img-tutorial" src="https://i.postimg.cc/d10GjC4g/IMG-7302.jpg" alt="Tutorial">
-            </div>
+                <img class="small-widget-img" id="icon-img-tutorial" src="https://i.postimg.cc/d10GjC4g/IMG-7302.jpg" alt="Tutorial"> 
+            </div> 
             <span class="small-widget-label" data-lang-key="homeAppTutorial">Tutorial</span>
         </div>
         <div class="small-widget" onclick="openWerewolfLobby('global')">
             <div class="small-widget-icon-wrapper"> 
-                <img class="small-widget-img" id="icon-img-werewolf" src="https://i.postimg.cc/k401K5g7/IMG-7304.jpg" alt="Werewolf">
-            </div>
+                <img class="small-widget-img" id="icon-img-werewolf" src="https://i.postimg.cc/k401K5g7/IMG-7304.jpg" alt="Werewolf"> 
+            </div> 
             <span class="small-widget-label" data-lang-key="homeAppWerewolf">Werewolf</span>
         </div>
         <div class="small-widget" onclick="showScreen('x-social-screen')">
@@ -227,7 +226,7 @@
       </div>
       <div id="desktop-dock">
         <div class="desktop-app-icon" onclick="showScreen('api-settings-screen')">
-          <div class="icon-bg-desktop"><img id="icon-img-api-settings" src="https://i.postimg.cc/MK8rJ8t7/IMG-6438.jpg" alt="API Settings"></div> <span class="label"data-lang-key="homeAppApiSettings">API Settings</span>
+          <div class="icon-bg-desktop"><img id="icon-img-api-settings" src="https://i.postimg.cc/MK8rJ8t7/IMG-6438.jpg" alt="API settings"></div> <span class="label"data-lang-key="homeAppApiSettings">API Settings</span>
         </div>
         <div class="desktop-app-icon" onclick="showScreen('font-settings-screen')">
           <div class="icon-bg-desktop"><img id="icon-img-font" src="https://i.postimg.cc/pXxk1JXk/IMG-6442.jpg" alt="Font"></div> <span class="label"data-lang-key="homeAppFont">Font</span>
@@ -241,7 +240,7 @@
       </div>
     </div>
     <div id="character-selection-screen" class="screen">
-      <div class="header"> <span class="back-btn" onclick="showScreen('home-screen')">‹</span> <span data-lang-key="cphoneTitleSelect">Select a Phone</span> <span style="width: 30px;"></span> </div>
+      <div class="header"> <span class="back-btn" onclick="showScreen('home-screen')">‹</span> <span data-lang-key="cphoneTitleSelect">Choose a mobile phone.</span> <span style="width: 30px;"></span> </div>
       <div id="character-grid" class="list-container"> </div>
     </div>
     <div id="character-phone-screen" class="screen">
@@ -320,7 +319,7 @@
                         <div class="icon-bg"><img id="cphone-icon-img-amap" src=""></div><span class="label"data-lang-key="cphoneAppAmap">Amap</span>
                     </div>
                     <div class="app-icon small" onclick="openCharApp('usage')">
-                        <div class="icon-bg"><img id="cphone-icon-img-usage" src=""></div><span class="label"data-lang-key="cphoneAppUsage">Usage</span>
+                        <div class="icon-bg"><img id="cphone-icon-img-usage" src=""></div><span class="label"data-lang-key="cphoneAppUsage">App Usage</span>
                     </div>
                 </div>
             </div>
@@ -335,22 +334,22 @@
                 </div>
                 <div class="app-icon" onclick="openCharApp('bilibili')">
                     <div class="icon-bg" style="background-color: #FB7299;"><img id="cphone-icon-img-bilibili" src="https://i.postimg.cc/Wz5gV0jB/bilibili-icon.png" style="border-radius:0;"></div>
-                    <span class="label">Bilibili</span>
+                    <span class="label" data-lang-key="cphoneAppBilibili">Bilibili</span>
                 </div>
                 <div class="app-icon" onclick="openCharApp('reddit')">
                     <div class="icon-bg"><img id="cphone-icon-img-reddit" src=""></div>
-                    <span class="label">Reddit</span>
+                    <span class="label" data-lang-key="cphoneAppReddit">Reddit</span>
                 </div>
                 <div class="app-icon" onclick="switchToMyPhone()">
                     <div class="icon-bg"><img id="cphone-icon-img-ephone" src=""></div>
-                    <span class="label">Ephone</span>
+                    <span class="label" data-lang-key="cphoneAppEphone">Ephone</span>
                 </div>
             </div>
         </div>
       </div> 
       <div id="char-amap-screen" class="char-screen">
-        <div class="header"> <span class="back-btn" onclick="switchToCharHomeScreen()">‹</span> <span>Footprint</span>
-          <div class="header-actions"> <span class="action-btn" id="regenerate-char-amap-btn" title="Regenerate Footprint"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <div class="header"> <span class="back-btn" onclick="switchToCharHomeScreen()">‹</span> <span data-lang-key="cphoneAppJourney">Journey</span>
+          <div class="header-actions"> <span class="action-btn" id="regenerate-char-amap-btn" title="Regenerate footprints" data-lang-key="cphoneAppRegenerateJourney"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M20 11A8.1 8.1 0 0 0 4.5 9M4 5v4h4"></path>
                 <path d="M4 13a8.1 8.1 0 0 0 15.5 2m.5 4v-4h-4"></path>
               </svg> </span> </div>
@@ -358,8 +357,8 @@
         <div id="char-amap-list" class="list-container"> </div>
       </div>
       <div id="char-qq-screen" class="char-screen">
-        <div class="header"> <span class="back-btn" onclick="switchToCharHomeScreen()">‹</span> <span>QQ</span>
-          <div class="header-actions"> <span class="action-btn" id="regenerate-char-qq-btn" title="Regenerate"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <div class="header"> <span class="back-btn" onclick="switchToCharHomeScreen()">‹</span> <span data-lang-key="cphoneAppQQ">QQ</span>
+          <div class="header-actions"> <span class="action-btn" id="regenerate-char-qq-btn" title="Regenerate" data-lang-key="cphoneAppRegenerateQQ"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M20 11A8.1 8.1 0 0 0 4.5 9M4 5v4h4"></path>
                 <path d="M4 13a8.1 8.1 0 0 0 15.5 2m.5 4v-4h-4"></path>
               </svg> </span> </div>
@@ -369,12 +368,12 @@
       <div id="char-qq-conversation-screen" class="char-screen">
         <div class="header"> <span class="back-btn" id="back-to-char-qq-list-btn">‹</span> <span id="char-conversation-partner-name"></span> <span style="width: 30px;"></span> </div>
         <div id="char-conversation-messages" class="list-container"> </div>
-        <div id="char-conversation-input-area" style="padding: 8px; border-top: 1px solid var(--border-color); display: flex; gap: 8px; background-color: #f7f7f7;"> <input type="text" id="char-simulated-input" placeholder="This is a simulated conversation, messages cannot be sent" data-lang-key-placeholder="cphoneSimulatedChatPlaceholder"disabled
+        <div id="char-conversation-input-area" style="padding: 8px; border-top: 1px solid var(--border-color); display: flex; gap: 8px; background-color: #f7f7f7;"> <input type="text" id="char-simulated-input" placeholder="This is a simulated conversation; messages cannot be sent." data-lang-key-placeholder="cphoneSimulatedChatPlaceholder"disabled
             style="flex-grow: 1; padding: 10px; border-radius: 6px; border: 1px solid #ddd; background: #eee;"> <button id="char-simulated-send-btn" style="padding: 0 20px; border: none; background-color: var(--accent-color); color: white; border-radius: 6px; font-weight: 500;">Send</button> </div>
       </div>
       <div id="char-album-screen" class="char-screen">
-        <div class="header"> <span class="back-btn" onclick="switchToCharHomeScreen()">‹</span> <span data-lang-key="cphoneAlbumTitle">Their Album</span>
-          <div class="header-actions"> <span class="action-btn" id="regenerate-char-album-btn" title="Regenerate Album"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <div class="header"> <span class="back-btn" onclick="switchToCharHomeScreen()">‹</span> <span data-lang-key="cphoneAlbumTitle">Their photo album</span>
+          <div class="header-actions"> <span class="action-btn" id="regenerate-char-album-btn" title="Regenerate album content" data-lang-key="cphoneAppRegenerateAlbum"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M20 11A8.1 8.1 0 0 0 4.5 9M4 5v4h4"></path>
                 <path d="M4 13a8.1 8.1 0 0 0 15.5 2m.5 4v-4h-4"></path>
               </svg> </span> </div>
@@ -384,8 +383,8 @@
         </div>
       </div>
       <div id="char-browser-screen" class="char-screen">
-        <div class="header"> <span class="back-btn" onclick="switchToCharHomeScreen()">‹</span> <span data-lang-key="cphoneBrowserTitle">Their Browser History</span>
-          <div class="header-actions"> <span class="action-btn" id="regenerate-char-browser-btn" title="Regenerate History"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <div class="header"> <span class="back-btn" onclick="switchToCharHomeScreen()">‹</span> <span data-lang-key="cphoneBrowserTitle">Their browser history</span>
+          <div class="header-actions"> <span class="action-btn" id="regenerate-char-browser-btn" title="Regenerate browser history" data-lang-key="cphoneAppRegenerateBrowser"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M20 11A8.1 8.1 0 0 0 4.5 9M4 5v4h4"></path>
                 <path d="M4 13a8.1 8.1 0 0 0 15.5 2m.5 4v-4h-4"></path>
               </svg> </span> </div>
@@ -396,7 +395,7 @@
         <div class="header"> <span class="back-btn" onclick="switchToCharScreen('char-browser-screen')">‹</span> <span id="char-article-title" style="max-width: 70%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">Article</span>
           <div class="header-actions"> <span class="action-btn" id="favorite-article-btn" title="Favorite"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-              </svg> </span> <span class="action-btn" id="copy-article-content-btn" title="Copy Content"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              </svg> </span> <span class="action-btn" id="copy-article-content-btn" title="Copy content"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
                 <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
               </svg> </span> </div>
@@ -404,13 +403,13 @@
         <div id="char-article-content" class="list-container" style="padding: 20px; font-size: 16px; line-height: 1.8; overflow-y: auto;"></div>
       </div>
       <div id="char-taobao-screen" class="char-screen">
-        <div class="header"> <span class="back-btn" onclick="switchToCharHomeScreen()">‹</span> <span data-lang-key="cphoneTaobaoTitle">Their Taobao Orders</span>
-          <div class="header-actions"> <span class="action-btn" id="char-wallet-btn" title="View Wallet" onclick="openCharWallet()"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+        <div class="header"> <span class="back-btn" onclick="switchToCharHomeScreen()">‹</span> <span data-lang-key="cphoneTaobaoTitle">Their Taobao orders</span>
+          <div class="header-actions"> <span class="action-btn" id="char-wallet-btn" title="View wallet" onclick="openCharWallet()"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                 stroke-linejoin="round">
                 <path d="M20 12V8H4v4"></path>
                 <path d="M4 8V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v2"></path>
                 <path d="M18 12v6a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2v-6"></path>
-              </svg> </span> <span class="action-btn" id="regenerate-char-taobao-btn" title="Regenerate Purchase History"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              </svg> </span> <span class="action-btn" id="regenerate-char-taobao-btn" title="Regenerate purchase history"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M20 11A8.1 8.1 0 0 0 4.5 9M4 5v4h4"></path>
                 <path d="M4 13a8.1 8.1 0 0 0 15.5 2m.5 4v-4h-4"></path>
               </svg> </span> </div>
@@ -423,7 +422,7 @@
       </div>
       <div id="char-memo-screen" class="char-screen">
         <div class="header"> <span class="back-btn" onclick="switchToCharHomeScreen()">‹</span> <span data-lang-key="cphoneMemoTitle">Memo</span>
-          <div class="header-actions"> <span class="action-btn" id="regenerate-char-memo-btn" title="Regenerate Memo"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <div class="header-actions"> <span class="action-btn" id="regenerate-char-memo-btn" title="Regenerate memo"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M20 11A8.1 8.1 0 0 0 4.5 9M4 5v4h4"></path>
                 <path d="M4 13a8.1 8.1 0 0 0 15.5 2m.5 4v-4h-4"></path>
               </svg> </span> <span class="action-btn" id="add-char-memo-btn">+</span> </div>
@@ -434,7 +433,7 @@
         <div class="header"> <span class="back-btn" id="char-memo-detail-back-btn">‹</span> <span id="char-memo-detail-title"></span>
           <div class="header-actions"> <span class="action-btn" id="favorite-memo-btn" title="Favorite"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-              </svg> </span> <span class="action-btn" id="copy-memo-content-btn" title="Copy Content"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              </svg> </span> <span class="action-btn" id="copy-memo-content-btn" title="Copy content"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
                 <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
               </svg> </span> </div>
@@ -443,7 +442,7 @@
       </div>
       <div id="char-diary-screen" class="char-screen">
         <div class="header"> <span class="back-btn" onclick="switchToCharHomeScreen()">‹</span> <span data-lang-key="cphoneDiaryTitle">Diary</span>
-          <div class="header-actions"> <span class="action-btn" id="regenerate-char-diary-btn" title="Regenerate Diary"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <div class="header-actions"> <span class="action-btn" id="regenerate-char-diary-btn" title="Regenerate diary"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M20 11A8.1 8.1 0 0 0 4.5 9M4 5v4h4"></path>
                 <path d="M4 13a8.1 8.1 0 0 0 15.5 2m.5 4v-4h-4"></path>
               </svg> </span> <span class="action-btn" id="add-char-diary-btn">+</span> </div>
@@ -454,7 +453,7 @@
         <div class="header"> <span class="back-btn" id="char-diary-detail-back-btn">‹ </span> <span id="char-diary-detail-title"></span>
           <div class="header-actions"> <span class="action-btn" id="favorite-diary-btn" title="Favorite"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-              </svg> </span> <span class="action-btn" id="copy-diary-content-btn" title="Copy Content"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              </svg> </span> <span class="action-btn" id="copy-diary-content-btn" title="Copy content"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
                 <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
               </svg> </span> </div>
@@ -465,7 +464,7 @@
       </div>
       <div id="char-usage-screen" class="char-screen">
         <div class="header"> <span class="back-btn" onclick="switchToCharHomeScreen()">‹</span> <span data-lang-key="cphoneUsageTitle">App Usage</span>
-          <div class="header-actions"> <span class="action-btn" id="regenerate-char-usage-btn" title="Regenerate Records"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <div class="header-actions"> <span class="action-btn" id="regenerate-char-usage-btn" title="Regenerate usage"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M20 11A8.1 8.1 0 0 0 4.5 9M4 5v4h4"></path>
                 <path d="M4 13a8.1 8.1 0 0 0 15.5 2m.5 4v-4h-4"></path>
               </svg> </span> </div>
@@ -476,12 +475,12 @@
         <div class="modal-content" style="height: 80%;">
           <div class="modal-header"> <span id="transcript-modal-char-name"></span> </div>
           <div class="modal-body" id="transcript-modal-body" style="background-color: #f0f2f5; padding: 15px; display: flex; flex-direction: column; gap: 15px;"> </div>
-          <div class="modal-footer"> <button class="save" id="close-transcript-modal-btn" style="width:100%;">Close</button> </div>
+          <div class="modal-footer"> <button class="save" id="close-transcript-modal-btn" style="width:100%;">关闭</button> </div>
         </div>
       </div>
       <div id="char-music-screen" class="char-screen">
         <div class="header"> <span class="back-btn" onclick="switchToCharHomeScreen()">‹</span> <span data-lang-key="cphoneMusicTitle">Their Playlist</span>
-          <div class="header-actions"> <span class="action-btn" id="regenerate-char-music-btn" title="Regenerate Playlist"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <div class="header-actions"> <span class="action-btn" id="regenerate-char-music-btn" title="Regenerate playlist"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M20 11A8.1 8.1 0 0 0 4.5 9M4 5v4h4"></path>
                 <path d="M4 13a8.1 8.1 0 0 0 15.5 2m.5 4v-4h-4"></path>
               </svg> </span> </div>
@@ -494,7 +493,7 @@
     <span>Reddit</span>
     
     <div class="header-actions"> 
-        <span class="action-btn" id="regenerate-char-reddit-btn" title="Generate Feed Based on Character"> 
+        <span class="action-btn" id="regenerate-char-reddit-btn" title="Regenerate recommendations" data-lang-key="cphoneAppRegenerateReddit" > 
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M20 11A8.1 8.1 0 0 0 4.5 9M4 5v4h4"></path>
                 <path d="M4 13a8.1 8.1 0 0 0 15.5 2m.5 4v-4h-4"></path>
@@ -520,7 +519,7 @@
             <span class="back-btn" onclick="switchToCharHomeScreen()">‹</span> 
             <span>Bilibili</span> 
             <div class="header-actions"> 
-                <span class="action-btn" id="regenerate-char-bilibili-btn" title="Generate Based on Persona"> 
+                <span class="action-btn" id="regenerate-char-bilibili-btn" title="Regenerate recommendations" data-lang-key="cphoneAppRegenerateBilibili"> 
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M20 11A8.1 8.1 0 0 0 4.5 9M4 5v4h4"></path>
                         <path d="M4 13a8.1 8.1 0 0 0 15.5 2m.5 4v-4h-4"></path>
@@ -530,7 +529,7 @@
             </div>
         <div class="search-bar-container" style="padding: 10px; background: transparent;"> 
             <div style="display: flex; gap: 8px;">
-                <input type="search" id="char-bilibili-search-input" placeholder="Search Videos..." style="flex-grow:1; padding: 8px 12px; border-radius: 8px; border: 1px solid var(--border-color);"> 
+                <input type="search" id="char-bilibili-search-input" placeholder="Searching for videos..." style="flex-grow:1; padding: 8px 12px; border-radius: 8px; border: 1px solid var(--border-color);"> 
                 <button id="char-bilibili-search-btn" class="form-button" style="width: auto; margin: 0; padding: 0 15px; background-color: #FB7299;">Search</button> 
             </div>
         </div>
@@ -558,7 +557,7 @@
     </div>
     <div id="world-book-screen" class="screen">
       <div class="header">
-        <div class="header-left-actions"> <span class="back-btn" onclick="showScreen('home-screen')">‹</span> <span class="action-btn" id="import-world-book-btn" title="Import World Book"data-lang-key-title="worldBookImportTitle"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor"
+        <div class="header-left-actions"> <span class="back-btn" onclick="showScreen('home-screen')">‹</span> <span class="action-btn" id="import-world-book-btn" title="Import World Book" data-lang-key-title="worldBookImportTitle"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor"
               stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
               <polyline points="17 8 12 3 7 8"></polyline>
@@ -582,11 +581,11 @@
     <div id="world-book-editor-screen" class="screen">
       <div class="header"> <span class="back-btn" onclick="showScreen('world-book-screen')">‹</span> <span id="world-book-editor-title"data-lang-key="worldBookEditorTitle"data-lang-key="edit">Edit World Book</span> <span class="save-btn" id="save-world-book-btn"data-lang-key="save">Save</span> </div>
       <div class="form-container">
-        <div class="form-group"> <label for="world-book-name-input"data-lang-key="worldBookNameLabel">Book Name</label> <input type="text" id="world-book-name-input" placeholder="Enter world book name..."data-lang-key-placeholder="worldBookNamePlaceholder"> </div>
+        <div class="form-group"> <label for="world-book-name-input"data-lang-key="worldBookNameLabel">Book Name</label> <input type="text" id="world-book-name-input" placeholder="Enter the name of the world book..."data-lang-key-placeholder="worldBookNamePlaceholder"> </div>
         <div class="form-group"> <label for="world-book-category-select"data-lang-key="worldBookCategoryLabel">Category</label> <select id="world-book-category-select"></select> </div>
         <div class="form-group" style="flex-grow: 1; display: flex; flex-direction: column;"> <label data-lang-key="worldBookEntriesLabel">Entries</label>
           <div id="world-book-entries-container" style="display: flex; flex-direction: column; gap: 15px; overflow-y: auto; padding: 5px; flex-grow: 1;"> </div>
-        </div> <button id="add-world-book-entry-btn" class="form-button form-button-secondary"data-lang-key="worldBookAddEntryBtn"> [+] Add Entry </button>
+        </div> <button id="add-world-book-entry-btn" class="form-button form-button-secondary"data-lang-key="worldBookAddEntryBtn"> [+] Add New Entry </button>
       </div>
     </div>
     <div id="preset-screen" class="screen">
@@ -616,43 +615,43 @@
         <div class="form-group"> <label for="preset-category-select"data-lang-key="presetCategoryLabel">Category</label> <select id="preset-category-select"></select> </div>
         <div class="form-group" style="flex-grow: 1; display: flex; flex-direction: column;"> <label data-lang-key="presetEntriesLabel">Entries</label>
           <div id="preset-entries-container" style="display: flex; flex-direction: column; gap: 15px; overflow-y: auto; padding: 5px; flex-grow: 1;"> </div>
-        </div> <button type="button" id="add-preset-entry-btn" class="form-button form-button-secondary"data-lang-key="presetAddEntryBtn"> [+] Add Entry </button>
+        </div> <button type="button" id="add-preset-entry-btn" class="form-button form-button-secondary"data-lang-key="presetAddEntryBtn"> [+] Add New Entry </button>
       </div>
     </div>
     <div id="api-settings-screen" class="screen ios-settings-screen">
       <div class="header"> 
-        <span class="back-btn" onclick="showScreen('home-screen')">‹</span>
-        <span data-lang-key="apiSettingsTitle">Settings</span>
-        <span class="save-btn" id="save-api-settings-btn" data-lang-key="save">Done</span> 
+        <span class="back-btn" onclick="showScreen('home-screen')">‹</span> 
+        <span data-lang-key="apiSettingsTitle">API Settings</span> 
+        <span class="save-btn" id="save-api-settings-btn" data-lang-key="save">Save</span> 
       </div>
       
       <div class="settings-container ios-scroll-container">
         
-        <!-- 语言设置 -->
+        <!-- Language Settings -->
         <div class="settings-section">
             <div class="settings-item">
                 <label for="language-select" data-lang-key="languageLabel">Language</label>
                 <div class="settings-right">
                     <select id="language-select" class="settings-select">
-                        <option value="zh-CN">Simplified Chinese</option>
                         <option value="en">English</option>
+                        <option value="vi">Vietnamese</option>
                     </select>
                 </div>
             </div>
         </div>
 
         <!-- API Preset -->
-        <div class="settings-header" data-lang-key="apiPresetManagement">API Preset</div>
+        <div class="settings-header" data-lang-key="apiPresetManagement">API Preset Management</div>
         <div class="settings-section">
             <div class="settings-item">
-                 <!-- 下拉框容器：flex-grow 占满左侧空间，内部左对齐 -->
+                 <!-- Dropdown container: flex-grow fills the left space, content left-aligned -->
                  <div style="flex-grow: 1; display: flex; align-items: center; justify-content: flex-start; overflow: hidden;">
                      <select id="api-preset-select" class="settings-select">
                          <!-- JS 填充选项 -->
                      </select>
                  </div>
                  
-                 <!-- 按钮组：固定在右侧 -->
+                 <!-- Button group: fixed on the right -->
                  <div class="settings-right" style="flex-grow: 0; width: auto; margin-left: 10px;">
                      <button id="save-api-preset-btn" class="settings-mini-btn">Save</button>
                      <button id="delete-api-preset-btn" class="settings-mini-btn">Delete</button>
@@ -663,14 +662,14 @@
         <!-- Primary API Settings -->
         <div class="settings-header" data-lang-key="apiPrimarySettings">Primary API (Conversation)</div>
         <div class="settings-section">
-            <!-- 1. 提示条 (还原截图效果) -->
+            <!-- 1. Tip bar (restore screenshot effect) -->
             <div class="settings-tip-wrapper">
                 <div class="settings-tip-content">
-                    Tip: To use the "Send Image" feature, please select a model that supports Vision, such as <code>gpt-4o</code> or <code>gpt-4-vision-preview</code>.
+                    Tip: To use the "Send Image" feature, make sure to select a model that supports Vision, such as <code>gpt-4o</code> or <code>gpt-4-vision-preview</code>.
                 </div>
             </div>
 
-            <!-- 2. 输入框部分 -->
+            <!-- 2. Input fields -->
             <div class="settings-item">
                 <label>Proxy URL</label>
                 <div class="settings-right">
@@ -698,7 +697,7 @@
             <div class="settings-item">
                 <label>Proxy URL</label>
                 <div class="settings-right">
-                    <input type="text" id="secondary-proxy-url" placeholder="Leave blank to use primary API">
+                    <input type="text" id="secondary-proxy-url" placeholder="Leave empty to use primary API">
                 </div>
             </div>
             <div class="settings-item">
@@ -707,45 +706,47 @@
                     <input type="password" id="secondary-api-key" placeholder="Optional">
                 </div>
             </div>
-            <!-- Model and fetch button on same line -->
+            <!-- Modification: Model and fetch button in one line -->
             <div class="settings-item">
                 <label>Model</label>
                 <div class="settings-right">
+                     <!-- Dropdown occupies remaining space -->
                     <select id="secondary-model-select" class="settings-select" style="flex-grow: 1; width: auto;"></select>
+                    <!-- Button placed next to it -->
                     <button id="fetch-secondary-models-btn" class="settings-mini-btn">Fetch</button>
                 </div>
             </div>
         </div>
 
         <!-- Parameter Settings -->
-        <div class="settings-header">Parameters</div>
+        <div class="settings-header">Parameter Settings</div>
         <div class="settings-section">
              <div class="settings-item">
-                <label>温度 (Temperature) <span id="api-temperature-value" style="color:var(--accent-color);">0.8</span></label>
+                <label>Temperature <span id="api-temperature-value" style="color:var(--accent-color);">0.8</span></label>
                 <div class="settings-right" style="width: 50%;">
                     <input type="range" id="api-temperature-slider" min="0" max="2" step="0.1" value="0.8">
                 </div>
             </div>
         </div>
 
-        <!-- 后台与自动化 -->
+        <!-- Background and Automation -->
         <div class="settings-header" data-lang-key="apiBgActivitySettings">Background Activity</div>
         <div class="settings-section">
             <div class="settings-item">
-                <label>Enable Background Character Activity</label>
+                <label>Enable Background Role Activity</label>
                 <label class="toggle-switch">
                     <input type="checkbox" id="background-activity-switch">
                     <span class="slider"></span>
                 </label>
             </div>
             <div class="settings-item">
-                <label>Detection Interval (Seconds)</label>
+                <label>Check Interval (seconds)</label>
                 <div class="settings-right">
                     <input type="number" id="background-interval-input" min="30" value="60" class="settings-num-input">
                 </div>
             </div>
             <div class="settings-item">
-                <label>Block Cooldown (Hours)</label>
+                <label>Block Cooldown (hours)</label>
                 <div class="settings-right">
                     <input type="number" id="block-cooldown-input" min="0.1" step="0.1" value="1" class="settings-num-input">
                 </div>
@@ -756,40 +757,40 @@
     <div class="settings-item">
         <div>
             <label>Allow System Notifications</label>
-            <div class="settings-desc">iOS: Must Add to Home Screen</div>
+            <div class="settings-desc">iOS requires adding to the home screen to take effect</div>
         </div>
         <div class="settings-right">
              <button id="enable-system-notifications-btn" class="settings-mini-btn" style="width: auto; padding: 6px 15px;">Click to Authorize</button>
         </div>
     </div>
     <div class="settings-item">
-        <label>Test System Notification</label>
+        <label>Test System Notifications</label>
         <div class="settings-right">
              <button id="test-system-notify-btn" class="settings-mini-btn">Send Test</button>
         </div>
     </div>
 </div>
-<div class="settings-header">iOS Background Keep-Alive</div>
+<div class="settings-header">iOS Background Keep-Alive (Prevent Freezing)</div>
 <div class="settings-section">
     <div class="settings-item">
         <div>
             <label>Force Activate Background Mode</label>
-            <div class="settings-desc">If unable to run in background, click</div>
+            <div class="settings-desc">If background operation is not possible, please click this button</div>
         </div>
         <div class="settings-right">
-             <!-- 点击这个按钮强制测试 -->
-             <button id="force-keep-alive-btn" class="settings-mini-btn" style="width: auto; padding: 6px 15px; background-color: #ff3b30; color: white; border: none;">Click to Activate</button>
+             <!-- Click this button to force test -->
+             <button id="force-keep-alive-btn" class="settings-mini-btn" style="width: auto; padding: 6px 15px; background-color: #ff3b30; color: white; border: none;">⚡ Click to Activate</button>
         </div>
     </div>
     <div class="settings-item">
         <label>Current Status</label>
         <div class="settings-right">
-             <span id="keep-alive-status" style="color: #999; font-size: 13px;">Not Activated / Paused</span>
+             <span id="keep-alive-status" style="color: #999; font-size: 13px;">🔴 Inactive / Paused</span>
         </div>
     </div>
 </div>
-        <!-- 语音设置 -->
-        <div class="settings-header" data-lang-key="apiTtsSettings">Minimax TTS Voice</div>
+        <!-- TTS Settings -->
+        <div class="settings-header" data-lang-key="apiTtsSettings">Minimax TTS</div>
         <div class="settings-section">
             <div class="settings-item">
                 <label>Group ID</label>
@@ -808,13 +809,13 @@
                 <label>Model</label>
                 <div class="settings-right">
                     <select id="minimax-model-select" class="settings-select">
-                        <!-- JS 会填充选项 -->
+                        <!-- JS will populate options -->
                     </select>
                 </div>
             </div>
-            <!-- 分行 2: Interface Domain (手动写死在这里，不再依赖 JS Updates插入) -->
+            <!-- 分行 2: 接口域名 (手动写死在这里，不再依赖 JS 动态插入) -->
             <div class="settings-item">
-                <label>Interface Domain</label>
+                <label>API Domain</label>
                 <div class="settings-right">
                     <select id="minimax-domain-select" class="settings-select">
                         <option value="https://api.minimax.chat">🇨🇳 Domestic (api.minimax.chat)</option>
@@ -824,12 +825,12 @@
             </div>
         </div>
 
-        <!-- 生图设置 (AI & NovelAI) -->
+        <!-- Image Generation Settings (AI & NovelAI) -->
         <div class="settings-header" data-lang-key="apiImageGenSettings">Image Generation</div>
         <div class="settings-section">
-            <!-- 通用生图 -->
+            <!-- General AI Image Generation -->
             <div class="settings-item">
-                <label>Enable AI Image Generation</label>
+                <label>Enable General AI Image Generation</label>
                 <label class="toggle-switch">
                     <input type="checkbox" id="enable-ai-drawing-switch">
                     <span class="slider"></span>
@@ -845,7 +846,7 @@
                 </label>
             </div>
             
-            <!-- NovelAI 详情 (JS控制显示/隐藏) -->
+            <!-- NovelAI Details (JS controls show/hide) -->
             <div id="novelai-details" style="display:none; background-color: #f9f9f9; border-top: 0.5px solid #ebedf0;">
                 <div class="settings-item">
                     <label>Model</label>
@@ -861,7 +862,7 @@
                     <label>API Key</label>
                     <div class="settings-right">
                         <div style="position:relative; width:100%;">
-                             <input type="password" id="novelai-api-key" placeholder="pst-...">
+                             <input type="password" id="novelai-api-key" placeholder="Enter API Key">
                              <span id="novelai-key-toggle" style="position: absolute; right: 0; top: 50%; transform: translateY(-50%); cursor: pointer;">🧐</span>
                         </div>
                     </div>
@@ -873,13 +874,13 @@
             </div>
         </div>
 
-        <!-- 云服务与存储 -->
-        <!-- 云服务与存储 (灰条下沉版) -->
-        <div class="settings-header">Cloud Services & Storage</div>
+        <!-- Cloud Services and Storage -->
+        <!-- Cloud Services and Storage (Gray Bar Version) -->
+        <div class="settings-header">Cloud Services and Storage</div>
         <div class="settings-section">
              
              <!-- === ImgBB === -->
-             <!-- 1. 先放开关行 -->
+             <!-- 1. Toggle Switch -->
              <div class="settings-item">
                 <label>ImgBB Image Hosting</label>
                 <label class="toggle-switch">
@@ -887,14 +888,14 @@
                     <span class="slider"></span>
                 </label>
             </div>
-            <!-- 2. 再放详情容器 (灰条移入此处) -->
+            <!-- 2. Details Container (Gray Bar Moved Here) -->
             <div id="imgbb-settings-details" style="display:none;">
-                 <!-- 灰条被移到了这里 -->
+                 <!-- Gray Bar Moved Here -->
                  <div class="settings-tip-wrapper">
                     <div class="settings-tip-content">
-                        After enabling, local images will auto-upload to ImgBB.<br>
-                        ⚠️ Images upload to public internet. Do not upload private photos!<br>
-                        🔗 <a href="https://api.imgbb.com/" target="_blank">Click to Register and Get API Key</a>
+                        Once enabled, local images will be automatically uploaded to ImgBB to reduce size.<br>
+                        ⚠️ Images will be uploaded to the public internet, do not upload private photos!<br>
+                        🔗 <a href="https://api.imgbb.com/" target="_blank">Click here to register and get an API Key</a>
                     </div>
                 </div>
                 
@@ -910,7 +911,7 @@
             </div>
 
             <!-- === Catbox === -->
-             <!-- 1. 开关 -->
+             <!-- 1. Toggle Switch -->
              <div class="settings-item">
                 <label>Catbox Hosting</label>
                 <label class="toggle-switch">
@@ -918,13 +919,13 @@
                     <span class="slider"></span>
                 </label>
             </div>
-            <!-- 2. 详情容器 (灰条移入此处) -->
+            <!-- 2. Details Container (Gray Bar Moved Here) -->
             <div id="catbox-settings-details" style="display:none;">
-                 <!-- 灰条被移到了这里 -->
+                 <!-- Gray Bar Moved Here -->
                  <div class="settings-tip-wrapper">
                     <div class="settings-tip-content">
-                        After enabling, songs will upload to Catbox.moe.<br>
-                        🔗 <a href="https://catbox.moe/user/manage.php" target="_blank">Log in Catbox for User Hash</a>
+                        Once enabled, song files will be uploaded to Catbox.moe for hosting.<br>
+                        🔗 <a href="https://catbox.moe/user/manage.php" target="_blank">Log in to Catbox to view User Hash</a>
                     </div>
                 </div>
 
@@ -940,7 +941,7 @@
             </div>
 
              <!-- === GitHub === -->
-             <!-- 1. 开关 -->
+             <!-- 1. Toggle Switch -->
              <div class="settings-item">
                 <label>GitHub Cloud Backup</label>
                 <label class="toggle-switch">
@@ -948,14 +949,14 @@
                     <span class="slider"></span>
                 </label>
             </div>
-            <!-- 2. 详情容器 (灰条移入此处) -->
+            <!-- 2. Details Container (Gray Bar Moved Here) -->
             <div id="github-settings-details" style="display:none;">
-                <!-- 灰条被移到了这里 -->
+                <!-- Gray Bar Moved Here -->
                 <div class="settings-tip-wrapper">
                     <div class="settings-tip-content">
-                        Backup data to private GitHub for syncing.<br>
-                        1. <a href="https://github.com/new" target="_blank">Create New Repository</a> (Recommended Private)<br>
-                        2. <a href="https://github.com/settings/tokens" target="_blank">Get Token</a> (Must check <strong>repo</strong> permission)
+                        Backup data to a private GitHub repository for easy cross-device synchronization.<br>
+                        1. <a href="https://github.com/new" target="_blank">Create a new repository</a> (Recommended to set as Private)<br>
+                        2. <a href="https://github.com/settings/tokens" target="_blank">Get a Token</a> (Must check <strong>repo</strong> permissions)
                     </div>
                 </div>
 
@@ -969,8 +970,8 @@
                         </label>
                     </div>
                 </div>
-                 <div class="settings-item"><label>Username</label><div class="settings-right"><input type="text" id="github-username" placeholder="e.g.: yourname"></div></div>
-                 <div class="settings-item"><label>Repository</label><div class="settings-right"><input type="text" id="github-repo" placeholder="e.g.: my-backup"></div></div>
+                 <div class="settings-item"><label>Username</label><div class="settings-right"><input type="text" id="github-username" placeholder="e.g., yourname"></div></div>
+                 <div class="settings-item"><label>Repository</label><div class="settings-right"><input type="text" id="github-repo" placeholder="e.g., my-backup"></div></div>
                  <div class="settings-item"><label>Token</label><div class="settings-right"><div style="position:relative; width:100%;"><input type="password" id="github-token"><span id="github-token-toggle" style="position: absolute; right: 0; top: 50%; transform: translateY(-50%); cursor: pointer;">🧐</span></div></div></div>
                  <div class="settings-item"><label>Filename</label><div class="settings-right"><input type="text" id="github-filename" value="ephone_backup.json"></div></div>
                  
@@ -985,45 +986,45 @@
                  <div id="github-proxy-input-group" style="display:none;">
                      <div class="settings-tip-wrapper" style="padding-top:10px !important;">
                         <div class="settings-tip-content">
-                            Recommended for China networks. Requires Cloudflare Worker.<br>
+                            Recommended to enable for domestic networks. Requires a self-built Cloudflare Worker.<br>
                             🔗 <a href="https://dash.cloudflare.com/" target="_blank">Go to Cloudflare Dashboard</a>
                         </div>
                     </div>
                     <div class="settings-item">
-                        <label>Proxy Address</label>
+                        <label>Proxy URL</label>
                         <div class="settings-right"><input type="text" id="github-proxy-url" placeholder="https://..."></div>
                     </div>
                  </div>
                  
-                 <!-- GitHub 按钮 -->
+                 <!-- GitHub Buttons -->
                  <div class="settings-item" style="justify-content: space-around;">
                     <button id="github-upload-btn" class="settings-mini-btn">☁️ Upload Backup</button>
                     <button id="github-download-btn" class="settings-mini-btn">📥 Restore Backup</button>
                 </div>
             </div>
         </div>
-        <!-- 性能 -->
+        <!-- Performance -->
         <div class="settings-header">Performance & Display</div>
         <div class="settings-section">
             <div class="settings-item">
-                <label>Chat List Load Count</label>
+                <label>Chat List Render Count</label>
                 <div class="settings-right">
                     <input type="number" id="chat-list-render-window-input" class="settings-num-input">
                 </div>
             </div>
              <div class="settings-item">
-                <label>In-Chat Load Count</label>
+                <label>Chat Render Count</label>
                 <div class="settings-right">
                     <input type="number" id="chat-render-window-input" class="settings-num-input">
                 </div>
             </div>
         </div>
 
-        <!-- 数据管理 (危险区域) -->
+        <!-- Data Management (Danger Zone) -->
         <div class="settings-header">Data Management</div>
         
         <div class="settings-section">
-            <!-- 1. 图片占用 + Compress按钮 (同一行) -->
+            <!-- 1. 图片占用 + 压缩按钮 (同一行) -->
             <div class="settings-item">
                 <!-- 左侧标题 -->
                 <label style="flex-shrink: 0;">Local Image Usage</label>
@@ -1033,7 +1034,7 @@
                     <!-- 数值 (由JS填充，CSS会隐藏多余文字只留MB) -->
                     <span id="total-image-size-display">Calculating...</span>
                     
-                    <!-- Compress按钮 -->
+                    <!-- 压缩按钮 -->
                     <button id="compress-images-btn" class="settings-mini-btn">Compress</button>
                 </div>
             </div>
@@ -1046,14 +1047,14 @@
             <button class="settings-full-btn" id="cleanup-data-btn">Clean Up Redundant Data</button>
             <button class="settings-full-btn" id="delete-world-books-btn">Delete World Books</button>
             <button class="settings-full-btn" id="clear-specific-data-btn">Advanced Data Cleanup</button>
-            <button class="settings-full-btn" id="check-and-fix-data-btn">Data Check & Repair</button>
+            <button class="settings-full-btn" id="check-and-fix-data-btn">Check and Fix Data</button>
             <button class="settings-full-btn" id="emergency-reset-appearance-btn" >Reset Current Appearance</button>
-            <button class="settings-full-btn" id="factory-reset-btn" > Initialize All Content</button>
+            <button class="settings-full-btn" id="factory-reset-btn" > Initialize All Content (Use with Caution)</button>
 <button class="settings-full-btn" id="logout-btn" >
-    退出登录 (切换账号)
+    Logout (Switch Account)
 </button>
         </div>
-        <!-- 新增：About与免责声明区域 -->
+        <!-- 新增：关于与免责声明区域 -->
         <div class="settings-header">About</div>
         <div class="settings-section">
             <div class="settings-item clickable" id="open-disclaimer-btn">
@@ -1061,14 +1062,14 @@
                 <div class="settings-right">›</div>
             </div>
             <div class="settings-item">
-                <label>Version Number</label>
+                <label>Version</label>
                 <div class="settings-right" style="color: #888;">v4.0</div>
             </div>
         </div>
         
         <p style="text-align: center; color: #999; font-size: 12px; margin-top: 20px; line-height: 1.5;">
-            EPhone is Pure Local Running Simulator<br>
-            Does Not Store Any User Data
+            EPhone is a purely local simulator<br>
+            Does not store any user data
         </p>
         <!-- 底部垫高 -->
         <div style="height: 60px;"></div>
@@ -1080,20 +1081,20 @@
       <span>Backup File Found</span>
     </div>
     <div class="modal-body">
-      <p>Found following data in backup:</p>
+      <p>The following data was found in this backup file:</p>
       <ul id="import-preview-list" style="text-align: left; margin-left: 20px; max-height: 200px; overflow-y: auto; background: #f9f9f9; padding: 10px; border-radius: 8px;">
         </ul>
       <hr style="opacity: 0.2; margin: 20px 0;">
-      <p style="font-weight: bold;">Please select import method:</p>
+      <p style="font-weight: bold;">Please choose an import method:</p>
     </div>
     <div class="modal-footer" style="flex-direction: column; gap: 10px;">
       <button class="save btn-danger" id="confirm-full-import-btn" style="width: 100%; background-color: #ff3b30; border-color: #ff3b30;">
-        <strong>Full Import (Overwrite)</strong>
-        <small style="display: block; font-weight: normal; opacity: 0.8;">Will delete all local data and replace with backup.</small>
+        <strong>Full Import (Overwrite All Data)</strong>
+        <small style="display: block; font-weight: normal; opacity: 0.8;">This will delete all local data and replace it with the data from the backup file.</small>
       </button>
       <button class="save" id="confirm-selective-import-btn" style="width: 100%;">
-        <strong>Selective Import (Merge)</strong>
-        <small style="display: block; font-weight: normal; opacity: 0.8;">Will add backup data to existing data.</small>
+        <strong>Selective Import (Merge Data)</strong>
+        <small style="display: block; font-weight: normal; opacity: 0.8;">This will add the data from the backup file to your existing data.</small>
       </button>
       <button class="cancel" id="cancel-import-options-btn" style="width: 100%; margin-top: 8px;" data-lang-key="cancel">Cancel</button>
     </div>
@@ -1119,15 +1120,15 @@
     <div id="data-clear-wizard-modal" class="modal">
       <div class="modal-content" style="height: 80%;">
         <div id="data-clear-step-1" class="wizard-step">
-          <div class="modal-header"> <span>Step 1: Select Characters</span> <label> <input type="checkbox" id="select-all-chars-for-clear"> Select All </label> </div>
+          <div class="modal-header"> <span>Step 1: Select Characters to Clear</span> <label> <input type="checkbox" id="select-all-chars-for-clear"> Select All </label> </div>
           <div class="modal-body" id="data-clear-char-list" style="padding: 0;"> </div>
-          <div class="modal-footer"> <button class="cancel" id="cancel-clear-wizard-btn-step1"data-lang-key="cancel">Cancel</button> <button class="save" id="go-to-clear-step2-btn">Next Step</button> </div>
+          <div class="modal-footer"> <button class="cancel" id="cancel-clear-wizard-btn-step1"data-lang-key="cancel">Cancel</button> <button class="save" id="go-to-clear-step2-btn">Next</button> </div>
         </div>
         <div id="data-clear-step-2" class="wizard-step" style="display: none;">
-          <div class="modal-header"> <span>Step 2: Select Data Types</span> <label> <input type="checkbox" id="select-all-types-for-clear"> Select All </label> </div>
+          <div class="modal-header"> <span>Step 2: Select Data Types to Clear</span> <label> <input type="checkbox" id="select-all-types-for-clear"> Select All </label> </div>
           <div class="modal-body" id="data-clear-type-list" style="padding: 0;"> </div>
-          <div class="modal-footer"> <button class="form-button-secondary" id="back-to-clear-step1-btn" style="width: 30%; margin:0;">Previous Step</button> <button class="cancel" id="cancel-clear-wizard-btn-step2" style="width: 30%; margin:0;"data-lang-key="cancel">Cancel</button> <button class="save btn-danger"
-              id="confirm-final-clear-btn" style="width: 30%; margin:0;">Confirm Cleanup</button> </div>
+          <div class="modal-footer"> <button class="form-button-secondary" id="back-to-clear-step1-btn" style="width: 30%; margin:0;">Previous</button> <button class="cancel" id="cancel-clear-wizard-btn-step2" style="width: 30%; margin:0;"data-lang-key="cancel">Cancel</button> <button class="save btn-danger"
+              id="confirm-final-clear-btn" style="width: 30%; margin:0;">Confirm Clear</button> </div>
         </div>
       </div>
     </div>
@@ -1144,7 +1145,7 @@
         <div id="chat-list"> </div>
       </div>
       <div id="qzone-screen" class="chat-list-view">
-        <div class="qzone-header"> <span class="back-btn" id="qzone-back-btn">‹</span> <span data-lang-key="qzoneTitle">Friends Updates</span>
+        <div class="qzone-header"> <span class="back-btn" id="qzone-back-btn">‹</span> <span data-lang-key="qzoneTitle">Friend Updates</span>
           <div class="header-actions"> <span class="action-btn" id="qzone-more-actions-btn" title="More Actions">…</span> </div>
         </div>
         <div class="qzone-content">
@@ -1155,16 +1156,16 @@
             </div>
           </div>
           <div class="qzone-actions-bar">
-            <div class="action-item" id="create-shuoshuo-btn"><span data-lang-key="qzoneActionShuoshuo">Status</span></div>
-            <div class="action-item" id="create-post-btn"><span data-lang-key="qzoneActionPost">Updates</span></div>
-            <div class="action-item" id="open-album-btn"><span data-lang-key="qzoneActionAlbum">Albums</span></div>
+            <div class="action-item" id="create-shuoshuo-btn"><span data-lang-key="qzoneActionShuoshuo">Shuoshuo</span></div>
+            <div class="action-item" id="create-post-btn"><span data-lang-key="qzoneActionPost">Post</span></div>
+            <div class="action-item" id="open-album-btn"><span data-lang-key="qzoneActionAlbum">Album</span></div>
           </div>
           <div id="qzone-posts-list"></div>
         </div>
       </div>
       <div id="favorites-view" class="chat-list-view">
         <div class="header"> <span class="back-btn" id="favorites-back-btn">‹</span> <span data-lang-key="navFavorites">My Favorites</span> <span class="action-btn" id="favorites-edit-btn"data-lang-key="edit">Edit</span> </div>
-        <div class="search-bar-container"> <input type="search" id="favorites-search-input" placeholder="Search favorites..."> <button id="favorites-search-clear-btn" class="search-clear-btn" style="display: none;">×</button> </div>
+        <div class="search-bar-container"> <input type="search" id="favorites-search-input" placeholder="Search by title, content, or author..."> <button id="favorites-search-clear-btn" class="search-clear-btn" style="display: none;">×</button> </div>
         <div id="favorites-list" class="list-container"> </div>
         <div id="favorites-action-bar" style="display: none;"> <button id="favorites-delete-selected-btn" class="action-bar-btn">Delete (0)</button> </div>
       </div>
@@ -1180,24 +1181,24 @@
       </div>
       <div id="chat-list-bottom-nav">
         <div class="nav-item active" data-view="messages-view"> <span data-lang-key="navMessages">Messages</span> </div>
-        <div class="nav-item" data-view="qzone-screen"> <span data-lang-key="navQzone">Updates</span> </div>
+        <div class="nav-item" data-view="qzone-screen"> <span data-lang-key="navQzone">Qzone</span> </div>
         <div class="nav-item" data-view="memories-view"> <span data-lang-key="navMemories">Memories</span> </div>
         <div class="nav-item" data-view="favorites-view"> <span data-lang-key="navFavorites">Favorites</span> </div>
         <div class="nav-item" data-view="npc-list-view"> <span data-lang-key="navNpcList">NPC</span> </div>
       </div>
     </div>
     <div id="album-screen" class="screen">
-      <div class="header"> <span class="back-btn" id="album-back-btn">‹</span> <span>My Albums</span> <span class="action-btn" id="create-album-btn-page">+</span> </div>
+      <div class="header"> <span class="back-btn" id="album-back-btn">‹</span> <span>My Album</span> <span class="action-btn" id="create-album-btn-page">+</span> </div>
       <div class="list-container">
         <div id="album-grid-page"> </div>
       </div>
     </div>
     <div id="album-photos-screen" class="screen">
-      <div class="header"> <span class="back-btn" id="album-photos-back-btn">‹</span> <span id="album-photos-title">Album</span> <span class="action-btn" id="album-upload-photo-btn">Upload</span> </div>
+      <div class="header"> <span class="back-btn" id="album-photos-back-btn">‹</span> <span id="album-photos-title">Album Name</span> <span class="action-btn" id="album-upload-photo-btn">Upload</span> </div>
       <div class="list-container">
         <div id="photos-grid-page"> </div>
         <div id="photo-viewer-modal" class="modal"> <button id="photo-viewer-close-btn">×</button> <button id="photo-viewer-prev-btn" class="nav-arrow">‹</button>
-          <div class="photo-viewer-content"> <img id="photo-viewer-image" src="" alt="Fullscreen photo preview"> </div> <button id="photo-viewer-next-btn" class="nav-arrow">›</button>
+          <div class="photo-viewer-content"> <img id="photo-viewer-image" src="" alt="Full-screen photo preview"> </div> <button id="photo-viewer-next-btn" class="nav-arrow">›</button>
         </div>
       </div>
     </div>
@@ -1208,26 +1209,26 @@
           <div class="form-group"> <label>NPC Avatar</label>
             <div class="avatar-upload"> <img id="npc-avatar-preview" src="https://i.postimg.cc/VkQfgzGJ/1.jpg"> <button onclick="document.getElementById('npc-avatar-input').click()">Upload Avatar</button> <input type="file" id="npc-avatar-input" accept="image/*" hidden> </div>
           </div>
-          <div class="form-group"> <label for="npc-name-input">NPC Nickname</label> <input type="text" id="npc-name-input" placeholder="Enter NPC name"> </div>
-          <div class="form-group"> <label for="npc-persona-input">NPC Persona</label> <textarea id="npc-persona-input" rows="4" placeholder="Describe NPC personality, background, speaking style..."></textarea> </div>
+          <div class="form-group"> <label for="npc-name-input">NPC Name</label> <input type="text" id="npc-name-input" placeholder="Enter NPC's common name"> </div>
+          <div class="form-group"> <label for="npc-persona-input">NPC Persona</label> <textarea id="npc-persona-input" rows="4" placeholder="Describe the NPC's personality, background, speaking style, etc."></textarea> </div>
 <div class="form-group" id="npc-group-section">
-            <label for="npc-group-select">NPC Grouping</label>
+            <label for="npc-group-select">NPC Group (for NPC mutual evaluation)</label>
             <div style="display: flex; align-items: center; gap: 10px;">
               <select id="npc-group-select" style="flex-grow: 1;">
-                <option value="">-- Not Grouped --</option>
+                <option value="">-- Ungrouped --</option>
               </select>
               <button id="manage-npc-groups-btn" type="button" class="form-button-secondary" style="margin-top: 0; padding: 12px;">Manage Groups</button>
             </div>
             <p style="font-size: 12px; font-weight: normal; color: #999; margin-top: 5px;">
-                只有在同一个分组内的NPC才能互相看见和评论对方的Updates。
+                Only NPCs within the same group can see and comment on each other's activities.
             </p>
           </div>
           <hr style="opacity: 0.2;">
-          <div class="form-group" style="display: flex; justify-content: space-between; align-items: center;"> <label for="npc-background-activity-switch" style="margin-bottom: 0;"> Enable Independent Background <p style="font-size: 12px; font-weight: normal; color: #999; margin-top: 5px;">
-                Allows the NPC to independently post Updates and comments in the background. The main switch in the API settings must also be enabled. </p> </label> <label class="toggle-switch"> <input type="checkbox" id="npc-background-activity-switch"> <span class="slider"></span> </label> </div>
-          <div class="form-group"> <label for="npc-action-cooldown-input"> Independent Action Cooldown <p style="font-size: 12px; font-weight: normal; color: #999; margin-top: 5px;"> The minimum interval for the NPC's proactive actions in the background. </p> </label> <input type="number" id="npc-action-cooldown-input" min="1" value="15"
+          <div class="form-group" style="display: flex; justify-content: space-between; align-items: center;"> <label for="npc-background-activity-switch" style="margin-bottom: 0;"> Enable Independent Background Activity <p style="font-size: 12px; font-weight: normal; color: #999; margin-top: 5px;">
+                Allows this NPC to independently post comments in the background. The master switch in the API settings must also be enabled. </p> </label> <label class="toggle-switch"> <input type="checkbox" id="npc-background-activity-switch"> <span class="slider"></span> </label> </div>
+          <div class="form-group"> <label for="npc-action-cooldown-input"> Independent Action Cooldown (minutes) <p style="font-size: 12px; font-weight: normal; color: #999; margin-top: 5px;"> The minimum interval for this NPC to take actions in the background. </p> </label> <input type="number" id="npc-action-cooldown-input" min="1" value="15"
               style="width: 80px; text-align: center;"> </div>
-          <div class="form-group"> <label>Associated Characters</label>
+          <div class="form-group"> <label>Associated Characters (NPC will comment on these characters' activities)</label>
             <div id="npc-association-list" style="max-height: 150px; overflow-y: auto; background: #f9f9f9; padding: 10px; border-radius: 8px;"> </div>
           </div>
         </div>
@@ -1236,7 +1237,7 @@
     </div>
     <div id="clear-posts-modal" class="modal">
       <div class="modal-content" style="height: 70%;">
-        <div class="modal-header"> <span>Select Clear Scope</span> </div>
+        <div class="modal-header"> <span>Select Clear Range</span> </div>
         <div class="modal-body" id="clear-posts-list" style="padding: 0;"> </div>
         <div class="modal-footer"> <button class="cancel" id="cancel-clear-posts-btn"data-lang-key="cancel">Cancel</button> <button class="save btn-danger" id="confirm-clear-posts-btn">Confirm Clear</button> </div>
       </div>
@@ -1244,14 +1245,14 @@
     <div id="chat-interface-screen" class="screen">
       <div id="gomoku-overlay">
         <div id="gomoku-content-wrapper"> <canvas id="gomoku-board"></canvas>
-          <div id="gomoku-controls"> <button id="close-gomoku-btn">Collapse Board</button> </div>
+          <div id="gomoku-controls"> <button id="close-gomoku-btn">Hide Board</button> </div>
         </div>
       </div>
       <div id="reading-overlay">
         <div id="reading-restore-btn" style="display: none;">📖</div>
         <div id="reading-window">
           <div class="reading-header"> <span id="reading-title">No Book Selected</span>
-            <div class="reading-controls"> <button id="toggle-reading-fullscreen-btn" title="Fullscreen">
+            <div class="reading-controls"> <button id="toggle-reading-fullscreen-btn" title="Toggle Fullscreen">
         <svg class="icon-maximize" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
             <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path>
         </svg>
@@ -1270,26 +1271,26 @@
                 </svg> </button></div>
           </div>
           <div id="reading-content">
-            <p>Click "Import" button<br>to load book content from local .txt files or web URLs.</p>
+            <p>Click the "Import" button,<br>to load book content from a local .txt file or a web URL.</p>
           </div>
-          <div class="reading-footer"> <button id="prev-page-btn">Previous</button> <span id="page-indicator">0 / 0</span> <button id="next-page-btn">Next</button> </div>
+          <div class="reading-footer"> <button id="prev-page-btn">Previous Page</button> <span id="page-indicator">0 / 0</span> <button id="next-page-btn">Next Page</button> </div>
         </div>
       </div><input type="file" id="book-upload-input" accept=".txt, text/plain" hidden>
       <div class="header">
         <div class="default-controls"> <span class="back-btn" id="back-to-list-btn">‹</span>
           <div id="global-lyrics-bar"></div>
-          <div id="chat-header-title-wrapper"> <span id="chat-header-title">Chat With</span>
+          <div id="chat-header-title-wrapper"> <span id="chat-header-title">Chat Partner</span>
             <div id="chat-header-status"> <span class="status-dot"></span> <span class="status-text">Online</span> </div>
           </div>
-          <div class="header-actions"> <span class="action-btn" id="open-memory-screen-btn" title="Long-Term Memory"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <div class="header-actions"> <span class="action-btn" id="open-memory-screen-btn" title="Long-term Memory"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M16 3H5C3.89543 3 3 3.89543 3 5V19C3 20.1046 3.89543 21 5 21H16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                 <path d="M12 6L9 9L12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                 <path d="M21 5V19C21 20.1046 20.1046 21 19 21H16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-              </svg> </span> <span class="action-btn" id="listen-together-btn" title="Listen Together"><img src="https://i.postimg.cc/dV8sdNcx/210-20250618115221.png" alt="Listen Together"></span> <span class="action-btn" id="chat-settings-btn" title="Settings"><img
+              </svg> </span> <span class="action-btn" id="listen-together-btn" title="Listen Together"><img src="https://i.postimg.cc/dV8sdNcx/210-20250618115221.png" alt="Listen Together"></span> <span class="action-btn" id="chat-settings-btn" title="Chat Settings"><img
                 src="https://i.postimg.cc/bvPq64cv/CCA834-BA-5-A90-408-D-94-FA-7-EE156-B6-A765.png" alt="Settings"></span> </div>
         </div>
         <div class="selection-controls"> 
-          <!-- Cancel按钮 (替换为 X 图标) -->
+          <!-- Cancel button (replaced with X icon) -->
           <span id="selection-cancel-btn" title="Cancel"> 
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                <line x1="18" y1="6" x2="6" y2="18"></line>
@@ -1300,7 +1301,7 @@
           <span id="selection-count"></span>
           
           <div class="header-actions"> 
-            <!-- 右侧的其他按钮保持你刚才修改的 SVG 不变 -->
+            <!-- The other buttons on the right keep the SVG you just modified unchanged -->
             <span id="selection-screenshot-btn" class="action-btn" title="Long Screenshot"> 
                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
@@ -1337,17 +1338,17 @@
         </div>
       </div>
       <div id="chat-messages">
-        <div id="typing-indicator">Typing...</div>
+        <div id="typing-indicator">'The other party is typing...</div>
       </div>
       <div id="chat-input-area">
         <div id="chat-at-mention-popup" class="at-mention-popup"></div>
         <div id="reply-preview-bar">
           <div class="reply-preview-content">
-            <div class="sender">Reply to xxx:</div>
+            <div class="sender">Replying to xxx:</div>
             <div class="text">Quoted message content...</div>
           </div> <span id="cancel-reply-btn">×</span>
         </div>
-        <div id="chat-input-actions-top"> <button id="open-sticker-panel-btn" class="chat-action-icon-btn action-button" title="Emoji Panel">
+        <div id="chat-input-actions-top"> <button id="open-sticker-panel-btn" class="chat-action-icon-btn action-button" title="Sticker Panel">
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <circle cx="12" cy="12" r="10"></circle>
         <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
@@ -1368,13 +1369,13 @@
         <circle cx="12" cy="12" r="2"></circle>
         <path d="M6 12h.01M18 12h.01"></path>
     </svg>
-</button><button id="voice-message-btn" class="chat-action-icon-btn action-button" title="Send Voice"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+</button><button id="voice-message-btn" class="chat-action-icon-btn action-button" title="Send Voice Message"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
               xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
               <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
               <path d="M12 19v4"></path>
               <path d="M8 23h8"></path>
-            </svg></button> <button id="send-waimai-request-btn" class="chat-action-icon-btn action-button" title="Food Delivery"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            </svg></button> <button id="send-waimai-request-btn" class="chat-action-icon-btn action-button" title="Initiate Waimai Request"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="2" stroke-linecap="round"
               stroke-linejoin="round">
               <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
               <line x1="3" y1="6" x2="21" y2="6"></line>
@@ -1387,7 +1388,7 @@
               <circle cx="9" cy="7" r="4"></circle>
               <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
               <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-            </svg></button> <button id="send-poll-btn" class="chat-action-icon-btn action-button" title="Start Poll"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            </svg></button> <button id="send-poll-btn" class="chat-action-icon-btn action-button" title="Initiate Poll"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M8 6h10"></path>
               <path d="M6 6h.01"></path>
               <path d="M8 12h10"></path>
@@ -1412,21 +1413,21 @@
               <path d="M16 5.02c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
               <path d="M14.5 11.02c0 .83-.67 1.5-1.5 1.5v0c-.83 0-1.5-.67-1.5-1.5v-5c0-.83.67-1.5 1.5-1.5v0c.83 0 1.5.67 1.5 1.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
               <path d="M5.5 14.52l-1.92-1.92c-.34-.34-.34-.89 0-1.23l3.58-3.58c.34-.34.89-.34 1.23 0l1.92 1.92c.34.34.34.89 0 1.23l-3.58 3.58c-.34.34-.89.34-1.23 0Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
-            </svg> </button> <button id="edit-last-response-btn" class="chat-action-icon-btn action-button" title="Edit Last Response"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            </svg> </button> <button id="edit-last-response-btn" class="chat-action-icon-btn action-button" title="Director Mode: Edit AI's Last Response"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="2" stroke-linecap="round"
               stroke-linejoin="round">
               <path d="M12 20h9"></path>
               <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
-            </svg> </button> <button id="regenerate-btn" class="chat-action-icon-btn action-button" title="Regenerate" style="display: flex;"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            </svg> </button> <button id="regenerate-btn" class="chat-action-icon-btn action-button" title="Regenerate Response" style="display: flex;"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
               stroke-linejoin="round">
               <path d="M20 11A8.1 8.1 0 0 0 4.5 9M4 5v4h4"></path>
               <path d="M4 13a8.1 8.1 0 0 0 15.5 2m.5 4v-4h-4"></path>
-            </svg> </button> <button id="propel-btn" class="chat-action-icon-btn action-button" title="Advance Plot" style="display: flex;"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            </svg> </button> <button id="propel-btn" class="chat-action-icon-btn action-button" title="Propel Story" style="display: flex;"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
               stroke-linejoin="round">
               <polygon points="13 19 22 12 13 5 13 19"></polygon>
               <polygon points="2 19 11 12 2 5 2 19"></polygon>
             </svg> </button> <button id="show-announcement-board-btn" class="chat-action-icon-btn action-button" title="Announcement Board" style="display: none;"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
               <path d="M21.782 6.132a1 1 0 0 0-1.053-.08l-4.729 2.489a1 1 0 0 0-.5.88v4.158a1 1 0 0 0 .5.88l4.729 2.489a1 1 0 0 0 1.053-.08a1 1 0 0 0 .499-.921V7.052a1 1 0 0 0-.499-.92zm-6 3.207L11 7.05v9.9l4.782-2.281V9.339zM10 6H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h6V6z" />
-            </svg> </button><button id="werewolf-game-btn" class="chat-action-icon-btn action-button" title="Werewolf" style="display: none;"> <svg width="24" height="24" viewBox="0 0 512 512" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            </svg> </button><button id="werewolf-game-btn" class="chat-action-icon-btn action-button" title="Werewolf Game" style="display: none;"> <svg width="24" height="24" viewBox="0 0 512 512" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M332.6 128.5c-61.1 0-110.5 49.4-110.5 110.5 0 23.4 7.3 45.1 19.9 63.3-19.3 6.3-40.1 9.7-61.9 9.7-88.2 0-160-71.8-160-160s71.8-160 160-160c5.3 0 10.5.3 15.6.8C202.9 44.1 160 0 160 0s-53.3 44.1-45.9 92.5c-48.4 24.3-82.1 73.4-82.1 129.6 0 80.9 65.5 146.4 146.4 146.4 20.2 0 39.4-4.1 56.8-11.5 24.1 33.6 63.3 56.8 107.4 56.8 7.2 0 14.2-0.6 21-1.7 15.2 24.2 41.2 41.1 71.6 41.1 44.7 0 80.9-36.2 80.9-80.9 0-25.2-11.5-47.7-29.6-62.6 11.6-16.1 18.4-35.6 18.4-56.5C443.1 177.9 393.7 128.5 332.6 128.5zM180.1 85.8c-52.1 0-94.4 42.3-94.4 94.4s42.3 94.4 94.4 94.4 94.4-42.3 94.4-94.4S232.2 85.8 180.1 85.8zM332.6 170.9c-37.8 0-68.4 30.6-68.4 68.4s30.6 68.4 68.4 68.4 68.4-30.6 68.4-68.4S370.4 170.9 332.6 170.9z">
               </path>
@@ -1452,8 +1453,8 @@
     </svg>
 </button>
 </div>
-        <div id="chat-input-main-row"> <button id="chat-expand-btn" class="chat-action-icon-btn action-button" title="Expand">+</button><textarea id="chat-input" rows="1" placeholder="Enter Message..."></textarea>
-          <div id="input-actions-wrapper"> <button id="wait-reply-btn" title="Wait"><img src="https://i.postimg.cc/q72zq80N/ECE92-BBC-BE57-48-E9-BB2-C-345-B6019-C4-B2.png" alt="Wait"></button> <button id="send-btn" class="action-button">Send</button> </div>
+        <div id="chat-input-main-row"> <button id="chat-expand-btn" class="chat-action-icon-btn action-button" title="Expand Features">+</button><textarea id="chat-input" rows="1" placeholder="Enter message..."></textarea>
+          <div id="input-actions-wrapper"> <button id="wait-reply-btn" title="Wait for Reply"><img src="https://i.postimg.cc/q72zq80N/ECE92-BBC-BE57-48-E9-BB2-C-345-B6019-C4-B2.png" alt="Wait for Reply"></button> <button id="send-btn" class="action-button">Send</button> </div>
         </div>
       </div>
       <div id="chat-lock-overlay">
@@ -1498,15 +1499,15 @@
           <div style="display: flex; gap: 10px;"> <span class="panel-btn" id="manage-sticker-categories-btn">Categories</span> <span class="panel-btn" id="manage-stickers-btn">Manage</span> <span class="panel-btn" id="add-sticker-batch-btn">Batch</span> <span class="panel-btn" id="upload-sticker-btn">Upload</span> </div>
         </div>
         <div id="sticker-category-tabs"></div>
-        <div id="sticker-search-container"> <input type="search" id="sticker-search-input" placeholder="Search sticker names..."></div>
+        <div id="sticker-search-container"> <input type="search" id="sticker-search-input" placeholder="Search sticker name..."></div>
         <div id="sticker-grid"></div>
-        <div id="sticker-action-bar"> <label class="select-all-label" style="display: flex; align-items: center; gap: 5px;"> <input type="checkbox" id="select-all-stickers-checkbox"> Select All </label><button id="move-selected-stickers-btn" style="background-color: #ff9800; margin-left: 5px;">Move (0)</button> <button id="export-selected-stickers-btn" style="background-color: #007bff;">Export (0)</button> </div>
+        <div id="sticker-action-bar"> <label class="select-all-label" style="display: flex; align-items: center; gap: 5px;"> <input type="checkbox" id="select-all-stickers-checkbox"> Select All </label><button id="move-selected-stickers-btn" style="background-color: #ff9800; margin-left: 5px;">Move (0)</button> <button id="export-selected-stickers-btn" style="background-color: #007bff;">Export (0)</button><button id="delete-selected-stickers-btn">Delete (0)</button> </div>
       </div> <input type="file" id="sticker-upload-input" accept="image/*" style="display: none;"> <input type="file" id="image-upload-input" accept="image/*" style="display: none;">
       <div id="music-player-overlay">
         <div class="music-player-window">
           <div class="music-player-top-actions">
             <div class="top-left-cluster"> <button id="music-return-btn">‹</button> <button id="music-exit-btn">×</button> </div>
-            <div style="display: flex; align-items: center; gap: 15px;"> <button id="toggle-fullscreen-btn" title="Fullscreen"> <svg class="icon-maximize" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <div style="display: flex; align-items: center; gap: 15px;"> <button id="toggle-fullscreen-btn" title="Toggle Fullscreen"> <svg class="icon-maximize" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3" />
                 </svg> <svg class="icon-minimize" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M8 3v3a2 2 0 0 1-2 2H3m18 0h-3a2 2 0 0 1-2-2V3m0 18v-3a2 2 0 0 1 2-2h3M3 16h3a2 2 0 0 1 2 2v3" />
@@ -1515,14 +1516,14 @@
           <div id="music-player-avatar-display"> </div>
           <div id="music-info-top">
             <div style="display: flex; justify-content: center; align-items: center; gap: 10px;">
-              <div id="music-time-counter">Listened together for 0.0 hours</div> <button id="show-avatars-btn" title="Show/Hide Avatars"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <div id="music-time-counter">Already listened together for 0.0 hours</div> <button id="show-avatars-btn" title="Show/Hide Avatars"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
                   <circle cx="9" cy="7" r="4"></circle>
                   <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
                   <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
                 </svg> </button>
             </div>
-            <div id="music-player-song-title">Add a song</div>
+            <div id="music-player-song-title">Please add a song</div>
             <div id="music-player-artist">...</div>
           </div>
           <div id="music-visual-container">
@@ -1542,7 +1543,7 @@
               </div>
               <div id="music-total-time" class="time-display">0:00</div>
             </div>
-            <div class="music-controls"> <button id="music-prev-btn">◀</button> <button id="music-play-pause-btn" class="play-pause-btn">▶</button> <button id="music-next-btn">▶</button> <button id="music-mode-btn">Order</button> <button id="toggle-blur-btn" title="Toggle Background Clarity">Clear</button>
+            <div class="music-controls"> <button id="music-prev-btn">◀</button> <button id="music-play-pause-btn" class="play-pause-btn">▶</button> <button id="music-next-btn">▶</button> <button id="music-mode-btn">Sequential</button> <button id="toggle-blur-btn" title="Toggle Background Clarity">Clear</button>
             </div>
           </div>
         </div>
@@ -1557,7 +1558,7 @@
           <span data-lang-key="playlistTitle">Playlist</span>
           
           <div>
-            <span class="panel-btn" id="cleanup-songs-btn">Clean</span>
+            <span class="panel-btn" id="cleanup-songs-btn">Clean</span> 
             <span class="panel-btn" id="add-song-local-btn">Local</span> 
             <span class="panel-btn" id="add-song-url-btn">URL</span> 
             <span class="panel-btn" id="add-song-search-btn" data-lang-key="search">Search</span>
@@ -1575,19 +1576,19 @@
     <div id="wallpaper-screen" class="screen ios-settings-screen">
       <div class="header"> 
         <span class="back-btn" onclick="showScreen('home-screen')">‹</span> 
-        <span data-lang-key="appearanceTitle">Appearance</span>
-        <!-- Keep original save button logic -->
-        <span class="save-btn" id="save-wallpaper-btn" data-lang-key="save">Done</span> 
+        <span data-lang-key="appearanceTitle">Appearance Settings</span> 
+        <!-- 保留原有保存按钮逻辑 -->
+        <span class="save-btn" id="save-wallpaper-btn" data-lang-key="save">Save</span> 
       </div>
 
       <div class="settings-container ios-scroll-container">
 
-        <!-- 1. Wallpaper and Background -->
+        <!-- 1. 壁纸与背景 -->
         <div class="settings-header">Wallpaper & Background</div>
         <div class="settings-section">
             <!-- EPhone 主屏幕 -->
             <div class="settings-item">
-                <label>Home Screen Wallpaper</label>
+                <label>Main Screen Wallpaper</label>
                 <div class="settings-right">
                     <!-- 预览图 -->
                     <div id="wallpaper-preview" class="wallpaper-thumbnail">Preview</div>
@@ -1602,7 +1603,7 @@
                 </div>
             </div>
 
-            <!-- CPhone Phone -->
+            <!-- CPhone 手机 -->
             <div class="settings-item">
                 <label>CPhone Wallpaper</label>
                 <div class="settings-right">
@@ -1616,9 +1617,9 @@
                 </div>
             </div>
 
-            <!-- 全局聊天背景 -->
+            <!-- Global Chat Background -->
             <div class="settings-item">
-                <label>Chat Background (Global)</label>
+                <label>Global Chat Background</label>
                 <div class="settings-right">
                     <div id="global-bg-preview" class="wallpaper-thumbnail">Preview</div>
                     <div class="action-btn-group">
@@ -1631,8 +1632,8 @@
             </div>
         </div>
 
-        <!-- 2. Display And Interaction -->
-        <div class="settings-header">Display</div>
+        <!-- 2. Display & Interaction -->
+        <div class="settings-header">Display & Interaction</div>
         <div class="settings-section">
             <div class="settings-item">
                 <label>Night Mode</label>
@@ -1642,7 +1643,7 @@
                 </label>
             </div>
             <div class="settings-item">
-                <label>Status Bar</label>
+                <label>Top Status Bar</label>
                 <label class="toggle-switch">
                     <input type="checkbox" id="status-bar-toggle-switch">
                     <span class="slider"></span>
@@ -1650,8 +1651,8 @@
             </div>
             <div class="settings-item">
                 <div>
-                    <label>Phone Bezel</label>
-                    <div class="settings-desc">Immersive simulation bezel</div>
+                    <label>Phone Frame</label>
+                    <div class="settings-desc">Immersive simulated frame</div>
                 </div>
                 <label class="toggle-switch">
                     <input type="checkbox" id="phone-frame-toggle-switch">
@@ -1660,8 +1661,8 @@
             </div>
             <div class="settings-item">
                 <div>
-                    <label>Detached Status Bar</label>
-                    <div class="settings-desc">Does not cover top area (notch adaptation)</div>
+                    <label>Detach Status Bar</label>
+                    <div class="settings-desc">Do not cover the top area (Notch screen adaptation)</div>
                 </div>
                 <label class="toggle-switch">
                     <input type="checkbox" id="detach-status-bar-switch">
@@ -1671,7 +1672,7 @@
             <div class="settings-item">
                 <div>
                     <label>Music Dynamic Island</label>
-                    <div class="settings-desc">Always show dynamic island UI when listening</div>
+                    <div class="settings-desc">Always show Dynamic Island UI when listening to music</div>
                 </div>
                 <label class="toggle-switch">
                     <input type="checkbox" id="dynamic-island-music-toggle-switch">
@@ -1680,7 +1681,7 @@
             </div>
             <div class="settings-item">
                 <div>
-                    <label>Simple Chat Interface</label>
+                    <label>Minimal Chat UI</label>
                     <div class="settings-desc">Collapse chat toolbar by default</div>
                 </div>
                 <label class="toggle-switch">
@@ -1691,17 +1692,17 @@
         </div>
 
         <!-- 3. Lock Screen Settings -->
-        <div class="settings-header">Lock Screen</div>
+        <div class="settings-header">Lock Screen Security</div>
         <div class="settings-section">
             <div class="settings-item">
-                <label>Enable Lock Password</label>
+                <label>Enable Lock Screen Password</label>
                 <label class="toggle-switch">
                     <input type="checkbox" id="lock-screen-toggle">
                     <span class="slider"></span>
                 </label>
             </div>
             
-            <!-- 锁屏详情 (JS控制显示隐藏) -->
+            <!-- Lock Screen Details (JS controls show/hide) -->
             <div id="lock-screen-settings-detail" style="display: none; background-color: #f9f9f9; border-top: 0.5px solid #ebedf0;">
                 <div class="settings-item">
                     <label>4-Digit Password</label>
@@ -1710,7 +1711,7 @@
                     </div>
                 </div>
                 <div class="settings-item">
-                    <label>Lock Wallpaper</label>
+                    <label>Lock Screen Wallpaper</label>
                     <div class="settings-right">
                          <div id="lock-wallpaper-preview" class="wallpaper-thumbnail" style="margin-right: 10px;">None</div>
                          <div class="action-btn-group">
@@ -1723,13 +1724,13 @@
             </div>
         </div>
 
-        <!-- 4. 提示音 -->
+        <!-- 4. Notification Sound -->
         <div class="settings-header">Sound</div>
         <div class="settings-section">
             <div class="settings-item-block">
-                <label style="display:block; margin-bottom:8px;">Message Notification Sound URL</label>
+                <label style="display:block; margin-bottom:8px;">Notification Sound URL</label>
                 <div style="display: flex; gap: 8px;">
-                    <input type="text" id="notification-sound-url-input" placeholder="Leave blank for default" class="settings-textarea" style="flex-grow:1; min-height:36px; padding:8px;">
+                    <input type="text" id="notification-sound-url-input" placeholder="Leave empty for default" class="settings-textarea" style="flex-grow:1; min-height:36px; padding:8px;">
                     <button id="test-sound-btn" class="settings-mini-btn" style="width:auto;">▶</button>
                     <button id="reset-sound-btn" class="settings-mini-btn" style="width:auto;">Reset</button>
                 </div>
@@ -1737,7 +1738,7 @@
         </div>
 
         <!-- 5. Icon Customization -->
-        <div class="settings-header">Icons</div>
+        <div class="settings-header">Icon Customization</div>
         <div class="settings-section">
             <div class="settings-item-block">
                 <label style="margin-bottom: 10px; display:block; font-weight:600;">EPhone Home Screen Icons</label>
@@ -1753,15 +1754,15 @@
             </div>
         </div>
 
-        <!-- 6. Toolbar Order -->
-        <div class="settings-header">Chat Toolbar</div>
+        <!-- 6. Toolbar Sorting -->
+        <div class="settings-header">Toolbar</div>
         <div class="settings-section">
             <div class="settings-item-block">
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
                     <label>Button Order</label>
-                    <button id="reset-button-order-btn" class="settings-mini-btn">Restore Default</button>
+                    <button id="reset-button-order-btn" class="settings-mini-btn">Reset</button>
                 </div>
-                <div class="settings-desc" style="margin: 0 0 10px 0;">Drag buttons below to adjust order:</div>
+                <div class="settings-desc" style="margin: 0 0 10px 0;">Drag the buttons below to adjust the order:</div>
                 <div id="button-order-editor">
                     <!-- JS 填充 -->
                 </div>
@@ -1771,9 +1772,9 @@
         <!-- 7. Preset Management (Advanced) -->
         <div class="settings-header">Presets & Advanced</div>
         <div class="settings-section">
-            <!-- 外观预设 -->
+            <!-- Appearance Presets -->
             <div class="settings-item">
-                 <label>Appearance Preset</label>
+                 <label>Appearance Presets</label>
                  <div class="settings-right">
                      <select id="appearance-preset-select" class="settings-select" style="width:auto; flex-grow:1; margin-right:5px;"></select>
                      <!-- 修改点：改为 settings-mini-btn -->
@@ -1781,9 +1782,9 @@
                      <button id="delete-appearance-preset-btn" class="settings-mini-btn" style="color: #ff3b30;">Delete</button>
                  </div>
             </div>
-            <!-- CSS 预设 -->
+            <!-- CSS Presets       -->
             <div class="settings-item">
-                 <label>CSS Preset</label>
+                 <label>CSS Presets</label>
                  <div class="settings-right">
                      <select id="css-preset-select" class="settings-select" style="width:auto; flex-grow:1; margin-right:5px;"></select>
                      <!-- 修改点：改为 settings-mini-btn -->
@@ -1795,14 +1796,14 @@
             <!-- 自定义 CSS -->
             <div class="settings-item-block">
                 <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
-                    <label>Global Custom CSS</label>
+                    <label>Global customization CSS</label>
                     <!-- 修改点：改为 settings-mini-btn -->
                     <button id="reset-global-css-btn" class="settings-mini-btn">Reset</button>
                 </div>
                 <textarea id="global-css-input" class="settings-textarea" placeholder="/*Enter CSS here*/"></textarea>
             </div>
             
-            <!-- 导入 -->
+            <!-- Import/Export -->
             <button class="settings-full-btn" id="export-appearance-btn">Export Appearance Config (JSON)</button>
 
             <button class="settings-full-btn" id="import-appearance-btn">Import Appearance Config (JSON/Word/Txt)</button>
@@ -1825,29 +1826,29 @@
               class="form-button-secondary" style="margin-top: 0; padding: 12px; background-color: #ffebee; color: #d32f2f; border-color: #ffcdd2;"data-lang-key="delete">Delete</button> </div>
         </div>
         <hr style="margin: 30px 0; opacity: 0.3;">
-        <div class="form-group"> <label for="font-url-input"data-lang-key="fontFileUrlLabel">URL for font files (e.g., .ttf, .otf, .woff, etc.)</label> <input type="text" id="font-url-input" placeholder="https://..../font.ttf"> </div>
-        <div class="form-group"> <label data-lang-key="fontPreviewLabel">Font Preview</label>
+        <div class="form-group"> <label for="font-url-input"data-lang-key="fontFileUrlLabel">Font File URL (.ttf, .otf, .woff, etc.)</label> <input type="text" id="font-url-input" placeholder="https://..../font.ttf"> </div>
+        <div class="form-group"> <label data-lang-key="fontPreviewLabel">Live Preview</label>
           <div id="font-preview">
-            <p style="font-size: 20px; margin: 0 0 10px 0;">Hello World</p>
-            <p style="margin: 0;">This is a font preview effect, 12345.</p>
+            <p style="font-size: 20px; margin: 0 0 10px 0;">Hello World 你好世界</p>
+            <p style="margin: 0;">This is a font preview, 12345.</p>
           </div>
-        </div> <button class="form-button" id="save-font-btn"data-lang-key="fontSaveAndApply">Save & Apply</button> <button class="form-button form-button-secondary" id="reset-font-btn"data-lang-key="fontResetDefault">Reset to Default Font</button>
+        </div> <button class="form-button" id="save-font-btn"data-lang-key="fontSaveAndApply">Save and Apply</button> <button class="form-button form-button-secondary" id="reset-font-btn"data-lang-key="fontResetDefault">Reset to Default Font</button>
       </div>
     </div>
     <div id="contact-picker-screen" class="screen">
-      <div class="header"> <span class="back-btn" id="cancel-contact-picker-btn"data-lang-key="cancel">Cancel</span> <span>Select Contact</span> <span class="save-btn" id="confirm-contact-picker-btn"data-lang-key="done">Done (0)</span> </div>
+      <div class="header"> <span class="back-btn" id="cancel-contact-picker-btn"data-lang-key="cancel">Cancel</span> <span>Select Contact</span> <span class="save-btn" id="confirm-contact-picker-btn"data-lang-key="done">Done(0)</span> </div>
       <div class="list-container" id="contact-picker-list"> </div>
     </div>
     <div id="member-management-screen" class="screen">
-      <div class="header"> <span class="back-btn" id="back-from-member-management">‹</span> <span>Group Member Management</span> <span style="width: 30px;"></span> </div>
+      <div class="header"> <span class="back-btn" id="back-from-member-management">‹</span> <span>Member Management</span> <span style="width: 30px;"></span> </div>
       <div class="list-container" id="member-management-list"> </div>
-      <div id="member-management-actions"> <button id="add-existing-contact-btn">Add from Friends</button> <button id="create-new-member-btn">Create New Member</button> </div>
+      <div id="member-management-actions"> <button id="add-existing-contact-btn">Add from Friends List</button> <button id="create-new-member-btn">Create New Member</button> </div>
     </div>
     <div id="sticker-category-manager-modal" class="modal">
       <div class="modal-content" style="height: 60%;">
         <div class="modal-header"> <span>Manage Sticker Categories</span> </div>
         <div class="modal-body">
-          <div class="form-group"> <label>Create Category</label>
+          <div class="form-group"> <label>New Category</label>
             <div style="display: flex; gap: 10px;"> <input type="text" id="new-sticker-category-name-input" placeholder="Enter category name..." style="flex-grow: 1;"> <button id="add-new-sticker-category-btn" class="form-button" style="width: auto; margin-top: 0; padding: 0 15px;"data-lang-key="add">Add</button> </div>
           </div>
           <hr style="opacity: 0.2;">
@@ -1859,7 +1860,7 @@
     <div id="incoming-call-modal" class="modal">
       <div class="incoming-call-content"> <img id="caller-avatar" class="caller-avatar" src="">
         <div id="caller-name" class="caller-name"></div>
-        <div class="caller-text">Inviting you to video call</div>
+        <div class="caller-text">invites you to a video call</div>
         <div class="incoming-call-actions">
           <div class="action-button-wrapper"> <button id="decline-call-btn" class="call-action-btn decline"></button> <span>Decline</span> </div>
           <div class="action-button-wrapper"> <button id="accept-call-btn" class="call-action-btn accept"></button> <span>Accept</span> </div>
@@ -1886,7 +1887,7 @@
     <div id="outgoing-call-screen" class="screen">
       <div class="outgoing-call-content"> <img id="outgoing-call-avatar" class="caller-avatar" src="">
         <div id="outgoing-call-name" class="caller-name"></div>
-        <div class="caller-text">Calling...</div>
+        <div class="caller-text">is calling...</div>
         <div class="outgoing-call-actions"> <button id="cancel-call-btn" class="call-action-btn decline"></button> <span data-lang-key="cancel">Cancel</span> </div>
       </div>
     </div>
@@ -1900,12 +1901,12 @@
               <path
                 d="M19.14,12.94c0.04-0.3,0.06-0.61,0.06-0.94c0-0.32-0.02-0.64-0.07-0.94l2.03-1.58c0.18-0.14,0.23-0.41,0.12-0.61 l-1.92-3.32c-0.12-0.22-0.37-0.29-0.59-0.22l-2.39,0.96c-0.5-0.38-1.03-0.7-1.62-0.94L14.4,2.81c-0.04-0.24-0.24-0.41-0.48-0.41 h-3.84c-0.24,0-0.44,0.17-0.48,0.41L9.12,4.84c-0.59,0.24-1.12,0.56-1.62,0.94L5.11,4.82c-0.22-0.08-0.47,0-0.59,0.22l-1.92,3.32 c-0.12,0.22-0.07,0.47,0.12,0.61l2.03,1.58C4.84,11.36,4.82,11.68,4.82,12s0.02,0.64,0.07,0.94l-2.03,1.58 c-0.18,0.14-0.23,0.41-0.12,0.61l1.92,3.32c0.12,0.22,0.37,0.29,0.59,0.22l2.39-0.96c0.5,0.38,1.03,0.7,1.62,0.94l0.48,2.03 c0.04,0.24,0.24,0.41,0.48,0.41h3.84c0.24,0,0.44-0.17,0.48-0.41l0.48-2.03c0.59-0.24,1.12-0.56,1.62-0.94l2.39,0.96 c0.22,0.08,0.47,0,0.59-0.22l1.92-3.32c0.12-0.22,0.07-0.47-0.12-0.61L19.14,12.94z M12,15.6c-1.98,0-3.6-1.62-3.6-3.6 s1.62-3.6,3.6-3.6s3.6,1.62,3.6,3.6S13.98,15.6,12,15.6z">
               </path>
-            </svg> </span> <span class="action-btn" id="douban-cast-select-btn" title="Select Character"> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            </svg> </span> <span class="action-btn" id="douban-cast-select-btn" title="Select Cast"> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
               <circle cx="9" cy="7" r="4"></circle>
               <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
               <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-            </svg> </span> <span class="action-btn" id="regenerate-douban-btn" title="Regenerate"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            </svg> </span> <span class="action-btn" id="regenerate-douban-btn" title="Regenerate Content"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M20 11A8.1 8.1 0 0 0 4.5 9M4 5v4h4"></path>
               <path d="M4 13a8.1 8.1 0 0 0 15.5 2m.5 4v-4h-4"></path>
             </svg> </span> </div>
@@ -1931,7 +1932,7 @@
         </div>
       </div>
       <div id="douban-comment-footer" class="post-footer">
-        <div class="comment-section"> <img id="douban-my-comment-avatar" src="" class="comment-avatar"> <input type="text" id="douban-comment-input" class="comment-input" placeholder="Write a response..."> </div> <button id="douban-wait-reply-btn" class="douban-feather-btn" title="Let AI continue discussion"> <svg
+        <div class="comment-section"> <img id="douban-my-comment-avatar" src="" class="comment-avatar"> <input type="text" id="douban-comment-input" class="comment-input" placeholder="Write a response..."> </div> <button id="douban-wait-reply-btn" class="douban-feather-btn" title="Let AI continue the discussion"> <svg
             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"></path>
             <line x1="16" y1="8" x2="2" y2="22"></line>
@@ -1941,7 +1942,7 @@
     </div>
     <div id="werewolf-game-screen" class="screen">
       <div class="header"> <span id="werewolf-game-title">Werewolf</span>
-        <div class="header-actions"><span class="action-btn" id="werewolf-retry-btn" title="Retry" style="display: none;"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+        <div class="header-actions"><span class="action-btn" id="werewolf-retry-btn" title="Retry Last AI Action" style="display: none;"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="2" stroke-linecap="round"
               stroke-linejoin="round">
               <path d="M20 11A8.1 8.1 0 0 0 4.5 9M4 5v4h4"></path>
               <path d="M4 13a8.1 8.1 0 0 0 15.5 2m.5 4v-4h-4"></path>
@@ -1951,7 +1952,7 @@
       <div id="werewolf-log" class="list-container"></div>
       <div id="werewolf-action-bar">
         <div id="chat-input-main-row" style="width: 100%;"> <textarea id="werewolf-user-input" rows="1" placeholder="It's your turn to speak..."></textarea>
-          <div id="input-actions-wrapper" style="gap: 5px;"> <button id="werewolf-wait-reply-btn" class="action-button" style="display: none; background-color: #007bff; height: 40px; padding: 0 10px; font-size: 13px;">Wait</button> <button id="werewolf-finish-speech-btn" class="action-button"
+          <div id="input-actions-wrapper" style="gap: 5px;"> <button id="werewolf-wait-reply-btn" class="action-button" style="display: none; background-color: #007bff; height: 40px; padding: 0 10px; font-size: 13px;">Waiting for response</button> <button id="werewolf-finish-speech-btn" class="action-button"
               style="display: none; background-color: var(--accent-color); height: 40px; padding: 0 10px; font-size: 13px;">End Speech</button> <button id="werewolf-next-step-btn" class="form-button" style="margin-top:0; display: none;">Next Step</button> </div>
         </div>
       </div>
@@ -1959,15 +1960,15 @@
     <div id="long-term-memory-screen" class="screen">
       <div class="header"> <span class="back-btn" id="memory-screen-back-btn">‹</span> <span data-lang-key="chatHeaderLongTermMemory">Long-Term Memory</span>
         <div class="header-actions"> 
-            <!-- Refine button -->
-            <span class="action-btn" id="refine-memory-btn-header" title="Refine">
+            <!-- Refine Button (Replace with Funnel/Filter Icon) -->
+            <span class="action-btn" id="refine-memory-btn-header" title="Refine (Integrate Old Memories)"> 
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
                 </svg>
             </span> 
             
-            <!-- Summarize button -->
-            <span class="action-btn" id="summarize-recent-btn-header" title="Summarize">
+            <!-- Summarize Button (Replace with Document/List Icon) -->
+            <span class="action-btn" id="summarize-recent-btn-header" title="Summarize (Recent Conversations)"> 
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
                     <polyline points="14 2 14 8 20 8"></polyline>
@@ -1977,8 +1978,8 @@
                 </svg>
             </span> 
             
-            <!-- Add button -->
-            <span class="action-btn" id="add-manual-memory-btn-header" title="Add Manually">
+            <!-- Add Button (Replace with SVG Plus Icon) -->
+            <span class="action-btn" id="add-manual-memory-btn-header" title="Add Manual Memory">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <line x1="12" y1="5" x2="12" y2="19"></line>
                     <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -1991,23 +1992,23 @@
     <div id="chat-settings-screen" class="screen">
       <div class="header"> 
           <span class="back-btn" onclick="showScreen('chat-interface-screen')">‹</span> 
-          <span>Chat Details</span>
-          <span class="save-btn" id="save-chat-settings-btn" data-lang-key="save">Done</span> 
+          <span>Chat Details</span> 
+          <span class="save-btn" id="save-chat-settings-btn" data-lang-key="save">Save</span> 
       </div>
       
       <div class="settings-container">
         
-        <!-- 第一组：基础信息 -->
+        <!-- First Group: Basic Information -->
         <div class="settings-section">
             <div class="settings-item" id="chat-name-group">
-                <label>Remark / Group Name</label>
+                <label>Remark Name / Group Name</label>
                 <div class="settings-right">
                     <input type="text" id="chat-name-input" placeholder="Not Set">
                 </div>
             </div>
             
             <div class="settings-item" id="ai-original-name-group">
-                <label>Real Name (for AI)</label>
+                <label>Original Name (For AI Recognition)</label>
                 <div class="settings-right">
                     <input type="text" id="ai-original-name-input" placeholder="Required">
                 </div>
@@ -2027,17 +2028,17 @@
                 </div>
             </div>
             
-            <!-- 头像相关 -->
+            <!-- Avatar Related -->
             <div class="settings-item" id="ai-avatar-group">
-                 <label>Character Avatar</label>
+                 <label>AI Avatar</label>
                  <div class="settings-right full-width">
                     <div class="avatar-action-wrapper">
-                         <!-- 头像在左 -->
+                         <!-- Avatar on the left -->
                          <img id="ai-avatar-preview" class="settings-avatar">
-                         <!-- 按钮组在右 -->
+                         <!-- Button group on the right -->
                          <div class="avatar-btn-group">
                              <button class="settings-mini-btn" onclick="document.getElementById('ai-avatar-input').click()">Change</button>
-                             <button class="settings-mini-btn" id="manage-ai-avatar-library-btn">Gallery</button>
+                             <button class="settings-mini-btn" id="manage-ai-avatar-library-btn">Library</button>
                              <button class="settings-mini-btn change-frame-btn" data-type="ai">Frame</button>
                              <input type="file" id="ai-avatar-input" accept="image/*" hidden>
                          </div>
@@ -2052,7 +2053,7 @@
                          <img id="group-avatar-preview" class="settings-avatar">
                          <div class="avatar-btn-group">
                              <button class="settings-mini-btn" onclick="document.getElementById('group-avatar-input').click()">Change</button>
-                             <button class="settings-mini-btn" id="manage-group-avatar-library-btn">Gallery</button>
+                             <button class="settings-mini-btn" id="manage-group-avatar-library-btn">Library</button>
                              <input type="file" id="group-avatar-input" accept="image/*" hidden>
                          </div>
                     </div>
@@ -2066,7 +2067,7 @@
                          <img id="my-avatar-preview" class="settings-avatar">
                          <div class="avatar-btn-group">
                              <button class="settings-mini-btn" onclick="document.getElementById('my-avatar-input').click()">Change</button>
-                             <button class="settings-mini-btn" id="manage-my-avatar-library-btn">Gallery</button>
+                             <button class="settings-mini-btn" id="manage-my-avatar-library-btn">Library</button>
                              <button class="settings-mini-btn change-frame-btn" data-type="my">Frame</button>
                              <button class="settings-mini-btn" id="open-persona-library-btn">Preset</button>
                              <input type="file" id="my-avatar-input" accept="image/*" hidden>
@@ -2087,33 +2088,33 @@
         <!-- 第二组：人设与剧情 (核心) -->
         <div class="settings-section">
             <div class="settings-item-block" id="ai-persona-group">
-                <label>Character Persona (AI)</label>
-                <textarea id="ai-persona" rows="3" class="settings-textarea" placeholder="Enter detailed character profile..."></textarea>
+                <label>AI Persona</label>
+                <textarea id="ai-persona" rows="3" class="settings-textarea" placeholder="Enter detailed character settings..."></textarea>
             </div>
             
             <div class="settings-item-block" id="my-persona-group">
                 <label>My Persona</label>
-                <textarea id="my-persona" rows="3" class="settings-textarea" placeholder="Enter your character profile..."></textarea>
+                <textarea id="my-persona" rows="3" class="settings-textarea" placeholder="Enter your character settings..."></textarea>
             </div>
             
             <div class="settings-item-block" id="group-members-group">
-                <label>Manage Members</label>
+                <label>Group Members Management</label>
                 <div id="group-members-settings" class="horizontal-scroll-list"></div> 
-                <button id="manage-members-btn" class="settings-full-btn">Manage All Members</button>
+                <button id="manage-members-btn" class="settings-full-btn">Manage All Group Members</button>
             </div>
             
             <div class="settings-item" id="switch-greeting-group" style="display: none;">
-                 <label>Opening</label>
+                 <label>Greeting</label>
                  <div class="settings-right">
-                     <!-- 升级为实体按钮样式 -->
-                     <button id="switch-greeting-btn" class="settings-mini-btn">Switch Opening</button>
+                     <!-- Upgrade to entity button style -->
+                     <button id="switch-greeting-btn" class="settings-mini-btn">Switch Opening Story</button>
                  </div>
             </div>
             
-            <div class="settings-item-block" id="world-book-link-group">
-                <label>Link World Book</label>
+            <div class="settings-item-block" id="world-book-link-group"> 
+                <label>Linked World Book</label>
                 <div class="custom-multiselect" style="margin-top: 5px; position: relative;">
-                    <div class="select-box"> <span class="selected-options-text">-- Select --</span> <span class="arrow-down">▼</span> </div>
+                    <div class="select-box"> <span class="selected-options-text">-- Click to select --</span> <span class="arrow-down">▼</span> </div>
                     <div id="world-book-checkboxes-container" class="checkboxes-container"> </div>
                 </div>
             </div>
@@ -2127,8 +2128,8 @@
                 <!-- 注入最新心声 -->
                 <div class="settings-item" id="inject-thought-group" style="display: flex !important; justify-content: space-between !important; align-items: center !important; flex-direction: row !important;">
                     <div style="flex: 1; padding-right: 10px; display: flex; flex-direction: column; align-items: flex-start;">
-                        <label style="margin-bottom: 2px;">Inject Latest Inner Voice</label>
-                        <div class="settings-desc">Inject previous turn's inner monologue before replying</div>
+                        <label style="margin-bottom: 2px;">Inject Latest Thought</label>
+                        <div class="settings-desc">Inject the previous round's inner monologue before replying</div>
                     </div>
                     <label class="toggle-switch" style="margin: 0;"> 
                         <input type="checkbox" id="inject-thought-toggle"> 
@@ -2136,11 +2137,11 @@
                     </label>
                 </div>
                 
-                <!-- Enable Independent Background -->
+                <!-- Enable Independent Background Activity -->
                 <div class="settings-item" style="display: flex !important; justify-content: space-between !important; align-items: center !important; flex-direction: row !important;">
                      <div style="flex: 1; padding-right: 10px; display: flex; flex-direction: column; align-items: flex-start;">
-                        <label style="margin-bottom: 2px;">Enable Independent Background</label>
-                        <div class="settings-desc">Allow character to initiate messages in background</div>
+                        <label style="margin-bottom: 2px;">Enable Independent Background Activity</label>
+                        <div class="settings-desc">Allow the character to actively send messages in the background</div>
                     </div>
                     <label class="toggle-switch" style="margin: 0;"> 
                         <input type="checkbox" id="char-background-activity-switch"> 
@@ -2154,34 +2155,34 @@
             <div class="settings-item" id="group-background-activity-group">
                  <div>
                     <label>Enable Group Background Activity</label>
-                    <div class="settings-desc">Allow AI to interact freely in groups</div>
+                    <div class="settings-desc">Allow the AI to interact freely within the group</div>
                 </div>
                 <label class="toggle-switch"> <input type="checkbox" id="group-background-activity-switch"> <span class="slider"></span> </label>
             </div>
 
-            <!-- 冷却时间 -->
+            <!-- Cooldown Time -->
             <div class="settings-item" id="ai-cooldown-group">
-                <label>Independent Action Cooldown</label>
+                <label>Independent Action Cooldown (minutes)</label>
                 <div class="settings-right">
                      <input type="number" id="ai-action-cooldown-input" class="settings-num-input">
                 </div>
             </div>
             <div class="settings-item" id="group-cooldown-group">
-                <label>Group Action Cooldown (Minutes)</label>
+                <label>Group Action Cooldown (minutes)</label>
                 <div class="settings-right">
                      <input type="number" id="group-action-cooldown-input" class="settings-num-input">
                 </div>
             </div>
 
-            <!-- 记忆设置 -->
+            <!-- Memory Settings -->
             <div class="settings-item">
-                 <label>Short-Term Memory Count</label>
+                 <label>Short-term Memory Count</label>
                  <div class="settings-right">
                     <input type="number" id="max-memory" class="settings-num-input">
                  </div>
             </div>
             <div class="settings-item">
-                 <label>Mount Memory Count</label>
+                 <label>Linked Memory Count</label>
                  <div class="settings-right">
                     <input type="number" id="linked-memory-count" class="settings-num-input">
                  </div>
@@ -2189,23 +2190,23 @@
             
             <div class="settings-item">
                  <div>
-                    <label>Auto-Summarize Long-Term Memory</label>
-                    <div class="settings-desc">Auto-extract when conversation reaches a certain length</div>
+                    <label>Auto Summarize Long-term Memory</label>
+                    <div class="settings-desc">Automatically extract key points when the conversation reaches a certain length</div>
                 </div>
                 <label class="toggle-switch"> <input type="checkbox" id="auto-memory-toggle"> <span class="slider"></span> </label>
             </div>
             <div class="settings-item">
-                 <label>Auto-Summary Interval (Items)</label>
+                 <label>Auto Summarize Interval (messages)</label>
                  <div class="settings-right">
                     <input type="number" id="auto-memory-interval" class="settings-num-input">
                  </div>
             </div>
 
-            <!-- 挂载聊天 -->
+            <!-- Linked Memory -->
             <div class="settings-item-block" id="linked-memory-group"> 
                  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px; height: 30px;">
-                    <label for="link-memory-toggle" style="line-height: 30px;">Mount Other Chat Memories</label> 
-                    <!-- 修复：使用美化的 toggle-switch 结构替代原生 checkbox -->
+                    <label for="link-memory-toggle" style="line-height: 30px;">Link Other Chat Memories</label> 
+                    <!-- Fix: Use a beautified toggle-switch structure instead of the native checkbox -->
                     <label class="toggle-switch"> 
                         <input type="checkbox" id="link-memory-toggle"> 
                         <span class="slider"></span> 
@@ -2213,7 +2214,7 @@
                  </div>
                  <div id="linked-memory-selection" style="display: none; position: relative;"> 
                     <div class="custom-multiselect">
-                      <div class="select-box"> <span class="selected-options-text">-- Select Chat --</span> <span class="arrow-down">▼</span> </div>
+                      <div class="select-box"> <span class="selected-options-text">-- Select Chats --</span> <span class="arrow-down">▼</span> </div>
                       <div id="linked-chats-checkboxes-container" class="checkboxes-container" style="max-height: 150px;"> </div>
                     </div>
                  </div>
@@ -2221,17 +2222,17 @@
             <div class="settings-item">
     <div>
        <label>Show Hidden Messages (Debug)</label>
-       <div class="settings-desc">Show system prompts, inner monologues and other hidden content for editing</div>
+       <div class="settings-desc">Show system prompts, inner monologues, and other hidden content for editing</div>
    </div>
    <label class="toggle-switch"> 
        <input type="checkbox" id="show-hidden-msg-toggle"> 
        <span class="slider"></span> 
    </label>
 </div>
-            <!-- Token 统计 -->
+            <!-- Token Statistics -->
             <div class="settings-section">
                 <div class="settings-item">
-                    <label>Current Message Count</label>
+                    <label>Current Conversation Count</label>
                     <div class="settings-right">
                         <span id="message-count-value" style="color: #8a8a8a;">Calculating...</span>
                     </div>
@@ -2244,9 +2245,9 @@
                 </div>
             </div>
         </div>
-<!-- 天气设置 (仅单聊显示) - UI 优化版 -->
+<!-- Weather Settings (Single Chat Only) - UI Optimized Version -->
 
-        <!-- 第四组：高级功能 (TTS, NAI, 线下模式) -->
+        <!-- Fourth Group: Advanced Features (TTS, NAI, Offline Mode) -->
         <div class="settings-section">
              <!-- Voice -->
              <div class="settings-item" id="tts-enable-group">
@@ -2263,10 +2264,10 @@
                 <label>Voice Language/Dialect</label>
                 <div class="settings-right">
                   <select id="ai-voice-lang-select" class="settings-select" style="width: 100%; text-align: right;">
-                    <option value="">Auto-Detect</option>
+                    <option value=""> Auto Detect (Auto)</option>
                     <hr disabled>
                     <option value="zh-CN">🇨🇳 Mandarin (Chinese)</option>
-                    <option value="zh-HK">🇭🇰 Cantonese</option>
+                    <option value="zh-HK">🇭🇰 Cantonese (Cantonese)</option>
                     <option value="en-US">🇺🇸 English</option>
                     <option value="ja-JP">🇯🇵 Japanese</option>
                     <option value="ko-KR">🇰🇷 Korean</option>
@@ -2293,8 +2294,8 @@
              </div>
   <div class="settings-item" id="synth-music-group">
     <div>
-        <label>Enable Music Synthesis</label>
-        <div class="settings-desc">Allow characters to send sheet music and play it automatically</div>
+        <label>Enable score synthesis.</label>
+        <div class="settings-desc">Allows characters to send sheet music and automatically play it.</div>
     </div>
     <label class="toggle-switch">
         <input type="checkbox" id="enable-synth-music-switch">
@@ -2313,7 +2314,7 @@
 </div>
 <div class="settings-item" id="todo-list-setting-group">
     <div style="flex: 1; padding-right: 10px;">
-        <label style="margin-bottom: 2px;">Enable to-do list synchronization</label>
+        <label style="margin-bottom: 2px;">Enable To-Do List Sync</label>
         <div class="settings-desc">When enabled, AI will read today's and incomplete to-do items.</div>
     </div>
     <label class="toggle-switch" style="margin: 0;"> 
@@ -2325,14 +2326,14 @@
              <div id="offline-mode-group">
                  <div class="settings-item">
                      <div>
-                        <label>Offline Mode (Descriptive Mode)</label>
+                        <label>Offline Mode (Narration Mode)</label>
                         <div class="settings-desc">AI will output text containing actions/psychological descriptions</div>
                      </div>
                      <label class="toggle-switch"> <input type="checkbox" id="offline-mode-toggle"> <span class="slider"></span> </label>
                  </div>
                  <div id="offline-mode-options" style="display: none; padding: 0 16px 16px 16px;">
                      <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px;">
-                        <span style="font-size:13px; color:#666;">Character Count Range:</span>
+                        <span style="font-size:13px; color:#666;">Character count range:</span>
                         <input type="number" id="offline-min-length-input" class="settings-num-input" value="100">
                         <span>-</span>
                         <input type="number" id="offline-max-length-input" class="settings-num-input" value="300">
@@ -2350,7 +2351,7 @@
              <div class="settings-item-block" id="time-zone-group" style="display: none;">
                  <label>Time Zone Settings</label>
                  <div style="margin-top: 10px; width: 100%;">
-                     <input type="search" id="time-zone-search-input" placeholder="Search Time Zone..." class="settings-textarea" style="height: 36px; padding: 8px; margin-bottom: 8px;">
+                     <input type="search" id="time-zone-search-input" placeholder="Search time zones..." class="settings-textarea" style="height: 36px; padding: 8px; margin-bottom: 8px;">
                      <select id="time-zone-select" class="settings-select" style="width: 100%; padding: 10px; background-color: #f5f5f7;"></select>
                  </div>
              </div>
@@ -2374,14 +2375,14 @@
         <div class="settings-section">
             <div class="settings-item">
                  <label>Chat Background</label>
-                 <!-- Add full-width class to maintain right alignment, use avatar-btn-group internally to maintain spacing -->
+                 <!-- Add full-width class to maintain right alignment, use avatar-btn-group inside to keep spacing consistent -->
                  <div class="settings-right full-width">
                      <div class="avatar-btn-group" style="justify-content: flex-end; width: 100%;">
                          <!-- Upgrade to solid small buttons -->
                          <button class="settings-mini-btn" onclick="document.getElementById('bg-input').click()">Upload</button>
                          <button class="settings-mini-btn" id="remove-bg-btn">Remove</button>
                          
-                         <!-- Maintain original hidden input and preview logic -->
+                         <!-- Keep the original hidden input and preview logic -->
                          <input type="file" id="bg-input" accept="image/*" hidden>
                          <img id="bg-preview" class="settings-bg-preview">
                      </div>
@@ -2478,7 +2479,7 @@
              </div>
         </div>
         
-        <div style="height: 40px;"></div> <!-- Bottom padding -->
+        <div style="height: 40px;"></div> <!-- Bottom Padding -->
       </div>
     </div>
     <div id="rendering-rules-screen" class="screen">
@@ -2514,7 +2515,7 @@
     <input type="file" id="import-rules-input" accept=".json" style="display: none;">
     <div id="rule-editor-modal" class="modal">
       <div class="modal-content" style="height: 85%;">
-        <div class="modal-header"> <span id="rule-editor-title">Create a new rule</span> </div>
+        <div class="modal-header"> <span id="rule-editor-title">Create New Rule</span> </div>
         <div class="modal-body" style="display: flex; flex-direction: column; gap: 15px;">
           <div class="form-group" style="flex-shrink: 0;"> <label for="rule-name-input">Rule Name</label> <input type="text" id="rule-name-input" placeholder="e.g., Meituan Waimai Card"> </div>
           <div class="form-group" style="flex-shrink: 0;"> <label for="rule-chat-id-select">Scope</label> <select id="rule-chat-id-select">
@@ -2522,7 +2523,7 @@
             </select> </div>
           <div class="form-group" style="flex-grow: 1; display: flex; flex-direction: column;"> <label for="rule-regex-input">Regular Expression (use g flag)</label> <textarea id="rule-regex-input" rows="3" style="font-family: monospace; resize: vertical;" placeholder="e.g., MTR\[(.*?)\]\[(.*?)\|(.*?)\]"></textarea>
           </div>
-          <div class="form-group" style="flex-grow: 2; display: flex; flex-direction: column;"> <label for="rule-template-input">HTML Template (use $1, $2 for references)</label> <textarea id="rule-template-input" rows="6" style="font-family: monospace; resize: vertical;"
+          <div class="form-group" style="flex-grow: 2; display: flex; flex-direction: column;"> <label for="rule-template-input">HTML Template (use $1, $2 references)</label> <textarea id="rule-template-input" rows="6" style="font-family: monospace; resize: vertical;"
               placeholder="e.g., <div class=`waimai-card`>...<span>$2</span>...</div>"></textarea> </div>
           <div class="form-group" style="display: flex; justify-content: space-between; align-items: center; flex-shrink: 0;"> <label for="rule-enabled-switch" style="margin-bottom: 0;">Enable Rule</label> <label class="toggle-switch"> <input type="checkbox" id="rule-enabled-switch" checked>
               <span class="slider"></span> </label> </div>
@@ -2530,7 +2531,7 @@
     <label for="rule-do-not-send-switch" style="margin-bottom: 0;">
         Remove from context when rendering
         <p style="font-size: 12px; font-weight: normal; color: #999; margin-top: 5px;">
-            When enabled, messages matching this rule will not be sent to the AI, only for front-end display.
+            When enabled, messages matching this rule will not be sent to the AI and are only used for front-end display.
         </p>
     </label>
     <label class="toggle-switch">
@@ -2545,7 +2546,7 @@
     <div id="search-history-screen" class="screen">
       <div class="header"> <span class="back-btn" id="search-history-back-btn">‹</span> <span>Search Chat History</span> <span style="width: 30px;"></span> </div>
       <div id="search-bar" style="padding: 10px 15px; border-bottom: 1px solid var(--border-color); background-color: var(--secondary-bg); flex-shrink: 0;">
-        <div style="display: flex; gap: 10px; margin-bottom: 10px;"> <input type="search" id="keyword-search-input" placeholder="Enter keywords..." style="flex-grow: 1; padding: 8px 12px; border: 1px solid var(--border-color); border-radius: 6px; font-size: 16px;"> <input type="date" id="date-search-input"
+        <div style="display: flex; gap: 10px; margin-bottom: 10px;"> <input type="search" id="keyword-search-input" placeholder="Enter keyword..." style="flex-grow: 1; padding: 8px 12px; border: 1px solid var(--border-color); border-radius: 6px; font-size: 16px;"> <input type="date" id="date-search-input"
             style="padding: 8px 12px; border: 1px solid var(--border-color); border-radius: 6px; font-size: 16px;"> </div>
         <div style="display: flex; gap: 10px;"> <button id="execute-search-btn" class="form-button" style="margin-top: 0; flex-grow: 1;">Search</button> <button id="clear-search-btn" class="form-button form-button-secondary" style="margin-top: 0; flex-grow: 1;">Reset</button> </div>
       </div>
@@ -2622,7 +2623,7 @@
     </div>
 </div>
 
-<!-- Fund Trade Modal -->
+<!-- 基金交易弹窗 -->
 <div id="fund-trade-modal" class="modal">
     <div class="modal-content" style="width: 300px; height: auto;">
         <div class="modal-header">
@@ -2640,14 +2641,14 @@
             
             <div class="form-group">
                 <label id="fund-trade-label">Buy Amount (Balance: ¥<span id="fund-wallet-balance"></span>)</label>
-                <!-- Fix: Force type="number" -->
+                <!-- 修复：强制 type="number" -->
                 <input type="number" id="fund-trade-amount" placeholder="Enter amount" style="font-size: 24px; font-weight: bold; color: #1677ff; border-bottom: 2px solid #eee; padding: 10px 0;">
             </div>
             <p id="fund-trade-info" style="font-size: 12px; color: #666; margin-top: 5px;"></p>
         </div>
         <div class="modal-footer">
             <button class="cancel" onclick="document.getElementById('fund-trade-modal').classList.remove('visible')">Cancel</button>
-            <!-- Fix: Directly bind onclick function, no longer rely on addEventListener -->
+            <!-- 修复：直接绑定 onclick 函数，不再依赖 addEventListener -->
             <button class="save" id="fund-confirm-btn" onclick="handleFundTradeConfirm()">Confirm</button>
         </div>
     </div>
@@ -2728,7 +2729,7 @@
         <button class="gr-icon-btn" onclick="openAuthorManager()" title="Author Management">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
         </button>
-        <button class="gr-icon-btn" onclick="createNewStory()" title="Create New Story">
+        <button class="gr-icon-btn" onclick="createNewStory()" title="New Story">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
         </button>
     </div>
@@ -2736,7 +2737,7 @@
     
     <div class="gr-content-area">
         <div class="gr-section-header">
-            <span class="gr-section-title">Books Library</span>
+            <span class="gr-section-title">Library</span>
         </div>
         <div id="gr-book-list" class="gr-grid-list">
             </div>
@@ -2764,7 +2765,7 @@
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
         </button>
         <div style="display:flex; flex-direction:column; align-items:center;">
-             <span class="gr-title" id="gr-book-name-display" style="font-size:14px; opacity:0.7;">Book title</span>
+             <span class="gr-title" id="gr-book-name-display" style="font-size:14px; opacity:0.7;">Book Title</span>
              <span class="gr-title" id="gr-chapter-title-display" style="font-size:16px; font-weight:bold;">Chapter 1</span>
         </div>
         <button class="gr-icon-btn" onclick="openStorySettings()" title="Settings">
@@ -2796,7 +2797,7 @@
 
         <div id="gr-writing-controls" style="display:none; gap:10px; align-items:center; width:100%; margin-top:10px;">
              <div class="gr-input-group" style="flex-grow:1;">
-                <input type="text" id="gr-direction-input" class="gr-input" placeholder="Enter the direction of this chapter (e.g., a quarrel between two characters)...">
+                <input type="text" id="gr-direction-input" class="gr-input" placeholder="Enter the direction of this chapter (e.g., a quarrel between two people)...">
             </div>
             <button id="gr-reroll-btn" class="gr-main-btn" style="background-color:#F4F4F5; color:#666; border:1px solid #ddd; padding: 10px;" title="Rewrite this chapter">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 4v6h-6"></path><path d="M1 20v-6h6"></path><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg>
@@ -2811,7 +2812,7 @@
         </div>
     </div>
 </div>
-<!-- Email main interface -->
+<!-- Email Main Screen -->
 <div id="email-screen" class="screen mail-theme">
     <div class="mail-header">
     <button class="mail-icon-btn" onclick="showScreen('home-screen')">
@@ -2896,37 +2897,37 @@
     
 </div>
 
-<!-- 邮件生成器配置弹窗 -->
+<!-- Email Generator Configuration Modal -->
 <div id="email-generator-modal" class="modal">
     <div class="modal-content" style="height: 85%; background-color: #FAFAF9; border-radius: 20px;">
         <div class="mail-modal-header">
-            <span>收件箱配置</span>
+            <span>Inbox Configuration</span>
         </div>
         <div class="modal-body" style="padding: 20px;">
             
-            <!-- 1. 身份设定 -->
+            <!-- 1. User Persona -->
             <div class="gr-form-group">
-                <label>收件人身份 (User Persona)</label>
+                <label>User Persona</label>
                 
                 <select id="mail-user-persona-select" class="gr-input" style="margin-bottom: 8px; padding: 8px; border:1px solid #ddd;">
                     <option value="">-- Only use the keywords below --</option>
                 </select>
 
-                <input type="text" id="mail-user-mask" class="gr-input" placeholder="e.g., Detective, Corporate Executive, Mysterious Person..." value="Ordinary User">
-                <p style="font-size:11px; color:#999; margin-top:5px;">Selecting a preset provides detailed background, while the input box below defines the current specific social identity.</p>
+                <input type="text" id="mail-user-mask" class="gr-input" placeholder="e.g., Detective, Corporate Executive, Mysterious Person..." value="Regular User">
+                <p style="font-size:11px; color:#999; margin-top:5px;">Selecting a preset provides detailed background, while the input below defines the current specific social identity.</p>
             </div>
 
             <!-- 2. World Context -->
             <div class="gr-form-group">
-                <label>Email System Background (World Context)</label>
-                <textarea id="mail-world-context" class="gr-input" rows="3" placeholder="e.g., Cyberpunk Hacker Forum Notification, Victorian Era Letters, Modern Workplace Spam..."></textarea>
+                <label>World Context</label>
+                <textarea id="mail-world-context" class="gr-input" rows="3" placeholder="e.g., Cyberpunk hacker forum notifications, Victorian-era letters, modern workplace spam..."></textarea>
             </div>
 
             <!-- 3. Sender Source -->
             <div class="gr-form-group">
                 <label>Sender Source (Multiple Choice)</label>
                 <div class="gr-checkbox-list" id="mail-sender-list">
-                    <!-- JS Updates填充角色和 NPC -->
+                    <!-- JS 动态填充角色和 NPC -->
                 </div>
                 <label style="margin-top:10px; display:flex; align-items:center;">
                     <input type="checkbox" id="mail-allow-random-npc" checked> Allow generating random strangers/spam
@@ -2935,9 +2936,9 @@
 
             <!-- 4. Related Context -->
             <div class="gr-form-group">
-                <label>Related Memories and World Books</label>
+                <label>Related Memories and World Book</label>
                 <div class="gr-checkbox-list" id="mail-context-list">
-                    <!-- JS Updates填充世界书 -->
+                    <!-- JS 动态填充世界书 -->
                 </div>
             </div>
           <div class="gr-form-group">
@@ -2957,11 +2958,11 @@
 
     <div id="shopping-screen" class="screen">
       <div class="header">
-        <div class="header-left-actions"> <span class="back-btn" id="shopping-back-btn">‹</span> <span class="action-btn" id="generate-shopping-items-btn" title="AI-generated products"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor"
+        <div class="header-left-actions"> <span class="back-btn" id="shopping-back-btn">‹</span> <span class="action-btn" id="generate-shopping-items-btn" title="AI Generate Items"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor"
               stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M20 11A8.1 8.1 0 0 0 4.5 9M4 5v4h4"></path>
               <path d="M4 13a8.1 8.1 0 0 0 15.5 2m.5 4v-4h-4"></path>
-            </svg> </span> <span class="action-btn" id="shopping-settings-btn" title="Generation Settings"> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            </svg> </span> <span class="action-btn" id="shopping-settings-btn" title="Settings"> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path
                 d="M19.14,12.94c0.04-0.3,0.06-0.61,0.06-0.94c0-0.32-0.02-0.64-0.07-0.94l2.03-1.58c0.18-0.14,0.23-0.41,0.12-0.61 l-1.92-3.32c-0.12-0.22-0.37-0.29-0.59-0.22l-2.39,0.96c-0.5-0.38-1.03-0.7-1.62-0.94L14.4,2.81c-0.04-0.24-0.24-0.41-0.48-0.41 h-3.84c-0.24,0-0.44,0.17-0.48,0.41L9.12,4.84c-0.59,0.24-1.12,0.56-1.62,0.94L5.11,4.82c-0.22-0.08-0.47,0-0.59,0.22l-1.92,3.32 c-0.12,0.22-0.07,0.47,0.12,0.61l2.03,1.58C4.84,11.36,4.82,11.68,4.82,12s0.02,0.64,0.07,0.94l-2.03,1.58 c-0.18,0.14-0.23,0.41-0.12,0.61l1.92,3.32c0.12,0.22,0.37,0.29,0.59,0.22l2.39-0.96c0.5,0.38,1.03,0.7,1.62,0.94l0.48,2.03 c0.04,0.24,0.24,0.41,0.48,0.41h3.84c0.24,0,0.44-0.17,0.48-0.41l0.48-2.03c0.59-0.24,1.12-0.56,1.62-0.94l2.39,0.96 c0.22,0.08,0.47,0,0.59-0.22l1.92-3.32c0.12-0.22,0.07-0.47-0.12-0.61L19.14,12.94z M12,15.6c-1.98,0-3.6-1.62-3.6-3.6 s1.62-3.6,3.6-3.6s3.6,1.62,3.6,3.6S13.98,15.6,12,15.6z">
               </path>
@@ -2986,7 +2987,7 @@
       </div>
       <div id="product-category-tabs"></div>
       <div id="product-grid" class="list-container"> </div>
-      <div id="shopping-action-bar"> <label class="select-all-label"> <input type="checkbox" id="select-all-products-checkbox"> Select All </label> <button id="delete-selected-products-btn" class="action-bar-btn">Delete (0)</button> </div>
+      <div id="shopping-action-bar"> <label class="select-all-label"> <input type="checkbox" id="select-all-products-checkbox"> Select all </label> <button id="delete-selected-products-btn" class="action-bar-btn">Delete (0)</button> </div>
     </div>
     <div id="product-detail-screen" class="screen">
       <div class="header"> <span class="back-btn" id="product-detail-back-btn">‹</span> <span>Product Details</span> <span style="width: 30px;"></span> </div>
@@ -3015,7 +3016,7 @@
             <div style="display: flex; align-items: center; gap: 10px;"> <select id="product-category-select" style="flex-grow: 1;"></select> <button id="manage-product-categories-btn" class="form-button-secondary" style="margin-top: 0; padding: 12px;">Manage</button> </div>
           </div>
           <div class="form-group"> <label for="product-price-input">Default Price (¥)</label> <input type="number" id="product-price-input" min="0" step="0.01"> </div>
-          <div class="form-group"> <label for="product-description-input">Product Description</label> <textarea id="product-description-input" rows="3" placeholder="Describe the product in detail..."></textarea> </div>
+          <div class="form-group"> <label for="product-description-input">Product Description</label> <textarea id="product-description-input" rows="3" placeholder="Describe this product in detail..."></textarea> </div>
           <hr style="opacity: 0.2; margin: 20px 0;">
           <div class="form-group"> <label>Product Variations</label>
             <p style="font-size: 12px; color: #888; margin-top: -5px; margin-bottom: 10px;">If no variations are added, the default price above will be used.</p>
@@ -3027,7 +3028,7 @@
     </div>
     <div id="gift-receipt-modal" class="modal">
       <div class="modal-content">
-        <div class="modal-header"> <span>Shopping receipt</span> </div>
+        <div class="modal-header"> <span>Gift Receipt</span> </div>
         <div class="modal-body" id="gift-receipt-body"> </div>
         <div class="modal-footer"> <button class="save" id="close-receipt-btn" style="width:100%;">Close</button> </div>
       </div>
@@ -3105,12 +3106,12 @@
   </div>
   <div id="create-countdown-modal" class="modal">
     <div class="modal-content" style="height: auto;">
-      <div class="modal-header"> <span>Create New Appointment</span> </div>
+      <div class="modal-header"> <span>Create New Countdown</span> </div>
       <div class="modal-body">
-        <div class="form-group"> <label for="countdown-title-input">Appointment Title</label> <input type="text" id="countdown-title-input" placeholder="e.g., My Birthday"> </div>
-        <div class="form-group"> <label for="countdown-date-input">Appointment Date and Time</label> <input type="datetime-local" id="countdown-date-input"> </div>
+        <div class="form-group"> <label for="countdown-title-input">Countdown Title</label> <input type="text" id="countdown-title-input" placeholder="e.g., My Birthday"> </div>
+        <div class="form-group"> <label for="countdown-date-input">Countdown Date and Time</label> <input type="datetime-local" id="countdown-date-input"> </div>
       </div>
-      <div class="modal-footer"> <button class="cancel" id="cancel-create-countdown-btn"data-lang-key="cancel">Cancel</button> <button class="save" id="confirm-create-countdown-btn"data-lang-key="save">Save Appointment</button> </div>
+      <div class="modal-footer"> <button class="cancel" id="cancel-create-countdown-btn"data-lang-key="cancel">Cancel</button> <button class="save" id="confirm-create-countdown-btn"data-lang-key="save">Save Countdown</button> </div>
     </div>
   </div>
   <div id="red-packet-modal" class="modal">
@@ -3118,20 +3119,20 @@
       <div class="modal-header"> <span>Send Red Packet</span> </div>
       <div class="modal-body" style="padding: 0;">
         <div class="frame-tabs">
-          <div id="rp-tab-group" class="frame-tab active">Lucky Red Packet</div>
-          <div id="rp-tab-direct" class="frame-tab">Exclusive Red Packet</div>
+          <div id="rp-tab-group" class="frame-tab active">Lucky draw red packet</div>
+          <div id="rp-tab-direct" class="frame-tab">Exclusive red packet</div>
         </div>
         <div id="rp-content-group" class="frame-content" style="padding: 20px 15px;">
           <div class="form-group"> <label>Total Amount (CNY)</label> <input type="number" id="rp-group-amount" placeholder="0.00"> </div>
           <div class="form-group"> <label>Number of Red Packets</label> <input type="number" id="rp-group-count" placeholder="Enter the number of red packets"> </div>
           <div class="form-group"> <label>Greeting</label> <input type="text" id="rp-group-greeting" placeholder="Congratulations and prosperity!"> </div>
-          <p id="rp-group-total" style="text-align: center; font-size: 24px; font-weight: bold; margin: 10px 0;">¥ 0.00</p> <button id="send-group-packet-btn" class="form-button">Fill Red Packet with Money</button>
+          <p id="rp-group-total" style="text-align: center; font-size: 24px; font-weight: bold; margin: 10px 0;">¥ 0.00</p> <button id="send-group-packet-btn" class="form-button">Fill Red Packet</button>
         </div>
         <div id="rp-content-direct" class="frame-content" style="display: none; padding: 20px 15px;">
-          <div class="form-group"> <label>Send To</label> <select id="rp-direct-receiver"></select> </div>
+          <div class="form-group"> <label>Recipient</label> <select id="rp-direct-receiver"></select> </div>
           <div class="form-group"> <label>Amount (CNY)</label> <input type="number" id="rp-direct-amount" placeholder="0.00"> </div>
           <div class="form-group"> <label>Greeting</label> <input type="text" id="rp-direct-greeting" placeholder="Congratulations and prosperity!"> </div>
-          <p id="rp-direct-total" style="text-align: center; font-size: 24px; font-weight: bold; margin: 10px 0;">¥ 0.00</p> <button id="send-direct-packet-btn" class="form-button">Fill Red Packet with Money</button>
+          <p id="rp-direct-total" style="text-align: center; font-size: 24px; font-weight: bold; margin: 10px 0;">¥ 0.00</p> <button id="send-direct-packet-btn" class="form-button">Fill Red Packet</button>
         </div>
       </div>
       <div class="modal-footer" style="justify-content: center;"> <button class="cancel" id="cancel-red-packet-btn" style="width: 100%;"data-lang-key="cancel">Cancel</button> </div>
@@ -3142,7 +3143,7 @@
       <div class="modal-header" style="background-color: #F96259; color: white; border-bottom: none; padding-bottom: 5px;">
         <div style="text-align: center; width: 100%;">
           <div id="rp-details-sender" style="font-size: 16px;"></div>
-          <div style="font-size: 13px; opacity: 0.8;">Red Envelope</div>
+          <div style="font-size: 13px; opacity: 0.8;">'s Red Packet</div>
         </div>
       </div>
       <div class="modal-body" style="padding: 15px;">
@@ -3288,18 +3289,18 @@
   </div>
   <div id="message-actions-modal" class="modal">
     <div id="custom-modal" style="width: 250px;">
-      <div class="custom-modal-footer"> <button id="edit-message-btn" data-lang-key="edit">EditMessages</button> <button id="copy-message-btn">Copy Text</button> <button id="copy-timestamp-btn">Copy Timestamp</button> <button id="recall-message-btn">Recall</button> <button id="publish-to-announcement-btn" style="display: none;">Publish to Announcement Board</button>
+      <div class="custom-modal-footer"> <button id="edit-message-btn" data-lang-key="edit">Edit Message</button> <button id="copy-message-btn">Copy Text</button> <button id="copy-timestamp-btn">Copy Timestamp</button> <button id="recall-message-btn">Recall</button> <button id="publish-to-announcement-btn" style="display: none;">Publish to Announcement Board</button>
         <button id="quote-message-btn">Quote</button> <button id="select-message-btn">Enter Multi-Select</button> <button id="cancel-message-action-btn" style="margin-top: 8px; border-radius: 8px; background-color: #f0f0f0;"data-lang-key="cancel">Cancel</button> </div>
     </div>
   </div>
   <div id="post-actions-modal" class="modal">
     <div id="custom-modal" style="width: 250px;">
-      <div class="custom-modal-footer"> <button id="edit-post-btn" data-lang-key="edit">EditUpdates</button> <button id="copy-post-btn">Copy Content</button> <button id="cancel-post-action-btn"data-lang-key="cancel">Cancel</button> </div>
+      <div class="custom-modal-footer"> <button id="edit-post-btn" data-lang-key="edit">Edit Post</button> <button id="copy-post-btn">Copy Content</button> <button id="cancel-post-action-btn"data-lang-key="cancel">Cancel</button> </div>
     </div>
   </div>
   <div id="message-editor-modal" class="modal">
     <div class="modal-content" style="height: 75%;">
-      <div class="modal-header"> <span data-lang-key="edit">Edit and Split Messages</span> </div>
+      <div class="modal-header"> <span data-lang-key="edit">Edit and Split Message</span> </div>
       <div class="modal-body" id="message-editor-body">
         <div id="message-editor-container"></div> <button id="add-message-editor-block-btn" class="form-button form-button-secondary" style="margin-top: 15px;"> [+] Add Next Message </button>
       </div>
@@ -3312,12 +3313,12 @@
       <div class="modal-body" id="ai-response-editor-body">
         <div id="ai-response-editor-container" style="display: flex; flex-direction: column; gap: 15px;"></div> <button id="add-ai-response-block-btn" class="form-button form-button-secondary" style="margin-top: 15px;"> [+] Add New Action </button>
       </div>
-      <div class="modal-footer"> <button class="cancel" id="cancel-ai-response-editor-btn"data-lang-key="cancel">Cancel</button> <button class="save" id="save-ai-response-editor-btn">应用修改</button> </div>
+      <div class="modal-footer"> <button class="cancel" id="cancel-ai-response-editor-btn"data-lang-key="cancel">Cancel</button> <button class="save" id="save-ai-response-editor-btn">Apply Changes</button> </div>
     </div>
   </div>
   <div id="repost-modal" class="modal">
     <div id="custom-modal" style="width: 280px;">
-      <div class="custom-modal-header">Forwarding Updates</div>
+      <div class="custom-modal-header">Repost</div>
       <div class="custom-modal-body"> <textarea id="repost-comment-input" placeholder="Enter repost comment (optional)" style="width: 100%; min-height: 60px; resize: vertical; border: 1px solid #ccc; border-radius: 6px; padding: 8px; font-size: 16px; box-sizing: border-box;"></textarea> </div>
       <div class="custom-modal-footer"> <button id="repost-cancel-btn"data-lang-key="cancel">Cancel</button> <button id="repost-confirm-btn" class="confirm-btn"data-lang-key="confirm">Confirm</button> </div>
     </div>
@@ -3329,9 +3330,9 @@
   </div> <audio id="audio-player" style="display:none;"></audio>
   <div id="create-post-modal" class="modal">
     <div class="modal-content" style="height: auto; max-height: 90%;">
-      <div class="modal-header"> <span>Create Updates</span> </div>
+      <div class="modal-header"> <span>Create Post</span> </div>
       <div class="modal-body">
-        <div class="form-group"> <textarea id="post-public-text" rows="3" placeholder="Share something new... (optional public text)"></textarea> </div>
+        <div class="form-group"> <textarea id="post-public-text" rows="3" placeholder="Share something new... (Optional public text)"></textarea> </div>
         <div class="post-mode-switcher"> <button id="switch-to-image-mode" class="mode-btn active">Upload Image</button> <button id="switch-to-text-image-mode" class="mode-btn">Use Text Image</button> </div>
         <div class="form-group"> <label>Visibility</label>
           <div id="post-visibility-options" style="display: flex; gap: 15px; margin-bottom: 10px;"> <label><input type="radio" name="visibility" value="public" checked> Public</label> <label><input type="radio" name="visibility" value="include"> Specific Groups</label> </div>
@@ -3342,7 +3343,7 @@
             <div id="post-image-preview-container" class="post-image-preview-container"> <img id="post-image-preview" src="" alt="Image Preview"> <button id="post-remove-image-btn">×</button> </div>
             <div class="post-image-upload-options"> <button id="post-upload-local-btn" class="form-button-secondary">Upload from Local</button> <button id="post-use-url-btn" class="form-button-secondary">Use URL</button> <input type="file" id="post-local-image-input" accept="image/*" hidden> </div>
           </div>
-          <div id="post-image-desc-group" class="form-group" style="display: none;"> <label>Image Description (Required for AI)</label> <input type="text" id="post-image-description" placeholder="Briefly describe the image to help AI understand"> </div>
+          <div id="post-image-desc-group" class="form-group" style="display: none;"> <label>Image Description (Required for AI)</label> <input type="text" id="post-image-description" placeholder="Briefly describe the image content to help AI understand"> </div>
         </div>
         <div id="text-image-mode-content" class="post-mode-content">
           <div class="form-group"> <label>Text Image (Description for AI, visible after clicking the image)</label> <textarea id="post-hidden-text" rows="4" placeholder="Write the image description here..."></textarea> </div>
@@ -3361,7 +3362,7 @@
       </div>
       <div class="modal-body">
         <div class="frame-tabs">
-          <div id="ai-frame-tab" class="frame-tab active">Their</div>
+          <div id="ai-frame-tab" class="frame-tab active">Other's</div>
           <div id="my-frame-tab" class="frame-tab">Mine</div>
         </div>
         <div id="ai-frame-content" class="frame-content">
@@ -3378,13 +3379,13 @@
   </div><input type="file" id="custom-frame-upload-input" accept="image/*" hidden>
   <div id="character-profile-modal" class="modal">
     <div class="character-profile-content"> <div style="position: absolute; top: 20px; right: 20px; display: flex; gap: 10px; z-index: 10;">
-        <button id="profile-edit-btn" title="Edit Heartfelt Voice" class="profile-history-icon-btn">
+        <button id="profile-edit-btn" title="Edit Current Thought" class="profile-history-icon-btn">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
             <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
           </svg>
         </button>
-        <button id="profile-history-icon-btn" title="View Heartfelt Voice History" class="profile-history-icon-btn">
+        <button id="profile-history-icon-btn" title="View Thought History" class="profile-history-icon-btn">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
             <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
@@ -3411,7 +3412,7 @@
         </div>
       </div>
       <div id="profile-thoughts-history-view">
-        <div class="profile-header"> <span>Heartfelt Voice History</span> <button id="history-back-btn" title="Back"> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+        <div class="profile-header"> <span>Thought History</span> <button id="history-back-btn" title="Back"> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
               <polyline points="15 18 9 12 15 6"></polyline>
             </svg> </button> </div>
         <div id="thoughts-history-list"></div>
@@ -3420,7 +3421,7 @@
   </div> <input type="file" id="my-avatar-upload-input" accept="image/*" hidden>
   <div id="gift-recipient-modal" class="modal">
     <div class="modal-content" style="height: 70%;">
-      <div class="modal-header"> <span>Select Gift Recipient</span> <label style="font-size: 14px; font-weight: normal; display: flex; align-items: center; gap: 5px;"> <input type="checkbox" id="select-all-recipients"> Select All </label> </div>
+      <div class="modal-header"> <span>Select Recipient</span> <label style="font-size: 14px; font-weight: normal; display: flex; align-items: center; gap: 5px;"> <input type="checkbox" id="select-all-recipients"> Select All </label> </div>
       <div class="modal-body" id="gift-recipient-list" style="padding: 0;"> </div>
       <div class="modal-footer"> <button class="cancel" id="cancel-gift-recipient-btn"data-lang-key="cancel">Cancel</button> <button class="save" id="confirm-gift-recipient-btn">Confirm</button> </div>
     </div>
@@ -3465,7 +3466,7 @@
   </div>
   <div id="werewolf-kill-modal" class="modal">
     <div class="modal-content" style="height: 70%;">
-      <div class="modal-header"><span>Werewolf, please choose your target.</span></div>
+      <div class="modal-header"><span>Werewolf, please select a target</span></div>
       <div class="modal-body" id="werewolf-kill-selection-list" style="padding: 0;"></div>
       <div class="modal-footer"> <button class="cancel" id="cancel-wolf-kill-btn">Give Up</button> <button class="save btn-danger" id="confirm-wolf-kill-btn">Confirm Kill</button> </div>
     </div>
@@ -3488,14 +3489,14 @@
   </div>
   <div id="werewolf-prophet-modal" class="modal">
     <div class="modal-content" style="height: 70%;">
-      <div class="modal-header"><span>Prophet, please choose your target.</span></div>
+      <div class="modal-header"><span>Prophet, please select a target</span></div>
       <div class="modal-body" id="werewolf-prophet-selection-list" style="padding: 0;"></div>
       <div class="modal-footer"> <button class="save" id="confirm-prophet-check-btn">Confirm Check</button> </div>
     </div>
   </div>
   <div id="werewolf-hunter-modal" class="modal">
     <div class="modal-content" style="height: 70%;">
-      <div class="modal-header"><span>Hunter, please choose your target.</span></div>
+      <div class="modal-header"><span>Hunter, please select a target</span></div>
       <div class="modal-body" id="werewolf-hunter-selection-list" style="padding: 0;"></div>
       <div class="modal-footer"> <button class="save btn-danger" id="confirm-hunter-shot-btn">Confirm Shot</button> </div>
     </div>
@@ -3509,7 +3510,7 @@
   </div>
   <div id="werewolf-guard-modal" class="modal">
     <div class="modal-content" style="height: 70%;">
-      <div class="modal-header"><span>Guard, please choose a player to protect tonight.</span></div>
+      <div class="modal-header"><span>Guard, please select a player to protect tonight</span></div>
       <div class="modal-body" id="werewolf-guard-selection-list" style="padding: 0;"></div>
       <div class="modal-footer"> <button class="save" id="confirm-guard-selection-btn">Confirm Protection</button> </div>
     </div>
@@ -3523,7 +3524,7 @@
   </div>
   <div id="werewolf-hunter-modal" class="modal">
     <div class="modal-content" style="height: 70%;">
-      <div class="modal-header"><span>Hunter, please choose your target.</span></div>
+      <div class="modal-header"><span>Hunter, please select a target</span></div>
       <div class="modal-body" id="werewolf-hunter-selection-list" style="padding: 0;"></div>
       <div class="modal-footer"> <button class="save btn-danger" id="confirm-hunter-shot-btn">Confirm Shot</button> </div>
     </div>
@@ -3540,7 +3541,7 @@
       <h2 id="werewolf-game-over-title">Game Over</h2>
       <p id="werewolf-game-over-reason" style="font-size: 16px; margin: 20px 0;"></p>
       <div id="werewolf-role-reveal-list" style="max-height: 250px; overflow-y: auto; margin: 20px 0; border-top: 1px solid #444; padding-top: 10px;"> </div> <button id="werewolf-game-over-close-btn" class="form-button">Return to Lobby</button> <button id="manual-werewolf-summary-btn"
-        class="form-button form-button-secondary" style="margin-top: 10px;">Manual Summary</button>
+        class="form-button form-button-secondary" style="margin-top: 10px;">Manual Memory Summary</button>
     </div>
   </div>
   <div id="reading-library-modal" class="modal">
@@ -3583,7 +3584,7 @@
             <p id="variation-selected-price" style="color: #ff5722; font-weight: bold; font-size: 18px; margin: 8px 0 0;"></p>
           </div>
         </div>
-        <div class="form-group"> <label>Select Style</label>
+        <div class="form-group"> <label>Select Variation</label>
           <div id="variation-options-container" style="display: flex; flex-wrap: wrap; gap: 8px;"> </div>
         </div>
         <div class="form-group"> <label>Quantity</label>
@@ -3598,10 +3599,10 @@
     <div class="modal-content">
       <div class="modal-header"> <span>Shopping Center Generation Settings</span> </div>
       <div class="modal-body">
-        <div class="form-group douban-settings-item"> <label for="shopping-category-count-input"> Number of Categories to Generate <p style="font-size: 12px; font-weight: normal; color: #999; margin-top: 5px;"> Set how many product categories AI should generate at once. </p> </label>
+        <div class="form-group douban-settings-item"> <label for="shopping-category-count-input"> Number of Categories <p style="font-size: 12px; font-weight: normal; color: #999; margin-top: 5px;"> Set how many product categories the AI should generate at once. </p> </label>
           <div class="douban-settings-controls"> <input type="number" id="shopping-category-count-input" min="1" max="10" value="3"> <span>categories</span> </div>
         </div>
-        <div class="form-group douban-settings-item"> <label for="shopping-product-count-input"> Number of Products per Category <p style="font-size: 12px; font-weight: normal; color: #999; margin-top: 5px;"> Set how many products to generate under each category. </p> </label>
+        <div class="form-group douban-settings-item"> <label for="shopping-product-count-input"> Number of Products per Category <p style="font-size: 12px; font-weight: normal; color: #999; margin-top: 5px;"> Set how many products the AI should generate for each category. </p> </label>
           <div class="douban-settings-controls"> <input type="number" id="shopping-product-count-input" min="2" max="10" value="8"> <span>products</span> </div>
         </div>
       </div>
@@ -3614,7 +3615,7 @@
         <span>Bind Category to Chat</span>
       </div>
       <div class="modal-body" id="sticker-binding-chat-list" style="padding: 0;">
-        <!-- Chat list will be rendered here -->
+        <!-- Chat list will be dynamically rendered here -->
       </div>
       <div class="modal-footer">
         <button class="cancel" id="cancel-sticker-binding-btn"data-lang-key="cancel">Cancel</button>
@@ -3672,13 +3673,13 @@
             </div>
 
             <div class="form-group">
-                <label style="color: #333;">Steps</label>
+                <label style="color: #333;">Sampling Steps (Steps)</label>
                 <input type="number" id="nai-steps" value="28" min="1" max="50" style="background-color: #f8f9fa; color: #333; border: 1px solid #ccc; padding: 8px; width: 100%; border-radius: 4px;">
-                <small style="color: #666;">Recommended value: 28 (Higher values improve quality but increase processing time)</small>
+                <small style="color: #666;">Recommended value: 28 (Higher values improve quality but take longer)</small>
             </div>
 
             <div class="form-group">
-                <label style="color: #333;">CFG Scale</label>
+                <label style="color: #333;">Prompt Relevance (CFG Scale)</label>
                 <input type="number" id="nai-cfg-scale" value="5" min="1" max="20" step="0.5" style="background-color: #f8f9fa; color: #333; border: 1px solid #ccc; padding: 8px; width: 100%; border-radius: 4px;">
                 <small style="color: #666;">Recommended value: 5 (Controls the relevance of the image to the prompt)</small>
             </div>
@@ -3696,9 +3697,9 @@
             </div>
 
             <div class="form-group">
-                <label style="color: #333;">Random Seed</label>
+                <label style="color: #333;">Random Seed (Seed)</label>
                 <input type="number" id="nai-seed" value="-1" min="-1" max="9999999999" style="background-color: #f8f9fa; color: #333; border: 1px solid #ccc; padding: 8px; width: 100%; border-radius: 4px;">
-                <small style="color: #666;">-1 means random, fixed seed can reproduce the same image</small>
+                <small style="color: #666;">-1 indicates random, fixed seed can reproduce the same image</small>
             </div>
 
             <div class="form-group">
@@ -3728,10 +3729,10 @@
             </div>
 
             <div class="form-group">
-                <label style="color: #333;">SMEA DYN (Updates Optimization)</label>
+                <label style="color: #333;">SMEA DYN (Dynamic Optimization)</label>
                 <div style="display: flex; align-items: center; gap: 10px;">
                     <input type="checkbox" id="nai-smea-dyn" style="width: auto;">
-                    <span style="color: #666; font-size: 14px;">Enable UpdatesSMEA</span>
+                    <span style="color: #666; font-size: 14px;">Enable dynamic SMEA</span>
                 </div>
             </div>
 
@@ -3763,11 +3764,11 @@
             <div id="nai-custom-proxy-group" class="form-group" style="display: none;">
                 <label style="color: #333;">Custom Proxy URL</label>
                 <input type="text" id="nai-custom-proxy-url" placeholder="https://your-proxy.com/?" style="background-color: #f8f9fa; color: #333; border: 1px solid #ccc; padding: 8px; width: 100%; border-radius: 4px;">
-                <small style="color: #666;">Proxy URL should end with / or ?, e.g., https://proxy.com/?</small>
+                <small style="color: #666;">The proxy URL should end with / or ?, for example: https://proxy.com/?</small>
             </div>
         </div>
         <div class="modal-footer">
-            <button id="reset-nai-settings-btn" class="form-button form-button-secondary" style="margin-right: 10px;">Restore Default</button>
+            <button id="reset-nai-settings-btn" class="form-button form-button-secondary" style="margin-right: 10px;">Restore Defaults</button>
             <button id="save-nai-settings-btn" class="form-button form-button-secondary"data-lang-key="save">Save Settings</button>
         </div>
     </div>
@@ -3783,7 +3784,7 @@
         </div>
         <div class="modal-body" style="padding: 20px;">
             <div class="form-group">
-                <label style="color: #333;">Positive Prompt (This prompt is only for this modal test)</label>
+                <label style="color: #333;">Positive Prompt (This prompt is only used for this test modal)</label>
                 <textarea id="nai-test-prompt" rows="4" style="background-color: #f8f9fa; color: #333; border: 1px solid #ccc; padding: 10px; width: 100%; border-radius: 4px; resize: vertical;" placeholder="1girl, solo, long hair, blue eyes, smile...">1girl, solo, long hair, blue eyes, smile, outdoors, cherry blossoms, spring</textarea>
             </div>
 
@@ -3830,14 +3831,14 @@
         </div>
         <div class="modal-body">
             <p style="font-size: 13px; color: #666; margin-bottom: 20px; background-color: #f0f8ff; padding: 12px; border-radius: 6px; border-left: 3px solid #007bff;">
-                💡 The prompt configured here applies only to the current character’s NAI image generation and will not impact other characters or global system settings.
+                💡  The prompts configured here are only used for the current character's NAI generation and do not affect other characters or system settings.
             </p>
             
             <div class="form-group">
                 <label for="character-nai-positive" style="color: #333; font-weight: 600;">
                     Positive Prompt
                 </label>
-                <textarea id="character-nai-positive" rows="4" style="background-color: #f8f9fa; color: #333; border: 1px solid #ccc; padding: 10px; width: 100%; border-radius: 4px; resize: vertical; font-size: 13px;" placeholder="e.g., masterpiece, best quality, 1girl, beautiful, detailed face, detailed eyes, long hair, anime style"></textarea>
+                <textarea id="character-nai-positive" rows="4" style="background-color: #f8f9fa; color: #333; border: 1px solid #ccc; padding: 10px; width: 100%; border-radius: 4px; resize: vertical; font-size: 13px;" placeholder="e.g.: masterpiece, best quality, 1girl, beautiful, detailed face, detailed eyes, long hair, anime style"></textarea>
                 <small style="display: block; color: #666; font-size: 12px; margin-top: 5px;">
                     Describe the style of the image you want to generate, you can include artist references.
                 </small>
@@ -3847,14 +3848,14 @@
                 <label for="character-nai-negative" style="color: #333; font-weight: 600;">
                     Negative Prompt
                 </label>
-                <textarea id="character-nai-negative" rows="4" style="background-color: #f8f9fa; color: #333; border: 1px solid #ccc; padding: 10px; width: 100%; border-radius: 4px; resize: vertical; font-size: 13px;" placeholder="e.g., lowres, bad anatomy, bad hands, text, error, missing fingers"></textarea>
+                <textarea id="character-nai-negative" rows="4" style="background-color: #f8f9fa; color: #333; border: 1px solid #ccc; padding: 10px; width: 100%; border-radius: 4px; resize: vertical; font-size: 13px;" placeholder="e.g.: lowres, bad anatomy, bad hands, text, error, missing fingers"></textarea>
                 <small style="display: block; color: #666; font-size: 12px; margin-top: 5px;">
-                    Describe the elements you want to avoid.
+                    Describe the elements you want to avoid in the generated image, such as low resolution, bad anatomy, text, etc.
                 </small>
             </div>
         </div>
         <div class="modal-footer">
-            <button id="reset-character-nai-prompts-btn" class="form-button form-button-secondary" style="margin-right: 10px;">Clear Configuration</button>
+            <button id="reset-character-nai-prompts-btn" class="form-button form-button-secondary" style="margin-right: 10px;">Reset Configuration</button>
             <button id="save-character-nai-prompts-btn" class="form-button form-button-secondary"data-lang-key="save">Save</button>
         </div>
     </div>
@@ -3876,19 +3877,19 @@
 <div id="pin-modal-overlay" class="modal">
     <div id="pin-modal-content" class="modal-content" style="width: 300px; height: auto;">
         <div class="modal-header">
-            <span>功能激活</span>
+            <span>Feature Activation</span>
         </div>
         <div class="modal-body" style="text-align: left;">
-            <p>此功能需要激活码 (PIN) 才能使用。</p>
+            <p>This feature requires an activation code (PIN) to use.</p>
             
             <div class="form-group">
-                <label for="pin-device-id-display">您的设备ID (请去尾巴镇角色卡中获取，还有解密没直接给网址，按照要求去Search就好了，以下数字即为你的设备码)</label>
+                <label for="pin-device-id-display">Your Device ID (Please obtain it from the Tail Town character card. The decryption is not directly provided on the website, follow the instructions to search for it. The following number is your device code)</label>
                 <input type="text" id="pin-device-id-display" readonly style="background: #eee; cursor: text; -webkit-user-select: text; user-select: text;">
             </div>
             
             <div class="form-group">
-                <label for="pin-input">Enter Activation Code (PIN)</label>
-                <input type="text" id="pin-input" placeholder="Enter activation code here...">
+                <label for="pin-input">Please enter the activation code (PIN)</label>
+                <input type="text" id="pin-input" placeholder="Enter the activation code here...">
             </div>
         </div>
         <div class="modal-footer">
@@ -3931,7 +3932,7 @@
     <div class="modal-content" style="height: 60%;">
         <div class="modal-header"> <span>Manage Reply Categories</span> </div>
         <div class="modal-body">
-            <div class="form-group"> <label>Create New Category</label>
+            <div class="form-group"> <label>New Category</label>
                 <div style="display: flex; gap: 10px;"> 
                     <input type="text" id="new-quick-reply-category-name-input" placeholder="Enter category name..." style="flex-grow: 1;"> 
                     <button id="add-new-quick-reply-category-btn" class="form-button" style="width: auto; margin-top: 0; padding: 0 15px;" data-lang-key="add">Add</button> 
@@ -3986,14 +3987,14 @@
           </div> <button id="close-char-music-player-btn" class="char-player-close-btn">×</button>
         </div>
       </div>
-<!-- New: Kinship Card Gift Modal -->
+<!-- 新增：亲属卡赠送专属弹窗 -->
 <div id="kinship-creation-modal" class="modal">
   <div class="modal-content" style="height: 70%; display: flex; flex-direction: column;">
     <div class="modal-header">
       <span>Gift Kinship Card</span>
     </div>
     
-    <!-- Middle Section: Divided into Character List Above and Amount Input Below -->
+    <!-- Middle section: divided into the character list above and the amount input below -->
     <div class="modal-body" style="padding: 0; flex-grow: 1; display: flex; flex-direction: column; overflow: hidden;">
       
       <!-- Prompt -->
@@ -4001,12 +4002,12 @@
         Please select a recipient (single choice)
       </div>
 
-      <!-- Character List Area (Reusing Clean Data Styles) -->
+      <!-- 角色列表区域 (复用清理数据的样式) -->
       <div id="kinship-char-list" style="flex-grow: 1; overflow-y: auto;">
-        <!-- JS Updates Fill -->
+        <!-- JS 动态填充 -->
       </div>
 
-      <!-- Amount Input Area -->
+      <!-- 金额输入区域 -->
       <div style="padding: 20px; background-color: #fff; border-top: 1px solid var(--border-color); box-shadow: 0 -2px 10px rgba(0,0,0,0.05); z-index: 2;">
         <div class="form-group" style="margin-bottom: 0;">
           <label for="kinship-limit-input" style="font-weight: 600;">Monthly Spending Limit</label>
@@ -4015,7 +4016,7 @@
              <input type="number" id="kinship-limit-input" value="5200" placeholder="Enter amount" 
                     style="font-size: 24px; font-weight: bold; color: #ff1744; border: none; border-bottom: 1px solid #ddd; border-radius: 0; padding: 5px 0; background: transparent;">
           </div>
-          <p style="font-size: 12px; color: #999; margin-top: 8px;">Priority will be given to deducting from the kinship card limit, any excess will be paid by the recipient.</p>
+          <p style="font-size: 12px; color: #999; margin-top: 8px;">Priority will be given to the kinship card limit, and any excess will be paid by the recipient.</p>
         </div>
       </div>
     </div>
@@ -4083,11 +4084,11 @@
                 <input type="text" id="gr-story-title" class="gr-input" placeholder="Enter the title">
             </div>
             <div class="gr-form-group">
-    <label>Macro World View / IF Line Setting</label>
-    <textarea id="gr-macro-world-view" class="gr-input" rows="3" placeholder="Enter the core settings here. For example: 'Republican warlord background, Char is the young marshal, User is a progressive student', or 'ABO setting, Char is Enigma'. This setting has the highest priority."></textarea>
+    <label>Grand worldview / IF line setting. (Macro World View)</label>
+    <textarea id="gr-macro-world-view" class="gr-input" rows="3" placeholder="Enter the core settings here. For example: 'Republican warlord background, Char is the young marshal, User is the progressive student', or 'ABO setting, Char is Enigma'. This setting has the highest priority."></textarea>
 </div>
             <div class="gr-form-group">
-                <label>Specified author (writing style)</label>
+                <label>Designated author (writing style).</label>
                 <select id="gr-author-select" class="gr-select"></select>
             </div>
 
@@ -4097,7 +4098,7 @@
             </div>
 
             <div class="gr-form-group">
-                <label>World Book</label>
+                <label>Worldview (World Book)</label>
                 <div class="gr-checkbox-list" id="gr-worldbook-list"></div>
             </div>
             
@@ -4109,11 +4110,11 @@
             </div>
 
             <div class="gr-form-group">
-                <label>Single Generation Word Count (Token)</label>
+                <label>Output Length (Token)</label>
                 <input type="number" id="gr-output-length" class="gr-input" value="500">
             </div>
              <div class="gr-form-group">
-                <label>Context Reference Count (History)</label>
+                <label>Context Limit (History)</label>
                 <input type="number" id="gr-context-limit" class="gr-input" value="20">
             </div>
         </div>
@@ -4135,7 +4136,7 @@
       </div>
       <div class="form-group">
         <label>Writing Style Description</label>
-        <textarea id="gr-author-style-input" rows="5" placeholder="Describe the author's word usage habits, sentence structure characteristics..."></textarea>
+        <textarea id="gr-author-style-input" rows="5" placeholder="Describe the author's word usage habits, sentence patterns, etc."></textarea>
       </div>
     </div>
     <div class="modal-footer">
@@ -4171,23 +4172,23 @@
 
             <h4 style="margin-top: 0;">2. Data Security and Privacy</h4>
             <p style="font-size: 13px; color: #666; margin-bottom: 15px;">
-                All data (including but not limited to chat records, character settings, images, API keys) is stored in your device's local browser database (IndexedDB/LocalStorage). The developer cannot view, access, or control any of your data. Please keep your device and exported backup files secure.
+                All data (including but not limited to chat records, character settings, images, API keys) is stored in your device's local browser database (IndexedDB/LocalStorage). The developer cannot view, access, or control any of your data. Please properly safeguard your device and exported backup files.
             </p>
 
             <h4 style="margin-top: 0;">3. Media Resource Copyright</h4>
             <p style="font-size: 13px; color: #666; margin-bottom: 15px;">
-                The music player, albums, and icon features within this application are only rendering tools. <b>All audio, images, fonts, and other media resources are imported by the user or loaded through third-party links.</b>
+                The music player, album, and icon functions within this application are only rendering tools. <b>All audio, images, fonts, and other media resources are imported by the user or loaded through third-party links.</b>
                 <br>
                 The developer does not provide, store, or distribute any copyrighted music or media files. Users are responsible for complying with copyright laws when importing online resources into this application.
             </p>
 
             <h4 style="margin-top: 0;">4. AI Generated Content</h4>
             <p style="font-size: 13px; color: #666; margin-bottom: 15px;">
-                Dialogues and images are generated by third-party APIs (such as OpenAI, Claude, Google Gemini, NovelAI, etc.) configured by the user. AI-generated content is random and does not represent the developer's stance. Please do not use this tool to generate content that violates laws and regulations.
+                Dialogues and images are generated by third-party APIs configured by the user (such as OpenAI, Claude, Google Gemini, NovelAI, etc.). AI-generated content is random and does not represent the developer's stance. Please do not use this tool to generate content that violates laws and regulations.
             </p>
             
             <div style="background: #f5f5f5; padding: 10px; border-radius: 8px; font-size: 12px; color: #999; margin-top: 20px;">
-                By continuing to use this application, you acknowledge that you have read and agree to the above terms.
+                Continuing to use this application indicates that you have read and agreed to the above terms.
             </div>
         </div>
         <div class="modal-footer">
