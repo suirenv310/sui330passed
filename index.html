@@ -133,14 +133,14 @@
             </div>
             <div id="page-2-app-container">
               <div class="left-column-stack">
-        <!-- 原来的大组件 -->
+        <!-- Original large component. -->
         <div class="large-widget" onclick="handleWidgetImageChange('large-widget-img')"> 
             <img class="large-widget-img" id="large-widget-img" src="https://i.imgur.com/Bv63o3h.jpg" alt="Colorful Widget"> 
         </div>
         
-        <!-- 新增：左侧 App 网格 -->
+        <!-- New: Left App Grid -->
         <div class="left-app-grid">
-            <!-- 支付宝图标 -->
+            <!-- Alipay Icon -->
             <div class="desktop-app-icon" onclick="openAlipayScreen()">
     <div class="icon-bg-desktop">
         <img id="icon-img-alipay" src="https://i.postimg.cc/SK31X0Bb/IMG_2231.png" alt="Alipay">
@@ -170,7 +170,7 @@
     </div>
     <span class="label">Mail</span>
 </div>
-            <!-- 未来可以在这里加更多 App -->
+            <!-- In the future, more Apps can be added here -->
         </div>
     </div>
               <div class="right-column-stack">
@@ -475,7 +475,7 @@
         <div class="modal-content" style="height: 80%;">
           <div class="modal-header"> <span id="transcript-modal-char-name"></span> </div>
           <div class="modal-body" id="transcript-modal-body" style="background-color: #f0f2f5; padding: 15px; display: flex; flex-direction: column; gap: 15px;"> </div>
-          <div class="modal-footer"> <button class="save" id="close-transcript-modal-btn" style="width:100%;">关闭</button> </div>
+          <div class="modal-footer"> <button class="save" id="close-transcript-modal-btn" style="width:100%;">Close</button> </div>
         </div>
       </div>
       <div id="char-music-screen" class="char-screen">
@@ -647,7 +647,7 @@
                  <!-- Dropdown container: flex-grow fills the left space, content left-aligned -->
                  <div style="flex-grow: 1; display: flex; align-items: center; justify-content: flex-start; overflow: hidden;">
                      <select id="api-preset-select" class="settings-select">
-                         <!-- JS 填充选项 -->
+                         <!-- JS fills options -->
                      </select>
                  </div>
                  
@@ -804,7 +804,7 @@
                      <input type="password" id="minimax-api-key" placeholder="Enter API Key">
                 </div>
             </div>
-            <!-- 分行 1: 模型 -->
+            <!-- Line 1: Model -->
             <div class="settings-item">
                 <label>Model</label>
                 <div class="settings-right">
@@ -813,7 +813,7 @@
                     </select>
                 </div>
             </div>
-            <!-- 分行 2: 接口域名 (手动写死在这里，不再依赖 JS 动态插入) -->
+            <!-- Line 2: API Domain (Manually written here, no longer relying on JS to dynamically insert) -->
             <div class="settings-item">
                 <label>API Domain</label>
                 <div class="settings-right">
@@ -1024,22 +1024,22 @@
         <div class="settings-header">Data Management</div>
         
         <div class="settings-section">
-            <!-- 1. 图片占用 + 压缩按钮 (同一行) -->
+            <!-- 1. Image Usage + Compress Button (Same Row) -->
             <div class="settings-item">
-                <!-- 左侧标题 -->
+                <!-- Left Title -->
                 <label style="flex-shrink: 0;">Local Image Usage</label>
                 
-                <!-- 右侧区域：数值 + 按钮 -->
+                <!-- Right Area: Value + Button -->
                 <div class="data-row-right">
-                    <!-- 数值 (由JS填充，CSS会隐藏多余文字只留MB) -->
+                    <!-- Value (Filled by JS, CSS will hide excess text leaving only MB) -->
                     <span id="total-image-size-display">Calculating...</span>
                     
-                    <!-- 压缩按钮 -->
+                    <!-- Compress Button -->
                     <button id="compress-images-btn" class="settings-mini-btn">Compress</button>
                 </div>
             </div>
             
-            <!-- 列表按钮：黑色左对齐 -->
+            <!-- List Buttons: Black Left-Aligned -->
             <button class="settings-full-btn" id="export-data-btn">Export All Data</button>
             <button class="settings-full-btn" id="import-btn">Import Backup File</button>
             <input id="import-data-input" type="file" accept="application/json" hidden>
@@ -1054,7 +1054,7 @@
     Logout (Switch Account)
 </button>
         </div>
-        <!-- 新增：关于与免责声明区域 -->
+        <!-- New: About & Disclaimer Section -->
         <div class="settings-header">About</div>
         <div class="settings-section">
             <div class="settings-item clickable" id="open-disclaimer-btn">
@@ -1071,7 +1071,7 @@
             EPhone is a purely local simulator<br>
             Does not store any user data
         </p>
-        <!-- 底部垫高 -->
+        <!-- Bottom Padding -->
         <div style="height: 60px;"></div>
       </div>
     </div>
@@ -1577,33 +1577,33 @@
       <div class="header"> 
         <span class="back-btn" onclick="showScreen('home-screen')">‹</span> 
         <span data-lang-key="appearanceTitle">Appearance Settings</span> 
-        <!-- 保留原有保存按钮逻辑 -->
+        <!-- Retain the original save button logic. -->
         <span class="save-btn" id="save-wallpaper-btn" data-lang-key="save">Save</span> 
       </div>
 
       <div class="settings-container ios-scroll-container">
 
-        <!-- 1. 壁纸与背景 -->
+        <!-- 1. Wallpaper & Background -->
         <div class="settings-header">Wallpaper & Background</div>
         <div class="settings-section">
-            <!-- EPhone 主屏幕 -->
+            <!-- EPhone Main Screen -->
             <div class="settings-item">
                 <label>Main Screen Wallpaper</label>
                 <div class="settings-right">
-                    <!-- 预览图 -->
+                    <!-- Preview -->
                     <div id="wallpaper-preview" class="wallpaper-thumbnail">Preview</div>
-                    <!-- 按钮组 -->
+                    <!-- Button Group -->
                     <div class="action-btn-group">
                         <button class="settings-mini-btn" onclick="document.getElementById('wallpaper-upload-input').click()">Local</button>
                         <button id="upload-ephone-bg-url-btn" class="settings-mini-btn">URL</button>
                         <button id="remove-ephone-bg-btn" class="settings-mini-btn" style="display:none; color:#ff3b30;">×</button>
                     </div>
-                    <!-- 隐藏的文件输入 -->
+                    <!-- Hidden File Input -->
                     <input type="file" id="wallpaper-upload-input" accept="image/*" class="hidden-input">
                 </div>
             </div>
 
-            <!-- CPhone 手机 -->
+            <!-- CPhone Wallpaper -->
             <div class="settings-item">
                 <label>CPhone Wallpaper</label>
                 <div class="settings-right">
@@ -1743,13 +1743,13 @@
             <div class="settings-item-block">
                 <label style="margin-bottom: 10px; display:block; font-weight:600;">EPhone Home Screen Icons</label>
                 <div id="icon-settings-grid" class="settings-icon-grid">
-                    <!-- JS 填充 -->
+                    <!-- JS Fill in -->
                 </div>
             </div>
             <div class="settings-item-block" style="border-top: 0.5px solid #c6c6c8;">
                 <label style="margin-bottom: 10px; display:block; font-weight:600;">CPhone App Icons</label>
                 <div id="cphone-icon-settings-grid" class="settings-icon-grid">
-                    <!-- JS 填充 -->
+                    <!-- JS Fill in -->
                 </div>
             </div>
         </div>
@@ -1764,7 +1764,7 @@
                 </div>
                 <div class="settings-desc" style="margin: 0 0 10px 0;">Drag the buttons below to adjust the order:</div>
                 <div id="button-order-editor">
-                    <!-- JS 填充 -->
+                    <!-- JS Fill in -->
                 </div>
             </div>
         </div>
@@ -1777,7 +1777,7 @@
                  <label>Appearance Presets</label>
                  <div class="settings-right">
                      <select id="appearance-preset-select" class="settings-select" style="width:auto; flex-grow:1; margin-right:5px;"></select>
-                     <!-- 修改点：改为 settings-mini-btn -->
+                     <!-- Modification point: Change to settings-mini-btn -->
                      <button id="save-appearance-preset-btn" class="settings-mini-btn">Save</button>
                      <button id="delete-appearance-preset-btn" class="settings-mini-btn" style="color: #ff3b30;">Delete</button>
                  </div>
@@ -1787,17 +1787,17 @@
                  <label>CSS Presets</label>
                  <div class="settings-right">
                      <select id="css-preset-select" class="settings-select" style="width:auto; flex-grow:1; margin-right:5px;"></select>
-                     <!-- 修改点：改为 settings-mini-btn -->
+                     <!-- Modification point: Change to settings-mini-btn -->
                      <button id="save-css-preset-btn" class="settings-mini-btn">Save</button>
                      <button id="delete-css-preset-btn" class="settings-mini-btn" style="color: #ff3b30;">Delete</button>
                  </div>
             </div>
             
-            <!-- 自定义 CSS -->
+            <!-- Custom CSS -->
             <div class="settings-item-block">
                 <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
                     <label>Global customization CSS</label>
-                    <!-- 修改点：改为 settings-mini-btn -->
+                    <!-- Modification point: Change to settings-mini-btn -->
                     <button id="reset-global-css-btn" class="settings-mini-btn">Reset</button>
                 </div>
                 <textarea id="global-css-input" class="settings-textarea" placeholder="/*Enter CSS here*/"></textarea>
@@ -1829,7 +1829,7 @@
         <div class="form-group"> <label for="font-url-input"data-lang-key="fontFileUrlLabel">Font File URL (.ttf, .otf, .woff, etc.)</label> <input type="text" id="font-url-input" placeholder="https://..../font.ttf"> </div>
         <div class="form-group"> <label data-lang-key="fontPreviewLabel">Live Preview</label>
           <div id="font-preview">
-            <p style="font-size: 20px; margin: 0 0 10px 0;">Hello World 你好世界</p>
+            <p style="font-size: 20px; margin: 0 0 10px 0;">Hello World</p>
             <p style="margin: 0;">This is a font preview, 12345.</p>
           </div>
         </div> <button class="form-button" id="save-font-btn"data-lang-key="fontSaveAndApply">Save and Apply</button> <button class="form-button form-button-secondary" id="reset-font-btn"data-lang-key="fontResetDefault">Reset to Default Font</button>
@@ -2085,7 +2085,7 @@
             </div>
         </div>
 
-        <!-- 第二组：人设与剧情 (核心) -->
+        <!-- Second Group: Persona & Story (Core) -->
         <div class="settings-section">
             <div class="settings-item-block" id="ai-persona-group">
                 <label>AI Persona</label>
@@ -2120,12 +2120,12 @@
             </div>
         </div>
 
-        <!-- 第三组：模型与智能设置 -->
+        <!-- Third Group: Model & Intelligence Settings -->
         <div class="settings-section">
-            <!-- 单聊独立后台 -->
+            <!-- Single Chat Independent Background -->
             <div id="single-char-background-activity-group">
                 
-                <!-- 注入最新心声 -->
+                <!-- Inject Latest Thought -->
                 <div class="settings-item" id="inject-thought-group" style="display: flex !important; justify-content: space-between !important; align-items: center !important; flex-direction: row !important;">
                     <div style="flex: 1; padding-right: 10px; display: flex; flex-direction: column; align-items: flex-start;">
                         <label style="margin-bottom: 2px;">Inject Latest Thought</label>
@@ -2151,7 +2151,7 @@
 
             </div>
 
-            <!-- 群聊后台 -->
+            <!-- Group Background -->
             <div class="settings-item" id="group-background-activity-group">
                  <div>
                     <label>Enable Group Background Activity</label>
@@ -2448,7 +2448,7 @@
             </div>
         </div>
 
-        <!-- 第六组：数据与操作 (底部) -->
+        <!-- Group Six: Data and Operations (Bottom) -->
         <div class="settings-section">
              <div class="settings-item clickable" id="search-history-btn">
                  <label>Search Chat History</label>
@@ -2552,7 +2552,7 @@
       </div>
       <div id="chat-search-results-list" class="list-container" style="padding: 15px; display: flex; flex-direction: column; gap: 15px;"> </div>
     </div>
-<!-- 支付宝屏幕 -->
+<!-- Alipay Screen -->
 <div id="alipay-screen" class="screen">
     <div class="alipay-header-area">
         <div class="alipay-nav">
@@ -2589,16 +2589,16 @@
             </div>
     </div>
 </div>
-<!-- 基金理财屏幕 (已去掉了内联颜色，改为 class 控制) -->
+<!-- Fund Screen (Removed inline colors, changed to class control) -->
 <div id="fund-screen" class="screen" style="background-color: #f5f5f5;">
-    <!-- 头部：添加了 class="fund-header-area" -->
+    <!-- Header: Added class="fund-header-area" -->
     <div class="header fund-header-area">
         <span class="back-btn" onclick="showScreen('alipay-screen')" style="color: white;">‹</span>
         <span>Fund Market</span>
         <span class="action-btn" onclick="refreshFundMarket()" style="font-size: 14px; color: white;">Refresh</span>
     </div>
     
-    <!-- 资产卡片：添加了 class="fund-asset-card" -->
+    <!-- Asset Card: Added class="fund-asset-card" -->
     <div class="fund-asset-card">
         <div style="font-size: 13px; opacity: 0.8;">Total Assets (CNY)</div>
         <div style="font-size: 32px; font-weight: 700; margin: 5px 0;" id="fund-total-assets">0.00</div>
@@ -2623,7 +2623,7 @@
     </div>
 </div>
 
-<!-- 基金交易弹窗 -->
+<!-- Fund Trade Modal -->
 <div id="fund-trade-modal" class="modal">
     <div class="modal-content" style="width: 300px; height: auto;">
         <div class="modal-header">
@@ -2641,14 +2641,14 @@
             
             <div class="form-group">
                 <label id="fund-trade-label">Buy Amount (Balance: ¥<span id="fund-wallet-balance"></span>)</label>
-                <!-- 修复：强制 type="number" -->
+                <!-- Fix: Force type="number" -->
                 <input type="number" id="fund-trade-amount" placeholder="Enter amount" style="font-size: 24px; font-weight: bold; color: #1677ff; border-bottom: 2px solid #eee; padding: 10px 0;">
             </div>
             <p id="fund-trade-info" style="font-size: 12px; color: #666; margin-top: 5px;"></p>
         </div>
         <div class="modal-footer">
             <button class="cancel" onclick="document.getElementById('fund-trade-modal').classList.remove('visible')">Cancel</button>
-            <!-- 修复：直接绑定 onclick 函数，不再依赖 addEventListener -->
+            <!-- Fix: Directly bind onclick function, no longer rely on addEventListener -->
             <button class="save" id="fund-confirm-btn" onclick="handleFundTradeConfirm()">Confirm</button>
         </div>
     </div>
@@ -2927,7 +2927,7 @@
             <div class="gr-form-group">
                 <label>Sender Source (Multiple Choice)</label>
                 <div class="gr-checkbox-list" id="mail-sender-list">
-                    <!-- JS 动态填充角色和 NPC -->
+                    <!-- JS Dynamically populate characters and NPCs -->
                 </div>
                 <label style="margin-top:10px; display:flex; align-items:center;">
                     <input type="checkbox" id="mail-allow-random-npc" checked> Allow generating random strangers/spam
@@ -2938,7 +2938,7 @@
             <div class="gr-form-group">
                 <label>Related Memories and World Book</label>
                 <div class="gr-checkbox-list" id="mail-context-list">
-                    <!-- JS 动态填充世界书 -->
+                    <!-- JS Dynamically populate world book -->
                 </div>
             </div>
           <div class="gr-form-group">
@@ -3623,7 +3623,7 @@
       </div>
     </div>
   </div>
-<!-- ▼▼▼ NovelAI 生成设置弹窗 ▼▼▼ -->
+<!-- ▼▼▼NovelAI generation settings pop-up. ▼▼▼ -->
 <div id="novelai-settings-modal" class="modal" style="display: none;">
     <div class="modal-content" style="max-width: 600px; width: 90%; max-height: 85vh; overflow-y: auto;">
         <div class="modal-header">
@@ -3987,7 +3987,7 @@
           </div> <button id="close-char-music-player-btn" class="char-player-close-btn">×</button>
         </div>
       </div>
-<!-- 新增：亲属卡赠送专属弹窗 -->
+<!-- New: Kinship Card Gift Exclusive Modal -->
 <div id="kinship-creation-modal" class="modal">
   <div class="modal-content" style="height: 70%; display: flex; flex-direction: column;">
     <div class="modal-header">
@@ -4002,12 +4002,12 @@
         Please select a recipient (single choice)
       </div>
 
-      <!-- 角色列表区域 (复用清理数据的样式) -->
+      <!-- Character List Area (Reusing cleaned data styles) -->
       <div id="kinship-char-list" style="flex-grow: 1; overflow-y: auto;">
-        <!-- JS 动态填充 -->
+        <!-- JS Dynamically populate -->
       </div>
 
-      <!-- 金额输入区域 -->
+      <!-- Amount Input Area -->
       <div style="padding: 20px; background-color: #fff; border-top: 1px solid var(--border-color); box-shadow: 0 -2px 10px rgba(0,0,0,0.05); z-index: 2;">
         <div class="form-group" style="margin-bottom: 0;">
           <label for="kinship-limit-input" style="font-weight: 600;">Monthly Spending Limit</label>
